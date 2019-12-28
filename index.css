@@ -32,11 +32,11 @@ h6 {
 }
 
 .text-light h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.text-light h2,
+.text-light h3,
+.text-light h4,
+.text-light h5,
+.text-light h6 {
     color: #fff;
 }
 
@@ -55,4 +55,19 @@ h6 {
 
 .sec2 {
     background-color: #22709f;
+}
+
+.btn-topik {
+    height: 5rem;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+.img-topik {
+    width: 2.5rem;
+}
+
+.text-vertical-center {
+    vertical-align: middle;
+    line-height: 3rem;
 }
