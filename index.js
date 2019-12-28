@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    // Header Trigger
+    // Header Trigger 
     $("#cari-trig").click(function () {
         $("#cari-list-trig").hide();
         $("#cari").toggleClass("d-none");
