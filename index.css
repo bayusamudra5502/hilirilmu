@@ -1,0 +1,44 @@
+/* GLOBAL STY;E */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar-utama {
+    background-color: #2c2c5f;
+}
+
+.navbar-toggler {
+    border: 0;
+}
+
+.dropdown-item:active {
+    background-color: transparent;
+    color: inherit;
+}
+
+#searchbox {
+    width: 100%;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #2c2c5f;
+    font-weight: 600;
+}
+
+/* END OF GLOBAL */
+/* ============================================ */
+/* MAIN PAGE ONLY */
+.flat {
+    background-color: #2c2c5f;
+    color: white;
+}
+
+.bq-awal {
+    font-weight: 300;
+}

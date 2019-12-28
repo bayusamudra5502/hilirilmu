@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+        integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.min.css"
+        integrity="sha256-77qGXu2p8NpfcBpTjw4jsMeQnz0vyh74f5do0cWjQ/Q=" crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/command-line/prism-command-line.css"
+        integrity="sha256-UvoA9bIYCYQkCMTYG5p2LM8ZpJmnC4G8k0oIc89nuQA=" crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-numbers/prism-line-numbers.min.css"
+        integrity="sha256-Afz2ZJtXw+OuaPX10lZHY7fN1+FuTE/KdCs+j7WZTGc=" crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/toolbar/prism-toolbar.min.css"
+        integrity="sha256-P45OhhEWm49G8sadt2n5rDaWLa3xZbDOQhJliuaojH0=" crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-highlight/prism-line-highlight.min.css"
+        integrity="sha256-FFGTaA49ZxFi2oUiWjxtTBqoda+t1Uw8GffYkdt9aco=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="index.css">
+
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" 
+            integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    <![endif]-->
+
+    <title>Halaman Utama | HIlir Ilmu</title>
+</head>
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-sm navbar-dark navbar-utama">
+            <div class="container">
+                <a class="navbar-brand" href="#">Hilir Ilmu</a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navcol">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navcol">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0 navbar-right">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown-Produk" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Produk</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                <a class="dropdown-item" href="#">Buku</a>
+                                <a class="dropdown-item" href="#">Video Tutorial</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown-Produk" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Artikel</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                <a class="dropdown-item" href="#">Matematika</a>
+                                <a class="dropdown-item" href="#">Ilmu Komputer</a>
+                                <hr>
+                                <a class="dropdown-item" href="#">Materi SMP</a>
+                                <a class="dropdown-item" href="#">Materi SMA</a>
+                                <a class="dropdown-item" href="#">Materi Kuliah</a>
+                                <a class="dropdown-item" href="#">Materi Olimpiade</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Kotak Saran</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Kontak</a>
+                        </li>
+
+                        <li class="nav-item" id="cari-list-trig">
+                            <a class="nav-link" id="cari-trig" href="#"><i class="fa fa-search fa-fw">
+                                    <div class="sr-only">Cari</div>
+                                </i></a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0 d-none" id="cari" method="GET" action="utama.html">
+                        <input class="form-control ml-sm-2" type="search" name="q" placeholder="Cari" id="form-cari"
+                            aria-label="Search">
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- END OF NAVBAR -->
+    </header>
+
+    <!-- START FLYER -->
+    <div class="w-100 py-5 flat text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-7 mx-auto">
+                    <blockquote class="h1 bq-awal">
+                        Janganlah pernah letih untuk menggali ilmu karena ilmu
+                        akan
+                        menjagamu dari segala keburukan.</blockquote>
+                    <button class="btn btn-outline-light btn-lg my-4" id="btnToCari">Let's do it</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END FLYER-->
+
+    <main>
+        <!-- FORM SEARCH SECTION -->
+        <div class="sec1 my-4 text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2 id="pencarian">Pencarian</h2>
+                        <p>Yuk cari artikel apa yang ingin kau tahu...</p>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 mx-auto">
+                        <form class="form my-2" method="GET" action="utama.html">
+                            <div class="input-group mb-3 input-group-lg">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-transparent border-right-0"><i
+                                            class="fa fa-search fa-fw">
+                                            <div class="sr-only">Cari</div>
+                                        </i></span>
+                                </div>
+                                <input type="text" class="form-control border-left-0"
+                                    placeholder="Tulis kata kunci disini" name="q">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END SECTION 1 -->
+
+        <!-- START SECTION 2 -->
+        <div class="sec2 my-4 text-center">
+
+        </div>
+        <!-- END SECTION 2 -->
+    </main>
+
+    <footer>
+
+    </footer>
+    <!-- Javascript Collection -->
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.5.6/plyr.min.js"
+        integrity="sha256-voP3sbDhk+YDZKsGO8dpMGk9qzne1cf3f1CRgjwRnrk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"
+        integrity="sha256-HWJnMZHGx7U1jmNfxe4yaQedmpo/mtxWSIXvcJkLIf4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"
+        integrity="sha256-ht8ay6ZTPZfuixYB99I5oRpCLsCq7Do2LjEYLwbe+X8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/command-line/prism-command-line.min.js"
+        integrity="sha256-pySw63TmypHJ7LQU3ycJreLDfrxg59cI+famzPcGH5Q=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-numbers/prism-line-numbers.min.js"
+        integrity="sha256-hep5s8952MqR7Y79JYfCXZD6vQjVHs7sOu/ZGrs1OEQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/toolbar/prism-toolbar.min.js"
+        integrity="sha256-SyBDbq8Z29N+/5vK9bf2HpTtvAEGUIiLKw0iepvhLQg=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-highlight/prism-line-highlight.min.js"
+        integrity="sha256-i1I0MEGBEKKEtBLlagkEPdef5OGDQEUdcjCPYo47a3Y=" crossorigin="anonymous"></script>
+    <script src="index.js">
+    </script>
+</body>
+
+</html>
