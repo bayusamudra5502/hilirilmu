@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    $("#goToUp").toggleClass("d-none");
+    $("#goToUp").hide();
+
     // Main Init
     twemoji.parse(document.body, {
         callback: function (icon, options) {
@@ -84,4 +87,7 @@ $(document).ready(function () {
         window.location.href = "#programming";
     });
 
+    // FREE THE FREEZE
+    $("body").toggleClass("noscroll");
+    $("#coverLoadingPage").fadeOut("slow");
 });

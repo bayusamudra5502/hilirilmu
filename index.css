@@ -1,4 +1,8 @@
-/* GLOBAL STY;E */
+/* GLOBAL STYLE */
+.err {
+    width: 10rem;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
 }
@@ -83,8 +87,26 @@ h6>a:hover {
     font-size: 2rem;
 }
 
-.bookmark>a {
-    color: rgba(0, 0, 0, 0.25);
+.bookmark>a,
+.text-muted-super {
+    color: rgba(0, 0, 0, 0.25) !important;
+}
+
+a.kategori {
+    display: inline-block;
+    border-radius: .75em;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.15) !important;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: .75em;
+    font-weight: 600;
+    padding: .187em .375em;
+}
+
+a.kategori:hover {
+    background-color: rgba(0, 0, 0, 0.25) !important;
+    color: rgba(0, 0, 0, 0.75);
+    text-decoration: none;
 }
 
 .card-column {
@@ -146,9 +168,43 @@ img.emoji {
     position: fixed;
     right: 3rem;
     bottom: 3rem;
-    z-index: 999;
+    z-index: 900;
 }
 
+/* LOADING OVERLAY */
+
+.cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 999;
+    opacity: 1;
+    background: #fff;
+    border-radius: 4px;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.cover-noscript {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1000;
+    opacity: 1;
+    background: #fff;
+    border-radius: 4px;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.noscroll {
+    /* BODY OVERLAY */
+    overflow: hidden;
+}
 
 /* END OF GLOBAL */
 /* ============================================ */
