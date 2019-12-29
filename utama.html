@@ -60,13 +60,15 @@
                             <a class="nav-link dropdown-toggle" href="#" id="dropdown-Produk" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">Artikel</a>
                             <div class="dropdown-menu" aria-labelledby="dropdownId">
-                                <a class="dropdown-item" href="#">Matematika</a>
-                                <a class="dropdown-item" href="#">Ilmu Komputer</a>
+                                <a class="dropdown-item goToTopik" href="#">Matematika</a>
+                                <a class="dropdown-item goToTopik" href="#">Ilmu Komputer</a>
                                 <hr>
                                 <a class="dropdown-item" href="#">Materi SMP</a>
                                 <a class="dropdown-item" href="#">Materi SMA</a>
                                 <a class="dropdown-item" href="#">Materi Kuliah</a>
                                 <a class="dropdown-item" href="#">Materi Olimpiade</a>
+                                <hr>
+                                <a class="dropdown-item" href="#">Tips & Triks</a>
                             </div>
                         </li>
 
@@ -112,11 +114,11 @@
 
     <main>
         <!-- FORM SEARCH SECTION -->
-        <div class="sec1 my-4 text-center p-5">
+        <div class="sec1 my-4 text-center p-5" id="pencarian">
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <h2 id="pencarian" class="mb-4">Pencarian</h2>
+                        <h2 class="mb-4">Pencarian</h2>
                         <p class="h5 mb-3">Yuk cari artikel apa yang ingin kau tahu...</p>
                     </div>
                 </div>
@@ -140,8 +142,8 @@
         </div>
         <!-- END SECTION 1 -->
 
-        <!-- START SECTION 2 -->
-        <div class="sec2 my-4 text-center p-5 text-light">
+        <!-- START SECTION 2 : Topik -->
+        <div class="sec2 my-4 text-center p-5 text-light" id="topik">
             <div class="container">
                 <div class="row">
                     <div class="col">
@@ -153,7 +155,7 @@
                         <p class="h5 mb-4">Yuk telusuri topik yang ada di Hilir Ilmu</p>
                     </div>
                 </div>
-                <div class="row text-left">
+                <div class="row my-2">
                     <div class="col">
                         <h3 class="h4">Matematika</h3>
                     </div>
@@ -260,7 +262,7 @@
                     </div>
                 </div>
                 <!-- END MATEMATIKA -->
-                <div class="row text-left">
+                <div class="row mt-3 mb-2">
                     <div class="col">
                         <h3 class="h4">Teori Komputer</h3>
                     </div>
@@ -299,25 +301,837 @@
         </div>
         <!-- END SECTION 2 -->
 
-        <!-- START SECTION 3-->
-        <div class="sec3">
+        <!-- START SECTION 3 : Artikel Terbaru -->
+        <div class="sec3 my-4 p-4" id="artikelBaru">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col">
+                        <h2 id="pencarian" class="mb-4">Artikel Terbaru</h2>
+                        <p class="h5 mb-3">Inilah artikel terbaru kami</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-column">
 
+                            <!-- START CARD -->
+                            <div class="card shadow" style="min-width: 18rem;">
+                                <img src="img/universe.jpg" class="card-img-top" alt="Universe">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row mb-1">
+                                            <div class="col">
+                                                <h5 class="card-title text-dark"> <a href="#">Judul Artikel</a></h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <p class="card-text text-justify">
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                                                    beatae ab perferendis molestias illo,
+                                                    dignissimos
+                                                    cumque, veniam laudantium!
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-1">
+                                            <div class="col-1">
+                                                <div class="ml-1 circle-img rounded-circle"
+                                                    style="background-image: url('img/bamboo.png');">
+                                                </div>
+                                            </div>
+                                            <div class="offset-1"></div>
+                                            <div class="col-7 pl-4">
+                                                <p class="text-muted c-author mb-1">Bayu Samudra</p>
+                                                <small class="text-muted c-calendar mt-0">28 Desember 2019</small>
+                                            </div>
+                                            <div class="col-1 d-flex align-item-end">
+                                                <div class="bookmark p-2 mx-auto"> <a href="#"><i
+                                                            class="far fa-bookmark"></i>
+                                                        <div class="sr-only">Pergi ke laman</div>
+                                                    </a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- END OF CARD -->
+                            <!-- START CARD -->
+                            <div class="card shadow" style="min-width: 18rem;">
+                                <img src="img/universe.jpg" class="card-img-top" alt="Universe">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row mb-1">
+                                            <div class="col">
+                                                <h5 class="card-title text-dark"> <a href="#">Judul Artikel</a></h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <p class="card-text text-justify">
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                                                    beatae ab perferendis molestias illo,
+                                                    dignissimos
+                                                    cumque, veniam laudantium!
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-1">
+                                            <div class="col-1">
+                                                <div class="ml-1 circle-img rounded-circle"
+                                                    style="background-image: url('img/bamboo.png');">
+                                                </div>
+                                            </div>
+                                            <div class="offset-1"></div>
+                                            <div class="col-7 pl-4">
+                                                <p class="text-muted c-author mb-1">Bayu Samudra</p>
+                                                <small class="text-muted c-calendar mt-0">28 Desember 2019</small>
+                                            </div>
+                                            <div class="col-1 d-flex align-item-end">
+                                                <div class="bookmark p-2 mx-auto"> <a href="#"><i
+                                                            class="far fa-bookmark"></i>
+                                                        <div class="sr-only">Pergi ke laman</div>
+                                                    </a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>Marilah
+                            </div>
+                            <!-- END OF CARD -->
+                            <!-- START CARD -->
+                            <div class="card shadow" style="min-width: 18rem;">
+                                <img src="img/universe.jpg" class="card-img-top" alt="Universe">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row mb-1">
+                                            <div class="col">
+                                                <h5 class="card-title text-dark"> <a href="#">Judul Artikel</a></h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <p class="card-text text-justify">
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                                                    beatae ab perferendis molestias illo,
+                                                    dignissimos
+                                                    cumque, veniam laudantium!
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-1">
+                                            <div class="col-1">
+                                                <div class="ml-1 circle-img rounded-circle"
+                                                    style="background-image: url('img/bamboo.png');">
+                                                </div>
+                                            </div>
+                                            <div class="offset-1"></div>
+                                            <div class="col-7 pl-4">
+                                                <p class="text-muted c-author mb-1">Bayu Samudra</p>
+                                                <small class="text-muted c-calendar mt-0">28 Desember 2019</small>
+                                            </div>
+                                            <div class="col-1 d-flex align-item-end">
+                                                <div class="bookmark p-2 mx-auto"> <a href="#"><i
+                                                            class="far fa-bookmark"></i>
+                                                        <div class="sr-only">Pergi ke laman</div>
+                                                    </a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- END OF CARD -->
+                            <!-- START CARD -->
+                            <div class="card shadow" style="min-width: 18rem;">
+                                <img src="img/universe.jpg" class="card-img-top" alt="Universe">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row mb-1">
+                                            <div class="col">
+                                                <h5 class="card-title text-dark"> <a href="#">Judul Artikel</a></h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <p class="card-text text-justify">
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                                                    beatae ab perferendis molestias illo,
+                                                    dignissimos
+                                                    cumque, veniam laudantium!
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                                                    saepe, dolor minima voluptates dolorum sapiente placeat in incidunt
+                                                    animi reiciendis blanditiis, quibusdam aspernatur enim maxime,
+                                                    necessitatibus deleniti soluta quia porro.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-1">
+                                            <div class="col-1">
+                                                <div class="ml-1 circle-img rounded-circle"
+                                                    style="background-image: url('img/bamboo.png');">
+                                                </div>
+                                            </div>
+                                            <div class="offset-1"></div>
+                                            <div class="col-7 pl-4">
+                                                <p class="text-muted c-author mb-1">Bayu Samudra</p>
+                                                <small class="text-muted c-calendar mt-0">28 Desember 2019</small>
+                                            </div>
+                                            <div class="col-1 d-flex align-item-end">
+                                                <div class="bookmark p-2 mx-auto"> <a href="#"><i
+                                                            class="far fa-bookmark"></i>
+                                                        <div class="sr-only">Pergi ke laman</div>
+                                                    </a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- END OF CARD -->
+                            <!-- START CARD -->
+                            <div class="card shadow" style="min-width: 18rem;">
+                                <img src="img/universe.jpg" class="card-img-top" alt="Universe">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row mb-1">
+                                            <div class="col">
+                                                <h5 class="card-title text-dark"> <a href="#">Judul Artikel</a></h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <p class="card-text text-justify">
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                                                    beatae ab perferendis molestias illo,
+                                                    dignissimos
+                                                    Lorem ipsum dolor sit amet dolore aperiam aliquam hic eum quo beatae
+                                                    facilis maxime corrupti quia.
+                                                    cumque, veniam laudantium!
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id saepe,
+                                                    quas aliquam, voluptate natus, odit ut consequatur ad architecto
+                                                    laborum tenetur! Cumque tempore, laudantium quam iure est repellat
+                                                    quaerat illum!
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-1">
+                                            <div class="col-1">
+                                                <div class="ml-1 circle-img rounded-circle"
+                                                    style="background-image: url('img/bamboo.png');">
+                                                </div>
+                                            </div>
+                                            <div class="offset-1"></div>
+                                            <div class="col-7 pl-4">
+                                                <p class="text-muted c-author mb-1">Bayu Samudra</p>
+                                                <small class="text-muted c-calendar mt-0">28 Desember 2019</small>
+                                            </div>
+                                            <div class="col-1 d-flex align-item-end">
+                                                <div class="bookmark p-2 mx-auto"> <a href="#"><i
+                                                            class="far fa-bookmark"></i>
+                                                        <div class="sr-only">Pergi ke laman</div>
+                                                    </a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- END OF CARD -->
+                            <!-- START CARD -->
+                            <div class="card shadow" style="min-width: 18rem;">
+                                <img src="img/universe.jpg" class="card-img-top" alt="Universe">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row mb-1">
+                                            <div class="col">
+                                                <h5 class="card-title text-dark"> <a href="#">Judul Artikel</a></h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <p class="card-text text-justify">
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                                                    beatae ab perferendis molestias illo,
+                                                    dignissimos
+                                                    cumque, veniam laudantium!
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-1">
+                                            <div class="col-1">
+                                                <div class="ml-1 circle-img rounded-circle"
+                                                    style="background-image: url('img/bamboo.png');">
+                                                </div>
+                                            </div>
+                                            <div class="offset-1"></div>
+                                            <div class="col-7 pl-4">
+                                                <p class="text-muted c-author mb-1">Bayu Samudra</p>
+                                                <small class="text-muted c-calendar mt-0">28 Desember 2019</small>
+                                            </div>
+                                            <div class="col-1 d-flex align-item-end">
+                                                <div class="bookmark p-2 mx-auto"> <a href="#"><i
+                                                            class="far fa-bookmark"></i>
+                                                        <div class="sr-only">Pergi ke laman</div>
+                                                    </a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- END OF CARD -->
+                            <!-- START CARD -->
+                            <div class="card shadow" style="min-width: 18rem;">
+                                <img src="img/universe.jpg" class="card-img-top" alt="Universe">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row mb-1">
+                                            <div class="col">
+                                                <h5 class="card-title text-dark"> <a href="#">Judul Artikel</a></h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <p class="card-text text-justify">
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                                                    beatae ab perferendis molestias illo,
+                                                    dignissimos
+                                                    cumque, veniam laudantium!
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-1">
+                                            <div class="col-1">
+                                                <div class="ml-1 circle-img rounded-circle"
+                                                    style="background-image: url('img/bamboo.png');">
+                                                </div>
+                                            </div>
+                                            <div class="offset-1"></div>
+                                            <div class="col-7 pl-4">
+                                                <p class="text-muted c-author mb-1">Bayu Samudra</p>
+                                                <small class="text-muted c-calendar mt-0">28 Desember 2019</small>
+                                            </div>
+                                            <div class="col-1 d-flex align-item-end">
+                                                <div class="bookmark p-2 mx-auto"> <a href="#"><i
+                                                            class="far fa-bookmark"></i>
+                                                        <div class="sr-only">Pergi ke laman</div>
+                                                    </a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- END OF CARD -->
+                            <!-- START CARD -->
+                            <div class="card shadow" style="min-width: 18rem;">
+                                <img src="img/universe.jpg" class="card-img-top" alt="Universe">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row mb-1">
+                                            <div class="col">
+                                                <h5 class="card-title text-dark"> <a href="#">Judul Artikel</a></h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <p class="card-text text-justify">
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                                                    beatae ab perferendis molestias illo,
+                                                    dignissimos
+                                                    cumque, veniam laudantium!
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-1">
+                                            <div class="col-1">
+                                                <div class="ml-1 circle-img rounded-circle"
+                                                    style="background-image: url('img/bamboo.png');">
+                                                </div>
+                                            </div>
+                                            <div class="offset-1"></div>
+                                            <div class="col-7 pl-4">
+                                                <p class="text-muted c-author mb-1">Bayu Samudra</p>
+                                                <small class="text-muted c-calendar mt-0">28 Desember 2019</small>
+                                            </div>
+                                            <div class="col-1 d-flex align-item-end">
+                                                <div class="bookmark p-2 mx-auto"> <a href="#"><i
+                                                            class="far fa-bookmark"></i>
+                                                        <div class="sr-only">Pergi ke laman</div>
+                                                    </a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- END OF CARD -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- END SECTION 3 -->
+
+        <!-- START SECTION 4 : Video Terbaru -->
+        <div class="sec3 my-4 p-4" id="artikelBaru">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col">
+                        <h2 id="pencarian" class="mb-4">Video Terbaru</h2>
+                        <p class="h5 mb-3">Inilah video terbaru kami</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-column">
+
+                            <!-- START CARD -->
+                            <div class="card shadow" style="min-width: 18rem;">
+                                <img src="img/universe.jpg" class="card-img-top" alt="Universe">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row mb-1">
+                                            <div class="col">
+                                                <h5 class="card-title text-dark"> <a href="#">Judul Artikel</a></h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <p class="card-text text-justify">
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                                                    beatae ab perferendis molestias illo,
+                                                    dignissimos
+                                                    cumque, veniam laudantium!
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-1">
+                                            <div class="col-1">
+                                                <div class="ml-1 circle-img rounded-circle"
+                                                    style="background-image: url('img/bamboo.png');">
+                                                </div>
+                                            </div>
+                                            <div class="offset-1"></div>
+                                            <div class="col-7 pl-4">
+                                                <p class="text-muted c-author mb-1">Bayu Samudra</p>
+                                                <small class="text-muted c-calendar mt-0">28 Desember 2019</small>
+                                            </div>
+                                            <div class="col-1 d-flex align-item-end">
+                                                <div class="bookmark p-2 mx-auto"> <a href="#"><i
+                                                            class="far fa-bookmark"></i>
+                                                        <div class="sr-only">Pergi ke laman</div>
+                                                    </a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- END OF CARD -->
+                            <!-- START CARD -->
+                            <div class="card shadow" style="min-width: 18rem;">
+                                <img src="img/universe.jpg" class="card-img-top" alt="Universe">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row mb-1">
+                                            <div class="col">
+                                                <h5 class="card-title text-dark"> <a href="#">Judul Artikel</a></h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <p class="card-text text-justify">
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                                                    beatae ab perferendis molestias illo,
+                                                    dignissimos
+                                                    cumque, veniam laudantium!
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-1">
+                                            <div class="col-1">
+                                                <div class="ml-1 circle-img rounded-circle"
+                                                    style="background-image: url('img/bamboo.png');">
+                                                </div>
+                                            </div>
+                                            <div class="offset-1"></div>
+                                            <div class="col-7 pl-4">
+                                                <p class="text-muted c-author mb-1">Bayu Samudra</p>
+                                                <small class="text-muted c-calendar mt-0">28 Desember 2019</small>
+                                            </div>
+                                            <div class="col-1 d-flex align-item-end">
+                                                <div class="bookmark p-2 mx-auto"> <a href="#"><i
+                                                            class="far fa-bookmark"></i>
+                                                        <div class="sr-only">Pergi ke laman</div>
+                                                    </a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>Marilah
+                            </div>
+                            <!-- END OF CARD -->
+                            <!-- START CARD -->
+                            <div class="card shadow" style="min-width: 18rem;">
+                                <img src="img/universe.jpg" class="card-img-top" alt="Universe">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row mb-1">
+                                            <div class="col">
+                                                <h5 class="card-title text-dark"> <a href="#">Judul Artikel</a></h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <p class="card-text text-justify">
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                                                    beatae ab perferendis molestias illo,
+                                                    dignissimos
+                                                    cumque, veniam laudantium!
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-1">
+                                            <div class="col-1">
+                                                <div class="ml-1 circle-img rounded-circle"
+                                                    style="background-image: url('img/bamboo.png');">
+                                                </div>
+                                            </div>
+                                            <div class="offset-1"></div>
+                                            <div class="col-7 pl-4">
+                                                <p class="text-muted c-author mb-1">Bayu Samudra</p>
+                                                <small class="text-muted c-calendar mt-0">28 Desember 2019</small>
+                                            </div>
+                                            <div class="col-1 d-flex align-item-end">
+                                                <div class="bookmark p-2 mx-auto"> <a href="#"><i
+                                                            class="far fa-bookmark"></i>
+                                                        <div class="sr-only">Pergi ke laman</div>
+                                                    </a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- END OF CARD -->
+                            <!-- START CARD -->
+                            <div class="card shadow" style="min-width: 18rem;">
+                                <img src="img/universe.jpg" class="card-img-top" alt="Universe">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row mb-1">
+                                            <div class="col">
+                                                <h5 class="card-title text-dark"> <a href="#">Judul Artikel</a></h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <p class="card-text text-justify">
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                                                    beatae ab perferendis molestias illo,
+                                                    dignissimos
+                                                    cumque, veniam laudantium!
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                                                    saepe, dolor minima voluptates dolorum sapiente placeat in incidunt
+                                                    animi reiciendis blanditiis, quibusdam aspernatur enim maxime,
+                                                    necessitatibus deleniti soluta quia porro.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-1">
+                                            <div class="col-1">
+                                                <div class="ml-1 circle-img rounded-circle"
+                                                    style="background-image: url('img/bamboo.png');">
+                                                </div>
+                                            </div>
+                                            <div class="offset-1"></div>
+                                            <div class="col-7 pl-4">
+                                                <p class="text-muted c-author mb-1">Bayu Samudra</p>
+                                                <small class="text-muted c-calendar mt-0">28 Desember 2019</small>
+                                            </div>
+                                            <div class="col-1 d-flex align-item-end">
+                                                <div class="bookmark p-2 mx-auto"> <a href="#"><i
+                                                            class="far fa-bookmark"></i>
+                                                        <div class="sr-only">Pergi ke laman</div>
+                                                    </a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- END OF CARD -->
+                            <!-- START CARD -->
+                            <div class="card shadow" style="min-width: 18rem;">
+                                <img src="img/universe.jpg" class="card-img-top" alt="Universe">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row mb-1">
+                                            <div class="col">
+                                                <h5 class="card-title text-dark"> <a href="#">Judul Artikel</a></h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <p class="card-text text-justify">
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                                                    beatae ab perferendis molestias illo,
+                                                    dignissimos
+                                                    Lorem ipsum dolor sit amet dolore aperiam aliquam hic eum quo beatae
+                                                    facilis maxime corrupti quia.
+                                                    cumque, veniam laudantium!
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id saepe,
+                                                    quas aliquam, voluptate natus, odit ut consequatur ad architecto
+                                                    laborum tenetur! Cumque tempore, laudantium quam iure est repellat
+                                                    quaerat illum!
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-1">
+                                            <div class="col-1">
+                                                <div class="ml-1 circle-img rounded-circle"
+                                                    style="background-image: url('img/bamboo.png');">
+                                                </div>
+                                            </div>
+                                            <div class="offset-1"></div>
+                                            <div class="col-7 pl-4">
+                                                <p class="text-muted c-author mb-1">Bayu Samudra</p>
+                                                <small class="text-muted c-calendar mt-0">28 Desember 2019</small>
+                                            </div>
+                                            <div class="col-1 d-flex align-item-end">
+                                                <div class="bookmark p-2 mx-auto"> <a href="#"><i
+                                                            class="far fa-bookmark"></i>
+                                                        <div class="sr-only">Pergi ke laman</div>
+                                                    </a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- END OF CARD -->
+                            <!-- START CARD -->
+                            <div class="card shadow" style="min-width: 18rem;">
+                                <img src="img/universe.jpg" class="card-img-top" alt="Universe">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row mb-1">
+                                            <div class="col">
+                                                <h5 class="card-title text-dark"> <a href="#">Judul Artikel</a></h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <p class="card-text text-justify">
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                                                    beatae ab perferendis molestias illo,
+                                                    dignissimos
+                                                    cumque, veniam laudantium!
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-1">
+                                            <div class="col-1">
+                                                <div class="ml-1 circle-img rounded-circle"
+                                                    style="background-image: url('img/bamboo.png');">
+                                                </div>
+                                            </div>
+                                            <div class="offset-1"></div>
+                                            <div class="col-7 pl-4">
+                                                <p class="text-muted c-author mb-1">Bayu Samudra</p>
+                                                <small class="text-muted c-calendar mt-0">28 Desember 2019</small>
+                                            </div>
+                                            <div class="col-1 d-flex align-item-end">
+                                                <div class="bookmark p-2 mx-auto"> <a href="#"><i
+                                                            class="far fa-bookmark"></i>
+                                                        <div class="sr-only">Pergi ke laman</div>
+                                                    </a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- END OF CARD -->
+                            <!-- START CARD -->
+                            <div class="card shadow" style="min-width: 18rem;">
+                                <img src="img/universe.jpg" class="card-img-top" alt="Universe">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row mb-1">
+                                            <div class="col">
+                                                <h5 class="card-title text-dark"> <a href="#">Judul Artikel</a></h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <p class="card-text text-justify">
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                                                    beatae ab perferendis molestias illo,
+                                                    dignissimos
+                                                    cumque, veniam laudantium!
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-1">
+                                            <div class="col-1">
+                                                <div class="ml-1 circle-img rounded-circle"
+                                                    style="background-image: url('img/bamboo.png');">
+                                                </div>
+                                            </div>
+                                            <div class="offset-1"></div>
+                                            <div class="col-7 pl-4">
+                                                <p class="text-muted c-author mb-1">Bayu Samudra</p>
+                                                <small class="text-muted c-calendar mt-0">28 Desember 2019</small>
+                                            </div>
+                                            <div class="col-1 d-flex align-item-end">
+                                                <div class="bookmark p-2 mx-auto"> <a href="#"><i
+                                                            class="far fa-bookmark"></i>
+                                                        <div class="sr-only">Pergi ke laman</div>
+                                                    </a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- END OF CARD -->
+                            <!-- START CARD -->
+                            <div class="card shadow" style="min-width: 18rem;">
+                                <img src="img/universe.jpg" class="card-img-top" alt="Universe">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row mb-1">
+                                            <div class="col">
+                                                <h5 class="card-title text-dark"> <a href="#">Judul Artikel</a></h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <p class="card-text text-justify">
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                                                    beatae ab perferendis molestias illo,
+                                                    dignissimos
+                                                    cumque, veniam laudantium!
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-1">
+                                            <div class="col-1">
+                                                <div class="ml-1 circle-img rounded-circle"
+                                                    style="background-image: url('img/bamboo.png');">
+                                                </div>
+                                            </div>
+                                            <div class="offset-1"></div>
+                                            <div class="col-7 pl-4">
+                                                <p class="text-muted c-author mb-1">Bayu Samudra</p>
+                                                <small class="text-muted c-calendar mt-0">28 Desember 2019</small>
+                                            </div>
+                                            <div class="col-1 d-flex align-item-end">
+                                                <div class="bookmark p-2 mx-auto"> <a href="#"><i
+                                                            class="far fa-bookmark"></i>
+                                                        <div class="sr-only">Pergi ke laman</div>
+                                                    </a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- END OF CARD -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END SECTION 4 -->
+
+        <!-- SECTION 5 : TIm -->
+        <div class="sec5 my-4 p-4" id="tim">
+            <div class="container">
+                <div class="row text-center mb-4">
+                    <div class="col">
+                        <h2 id="pencarian" class="mb-4">Tim Kami</h2>
+                        <p class="h5 mb-3">Inilah daftar tim kami</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="media mb-5">
+                            <div class="mr-4 team rounded-circle"
+                                style="background-image: url('img/w40-nebula (1).jpg');"></div>
+                            <div class="media-body">
+                                <h5 class="mt-0">Bayu Samudra</h5>
+                                <p class="text-muted jabatan">Founder</p>
+                                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
+                                    sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus
+                                    viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+                                    congue felis in faucibus.</p>
+                            </div>
+                        </div>
+                        <div class="media mb-5">
+
+                            <div class="media-body">
+                                <h5 class="mt-0">Bayu Samudra</h5>
+                                <p class="text-muted jabatan">Co-Founder</p>
+                                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
+                                    sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus
+                                    viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+                                    congue felis in faucibus.</p>
+                            </div>
+                            <div class="ml-4 team rounded-circle" style="background-image: url('img/universe.jpg');">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <footer>
-
+    <!-- Go To Top  -->
+    <footer class="p-3 mb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col h6 mb-0">
+                    <p>Dibuat dengan ❤️ oleh Tim Hilir Ilmu.</p>
+                </div>
+            </div>
+        </div>
     </footer>
+
     <!-- Javascript Collection -->
-    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous">
+    </script>
 
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.5.6/plyr.min.js"
-        integrity="sha256-voP3sbDhk+YDZKsGO8dpMGk9qzne1cf3f1CRgjwRnrk=" crossorigin="anonymous"></script>
+        integrity="sha256-voP3sbDhk+YDZKsGO8dpMGk9qzne1cf3f1CRgjwRnrk=" crossorigin="anonymous">
+    </script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    </script>
     </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
@@ -326,17 +1140,23 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"
-        integrity="sha256-HWJnMZHGx7U1jmNfxe4yaQedmpo/mtxWSIXvcJkLIf4=" crossorigin="anonymous"></script>
+        integrity="sha256-HWJnMZHGx7U1jmNfxe4yaQedmpo/mtxWSIXvcJkLIf4=" crossorigin="anonymous">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"
-        integrity="sha256-ht8ay6ZTPZfuixYB99I5oRpCLsCq7Do2LjEYLwbe+X8=" crossorigin="anonymous"></script>
+        integrity="sha256-ht8ay6ZTPZfuixYB99I5oRpCLsCq7Do2LjEYLwbe+X8=" crossorigin="anonymous">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/command-line/prism-command-line.min.js"
-        integrity="sha256-pySw63TmypHJ7LQU3ycJreLDfrxg59cI+famzPcGH5Q=" crossorigin="anonymous"></script>
+        integrity="sha256-pySw63TmypHJ7LQU3ycJreLDfrxg59cI+famzPcGH5Q=" crossorigin="anonymous">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-numbers/prism-line-numbers.min.js"
-        integrity="sha256-hep5s8952MqR7Y79JYfCXZD6vQjVHs7sOu/ZGrs1OEQ=" crossorigin="anonymous"></script>
+        integrity="sha256-hep5s8952MqR7Y79JYfCXZD6vQjVHs7sOu/ZGrs1OEQ=" crossorigin="anonymous">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/toolbar/prism-toolbar.min.js"
-        integrity="sha256-SyBDbq8Z29N+/5vK9bf2HpTtvAEGUIiLKw0iepvhLQg=" crossorigin="anonymous"></script>
+        integrity="sha256-SyBDbq8Z29N+/5vK9bf2HpTtvAEGUIiLKw0iepvhLQg=" crossorigin="anonymous">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-highlight/prism-line-highlight.min.js"
-        integrity="sha256-i1I0MEGBEKKEtBLlagkEPdef5OGDQEUdcjCPYo47a3Y=" crossorigin="anonymous"></script>
+        integrity="sha256-i1I0MEGBEKKEtBLlagkEPdef5OGDQEUdcjCPYo47a3Y=" crossorigin="anonymous">
+    </script>
     <script src="index.js">
     </script>
 </body>

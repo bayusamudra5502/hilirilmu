@@ -1,4 +1,11 @@
 $(document).ready(function () {
+    // Main Init
+    twemoji.parse(document.body, {
+        callback: function (icon, options) {
+            return ''.concat(options.base, options.size, '/', icon, options.ext);
+        }
+    });
+
     // Header Trigger 
     $("#cari-trig").click(function () {
         $("#cari-list-trig").hide();
@@ -17,6 +24,12 @@ $(document).ready(function () {
             scrollTop: $("#pencarian").offset().top
         }, 2000);
     });
+
+    $(".goToTopik").click(function () {
+        $("html,body").animate({
+            scrollTop: $("#topik").offset().top
+        }, 2000);
+    })
 
     $("#materiALjabar").click(function () {
         window.location.href = "#aljabar";

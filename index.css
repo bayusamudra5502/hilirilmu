@@ -31,6 +31,28 @@ h6 {
     font-weight: 600;
 }
 
+h1>a,
+h2>a,
+h3>a,
+h4>a,
+h5>a,
+h6>a {
+    color: #2c2c5f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+h1>a:hover,
+h2>a:hover,
+h3>a:hover,
+h4>a:hover,
+h5>a:hover,
+h6>a:hover {
+    color: #706fd3;
+    text-decoration: none;
+    font-weight: 600;
+}
+
 .text-light h1,
 .text-light h2,
 .text-light h3,
@@ -38,6 +60,86 @@ h6 {
 .text-light h5,
 .text-light h6 {
     color: #fff;
+}
+
+
+.circle-img {
+    height: 3rem;
+    width: 3rem;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+}
+
+.c-author {
+    font-weight: 600;
+}
+
+.c-calendar {
+    font-weight: 200;
+}
+
+.bookmark {
+    font-size: 2rem;
+}
+
+.bookmark>a {
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.card-column {
+    column-count: 1;
+}
+
+@media only screen and (min-width:768px) {
+    .card-column {
+        column-count: 2;
+    }
+}
+
+@media only screen and (min-width:992px) {
+    .card-column {
+        column-count: 3;
+    }
+}
+
+.card {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.team {
+    width: 5rem;
+    height: 5rem;
+    background-position: center;
+    background-size: cover;
+}
+
+@media only screen and (min-width:992px) {
+    .team {
+        width: 10rem;
+        height: 10rem;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+
+.jabatan {
+    font-weight: 600;
+}
+
+footer {
+    background-color: #2d4059;
+    color: white;
+    text-align: center;
+}
+
+img.emoji {
+    height: 1em;
+    width: 1em;
+    margin: 0 .05em 0 .1em;
+    vertical-align: -0.1em;
 }
 
 /* END OF GLOBAL */
