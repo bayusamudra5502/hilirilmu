@@ -6,6 +6,22 @@ $(document).ready(function () {
         }
     });
 
+    window.onscroll = function () {
+        if ($("body").scrollTop > 20 ||
+            document.documentElement.scrollTop > 20 ||
+            document.body.scrollTop > 20) {
+            $("#goToUp").fadeIn("slow");
+        } else {
+            $("#goToUp").fadeOut("slow");
+        }
+    };
+
+    $("#goToUp").click(function () {
+        $("html,body").animate({
+            scrollTop: 0
+        }, 2000);
+    });
+
     // Header Trigger 
     $("#cari-trig").click(function () {
         $("#cari-list-trig").hide();
