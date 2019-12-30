@@ -1,3 +1,8 @@
+// DATABASE
+var team = {
+    "Bayu Samudra": ["Founder", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo velit est similique ut praesentium laborum quae ratione. Fuga eum dolor reiciendis? Excepturi quis ratione, repellendus enim illo asperiores. Tempora, ea?"]
+}
+
 $(document).ready(function () {
     $("#goToUp").toggleClass("d-none");
     $("#goToUp").hide();
@@ -102,15 +107,28 @@ $(document).ready(function () {
         $("#kolomKomentar").focus();
     });
 
+    if ($("#namaPenulis").length > 0) {
+        $("#share").children("span").toggleClass("d-none");
+        $("#waktuBaca").text(lamaBaca("#jumlahKata"));
+    }
+
+    if ($("#namaPenulis").length > 0) {
+        $("#jabatanPenulis").text(team[$("#namaPenulis").text()][0]);
+        $("#keteranganPenulis").text(team[$("#namaPenulis").text()][1]);
+    }
+
     // FREE THE FREEZE
     $("body").toggleClass("noscroll");
     $("#coverLoadingPage").fadeOut("slow");
-
-    $("#share").children("span").toggleClass("d-none");
 });
 
 function goto(identiifier) {
     $("html,body").animate({
         scrollTop: $(identiifier).offset().top
     }, 2000);
+}
+
+function lamaBaca(cntTag) {
+    var value = $(cntTag).text();
+    return Math.ceil(value / 180);
 }

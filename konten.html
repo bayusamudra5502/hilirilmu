@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <b:include data='blog' name='google-analytics' />
+
     <!-- Style -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
         integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
@@ -33,7 +35,8 @@
             integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
     <![endif]-->
 
-    <title>Halaman Utama | HIlir Ilmu</title>
+    <title>
+        <data:blog.pageTitle /> | HIlir Ilmu</title>
 </head>
 
 <body class="noscroll">
@@ -63,7 +66,8 @@
                     <div class="offset-md-1 offset-lg-0 mr-lg-4"></div>
                     <div class="col">
                         <h1 class="mb-2">Oopss...</h1>
-                        <p class="mb-4">Maaf kamu tidak bisa melanjutkan menelusuri Hilir Ilmu jika Javascriptmu tidak
+                        <p class="mb-4">Maaf kamu tidak bisa melanjutkan menelusuri Hilir Ilmu jika Javascriptmu
+                            tidak
                             dinyalakan..
                         </p>
                         <p class="text-muted">Kesalahan : Javascript was blocked.</p>
@@ -93,7 +97,7 @@
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdown-Produk" data-toggle="dropdown"
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown-Artikel" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">Artikel</a>
                             <div class="dropdown-menu" aria-labelledby="dropdownId">
                                 <a class="dropdown-item goToTopik" href="#">Matematika</a>
@@ -118,7 +122,7 @@
 
                         <li class="nav-item" id="cari-list-trig">
                             <a class="nav-link" id="cari-trig" href="#"><i class="fa fa-search fa-fw">
-                                    <div class="sr-only">Cari</div>
+                                    <span class="sr-only">Cari</span>
                                 </i></a>
                         </li>
                     </ul>
@@ -136,7 +140,7 @@
     <div class="goTop-container">
         <button class="btn btn-dark d-none" id="goToUp" title="Ke Atas">
             <i class="fa fa-chevron-up"></i>
-            <div class="sr-only">Ke Atas</div>
+            <span class="sr-only">Ke Atas</span>
         </button>
     </div>
 
@@ -169,7 +173,9 @@
                                 <div class="offset-1 offset-md-0"></div>
                                 <div class="col pl-lg-4 pl-md-5">
                                     <p class="text-muted c-author mb-0">Bayu Samudra</p>
-                                    <small class="text-muted c-calendar mt-0">28 Desember 2019 • 2 menit dibaca</small>
+                                    <small class="text-muted c-calendar mt-0">28 Desember 2019 • <span
+                                            id="waktuBaca"></span> menit
+                                        dibaca</small>
                                 </div>
                                 <div class="col-1 d-flex item-align-center">
                                     <!-- AddToAny BEGIN -->
@@ -186,6 +192,7 @@
                         <!-- ============================================================ -->
                         <!-- BLOG CONTENT -->
                         <div class="isi-konten">
+                            <span id="jumlahKata" class="d-none">2000</span>
                             <blockquote>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptates minus ad
                                 reiciendis tenetur at culpa, dolores labore harum itaque, facilis quidem sapiente quos,
@@ -263,16 +270,9 @@
                                     <div class="mr-4 team rounded-circle d-md-block d-none"
                                         style="background-image: url('img/bamboo.png');"></div>
                                     <div class="media-body">
-                                        <h5 class="card-title">Bayu Samudra</h5>
-                                        <p class="text-muted jabatan">Founder</p>
-                                        <p class="card-text">Cras sit amet nibh libero, in gravida nulla. Nulla vel
-                                            metus
-                                            scelerisque ante
-                                            sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus
-                                            viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
-                                            Donec
-                                            lacinia
-                                            congue felis in faucibus.</p>
+                                        <h5 class="card-title" id="namaPenulis">Bayu Samudra</h5>
+                                        <p class="text-muted jabatan" id="jabatanPenulis"></p>
+                                        <p class="card-text" id="keteranganPenulis"></p>
                                     </div>
                                 </div>
                             </div>

@@ -28,11 +28,394 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-highlight/prism-line-highlight.min.css"
         integrity="sha256-FFGTaA49ZxFi2oUiWjxtTBqoda+t1Uw8GffYkdt9aco=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="index.css" />
 
-    <style>
+  <b:skin>
+    <![CDATA[
+      
+      
+/* GLOBAL STYLE */
+.err {
+    width: 10rem;
+}
 
-    </style>
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar-utama {
+    background-color: #2c2c5f;
+}
+
+.navbar-toggler {
+    border: 0;
+}
+
+.dropdown-item:active {
+    background-color: transparent;
+    color: inherit;
+}
+
+#searchbox {
+    width: 100%;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #2c2c5f;
+    font-weight: 600;
+}
+
+h1>a,
+h2>a,
+h3>a,
+h4>a,
+h5>a,
+h6>a {
+    color: #2c2c5f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+h1>a:hover,
+h2>a:hover,
+h3>a:hover,
+h4>a:hover,
+h5>a:hover,
+h6>a:hover {
+    color: #706fd3;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.text-light h1,
+.text-light h2,
+.text-light h3,
+.text-light h4,
+.text-light h5,
+.text-light h6 {
+    color: #fff;
+}
+
+
+.circle-img {
+    height: 3rem;
+    width: 3rem;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+}
+
+.c-author {
+    font-weight: 600;
+}
+
+.c-calendar {
+    font-weight: 200;
+}
+
+.bookmark {
+    font-size: 2rem;
+}
+
+.bookmark>a,
+.text-muted-super {
+    color: rgba(0, 0, 0, 0.25) !important;
+}
+
+a.kategori {
+    display: inline-block;
+    border-radius: .75em;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.15) !important;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: .75em;
+    font-weight: 600;
+    padding: .187em .375em;
+}
+
+a.kategori:hover {
+    background-color: rgba(0, 0, 0, 0.25) !important;
+    color: rgba(0, 0, 0, 0.75);
+    text-decoration: none;
+}
+
+.card-column {
+    column-count: 1;
+}
+
+@media only screen and (min-width:768px) {
+    .card-column {
+        column-count: 2;
+    }
+
+    .error-logo {
+        font-size: 3em;
+    }
+}
+
+@media only screen and (min-width:992px) {
+    .card-column {
+        column-count: 3;
+    }
+
+    .error-logo {
+        font-size: 4em;
+    }
+}
+
+.card {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.team {
+    width: 5rem;
+    height: 5rem;
+    background-position: center;
+    background-size: cover;
+}
+
+@media only screen and (min-width:992px) {
+    .team {
+        width: 10rem;
+        height: 10rem;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+
+.jabatan {
+    font-weight: 600;
+}
+
+footer {
+    background-color: #2d4059;
+    color: white;
+    text-align: center;
+}
+
+img.emoji {
+    height: 1em;
+    width: 1em;
+    margin: 0 .05em 0 .1em;
+    vertical-align: -0.1em;
+}
+
+.goTop-container {
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    z-index: 900;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: ">";
+}
+
+
+.breadcrumb {
+    background-color: transparent;
+    font-size: .8rem;
+    padding-left: 0;
+    margin-bottom: .5rem;
+}
+
+article {
+    margin-bottom: 3rem;
+}
+
+.isi-konten blockquote {
+    font-weight: 300;
+    padding-left: 1rem;
+    border-left: #2d4059 solid .25rem;
+}
+
+.isi-konten blockquote cite {
+    font-size: 1rem;
+    display: block;
+    text-align: right;
+}
+
+.isi-konten blockquote cite::before {
+    content: "—   ";
+}
+
+.isi-konten img {
+    margin: 1rem 0;
+    width: 100%;
+}
+
+article .container {
+    padding-left: 0;
+}
+
+article h2 {
+    margin: 2rem 0 .5rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.point {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.isi-konten {
+    line-height: 2;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.komentar-box {
+    border: none;
+    resize: none;
+}
+
+.komentar {
+    cursor: text;
+}
+
+.pic-komentar {
+    width: 5rem;
+    height: 5rem;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.daftar {
+    width: 100%;
+    top: 20%;
+    position: fixed;
+    color: rgba(0, 0, 0, 0.5);
+    max-width: 10rem;
+    text-align: left;
+}
+
+.daftar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.daftar ul li {
+    display: block;
+    border-radius: .1rem;
+    margin: .15rem 0;
+}
+
+.daftar ul li:hover {
+    color: rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+}
+
+.share-bar a {
+    text-align: right;
+    font-size: 1.5em;
+    color: #2c2c5f;
+}
+
+.cover-error {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    opacity: 1;
+    background: #2c2c5f;
+    border-radius: 0px;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.error-message h1 {
+    color: #fff;
+}
+
+/* LOADING OVERLAY */
+
+.cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 999;
+    opacity: 1;
+    background: #fff;
+    border-radius: 4px;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.cover-noscript {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1000;
+    opacity: 1;
+    background: #fff;
+    border-radius: 4px;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.noscroll {
+    /* BODY OVERLAY */
+    overflow: hidden;
+}
+
+/* END OF GLOBAL */
+/* ============================================ */
+/* MAIN PAGE ONLY  */
+
+.flat {
+    background-color: #2c2c5f;
+    color: white;
+}
+
+.bq-awal {
+    font-size: 2rem;
+}
+
+
+@media only screen and (min-width:768px) {
+    .bq-awal {
+        font-size: 2.5rem;
+    }
+}
+
+
+.sec2 {
+    background-color: #22709f;
+}
+
+.btn-topik {
+    height: 5rem;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+.img-topik {
+    width: 2.5rem;
+}
+
+.text-vertical-center {
+    vertical-align: middle;
+    line-height: 3rem;
+}
+   ]]>
+    </b:skin>
 
     <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" 
@@ -43,6 +426,45 @@
 </head>
 
 <body class="noscroll">
+  		<b:section class='navbar' id='navbar' maxwidgets='1' showaddelement='no'>
+<b:widget id='Navbar1' locked='true' title='Navbar' type='Navbar'>
+  <b:includable id='main'>&lt;script type=&quot;text/javascript&quot;&gt;
+    function setAttributeOnload(object, attribute, val) {
+      if(window.addEventListener) {
+        window.addEventListener(&#39;load&#39;,
+          function(){ object[attribute] = val; }, false);
+      } else {
+        window.attachEvent(&#39;onload&#39;, function(){ object[attribute] = val; });
+      }
+    }
+  &lt;/script&gt;
+&lt;div id=&quot;navbar-iframe-container&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://apis.google.com/js/plusone.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+      gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
+        if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
+          gapi.iframes.getContext().openChild({
+              url: &#39;https://www.blogger.com/navbar.g?targetBlogID\x3d1908039930002163725\x26blogName\x3dHilir+Ilmu+(Arsip)\x26publishMode\x3dPUBLISH_MODE_BLOGSPOT\x26navbarType\x3dLIGHT\x26layoutType\x3dLAYOUTS\x26searchRoot\x3dhttps://arsip-hilirilmu.blogspot.com/search\x26blogLocale\x3din\x26v\x3d2\x26homepageUrl\x3dhttps://arsip-hilirilmu.blogspot.com/\x26readAccessMode\x3dPRIVATE\x26vt\x3d-5373565454425683363&#39;,
+              where: document.getElementById(&quot;navbar-iframe-container&quot;),
+              id: &quot;navbar-iframe&quot;
+          });
+        }
+      });
+    &lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt;
+(function() {
+var script = document.createElement(&#39;script&#39;);
+script.type = &#39;text/javascript&#39;;
+script.src = &#39;//pagead2.googlesyndication.com/pagead/js/google_top_exp.js&#39;;
+var head = document.getElementsByTagName(&#39;head&#39;)[0];
+if (head) {
+head.appendChild(script);
+}})();
+&lt;/script&gt;
+</b:includable>
+</b:widget>
+</b:section>
+
+  
     <div class="cover" id="coverLoadingPage">
         <div class="container text-center">
             <div class="row">
@@ -581,8 +1003,142 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-highlight/prism-line-highlight.min.js"
         integrity="sha256-i1I0MEGBEKKEtBLlagkEPdef5OGDQEUdcjCPYo47a3Y=" crossorigin="anonymous">
     </script>
-    <script src="index.js">
-    </script>
+    <script>    <![CDATA[
+      // DATABASE
+var team = {
+    "Bayu Samudra": ["Founder", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo velit est similique ut praesentium laborum quae ratione. Fuga eum dolor reiciendis? Excepturi quis ratione, repellendus enim illo asperiores. Tempora, ea?"]
+}
+
+$(document).ready(function () {
+    $("#goToUp").toggleClass("d-none");
+    $("#goToUp").hide();
+
+    // Main Init
+    twemoji.parse(document.body, {
+        callback: function (icon, options) {
+            return ''.concat(options.base, options.size, '/', icon, options.ext);
+        }
+    });
+
+    $("#goToUp").click(function () {
+        $("html,body").animate({
+            scrollTop: 0
+        }, 2000);
+    });
+
+    // Header Trigger 
+    $("#cari-trig").click(function () {
+        $("#cari-list-trig").hide();
+        $("#cari").toggleClass("d-none");
+        $("#form-cari").focus();
+    });
+
+    $("#form-cari").blur(function () {
+        $("#cari-list-trig").fadeIn("slow");
+        $("#cari").toggleClass("d-none");
+    });
+
+    // Index Main
+    $("#btnToCari").click(function () {
+        $("html,body").animate({
+            scrollTop: $("#pencarian").offset().top
+        }, 2000);
+    });
+
+    $(".goToTopik").click(function () {
+        $("html,body").animate({
+            scrollTop: $("#topik").offset().top
+        }, 2000);
+    });
+
+    $("#materiALjabar").click(function () {
+        window.location.href = "#aljabar";
+    });
+
+    $("#materiMatdis").click(function () {
+        window.location.href = "#matdis";
+    });
+
+    $("#materiGeometri").click(function () {
+        window.location.href = "#geometri";
+    });
+
+    $("#materiLogika").click(function () {
+        window.location.href = "#logika";
+    });
+
+
+    $("#materiTeoBilr").click(function () {
+        window.location.href = "#teobil";
+    });
+
+    $("#materiStatistika").click(function () {
+        window.location.href = "#statistika";
+    });
+
+    $("#materiKalkulus").click(function () {
+        window.location.href = "#kalkulus";
+    });
+
+    $("#materiAlgoritma").click(function () {
+        window.location.href = "#algoritma";
+    });
+
+    $("#materiPemrograman").click(function () {
+        window.location.href = "#programming";
+    });
+
+    // Load Table of Content
+    $(".daftar").toggleClass("d-none");
+    $(".daftar").hide();
+
+    // $(".point").each(function () {
+    //     var txt = $(this).text();
+    //     $("#daftarIsi").append('<li onclick="goto(\'#' + $(this).attr("id") + '\')">' + txt + "</li>");
+    // });
+
+    window.onscroll = function () {
+        if ($("body").scrollTop > 20 ||
+            document.documentElement.scrollTop > 20 ||
+            document.body.scrollTop > 20) {
+            // $(".daftar").fadeIn("slow");
+            $("#goToUp").fadeIn("slow");
+        } else {
+            // $(".daftar").fadeOut("slow");
+            $("#goToUp").fadeOut("slow");
+        }
+    };
+
+    $("#badanKomentar").click(function () {
+        $("#kolomKomentar").focus();
+    });
+
+    if ($("#namaPenulis").length > 0) {
+        $("#share").children("span").toggleClass("d-none");
+        $("#waktuBaca").text(lamaBaca("#jumlahKata"));
+    }
+
+    if ($("#namaPenulis").length > 0) {
+        $("#jabatanPenulis").text(team[$("#namaPenulis").text()][0]);
+        $("#keteranganPenulis").text(team[$("#namaPenulis").text()][1]);
+    }
+
+    // FREE THE FREEZE
+    $("body").toggleClass("noscroll");
+    $("#coverLoadingPage").fadeOut("slow");
+});
+
+function goto(identiifier) {
+    $("html,body").animate({
+        scrollTop: $(identiifier).offset().top
+    }, 2000);
+}
+
+function lamaBaca(cntTag) {
+    var value = $(cntTag).text();
+    return Math.ceil(value / 180);
+}
+  ]]></script>
 </body>
 
 </html>
