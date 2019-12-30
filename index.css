@@ -25,6 +25,7 @@ body {
 }
 
 
+
 h1,
 h2,
 h3,
@@ -169,6 +170,91 @@ img.emoji {
     right: 3rem;
     bottom: 3rem;
     z-index: 900;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: ">";
+}
+
+
+.breadcrumb {
+    background-color: transparent;
+    font-size: .8rem;
+    padding-left: 0;
+    margin-bottom: .5rem;
+}
+
+article {
+    margin-bottom: 2rem;
+}
+
+.isi-konten blockquote {
+    font-weight: 300;
+    padding-left: 1rem;
+    border-left: #2d4059 solid .25rem;
+}
+
+.isi-konten blockquote cite {
+    font-size: 1rem;
+    display: block;
+    text-align: right;
+}
+
+.isi-konten blockquote cite::before {
+    content: "—   ";
+}
+
+.isi-konten img {
+    margin: 1rem 0;
+    width: 100%;
+}
+
+article .container {
+    padding-left: 0;
+}
+
+article h2 {
+    margin: 2rem 0 .5rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.isi-konten {
+    line-height: 2;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.daftar {
+    width: 100%;
+    top: 20%;
+    position: fixed;
+    color: rgba(0, 0, 0, 0.5);
+    max-width: 10rem;
+    text-align: left;
+}
+
+.daftar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.daftar ul li {
+    display: block;
+    border-radius: .1rem;
+    margin: .15rem 0;
+}
+
+.daftar ul li:hover {
+    color: rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+}
+
+.share-bar a {
+    text-align: right;
+    font-size: 1.5em;
+    color: #2c2c5f;
 }
 
 /* LOADING OVERLAY */

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+        integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.min.css"
+        integrity="sha256-77qGXu2p8NpfcBpTjw4jsMeQnz0vyh74f5do0cWjQ/Q=" crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/command-line/prism-command-line.css"
+        integrity="sha256-UvoA9bIYCYQkCMTYG5p2LM8ZpJmnC4G8k0oIc89nuQA=" crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-numbers/prism-line-numbers.min.css"
+        integrity="sha256-Afz2ZJtXw+OuaPX10lZHY7fN1+FuTE/KdCs+j7WZTGc=" crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/toolbar/prism-toolbar.min.css"
+        integrity="sha256-P45OhhEWm49G8sadt2n5rDaWLa3xZbDOQhJliuaojH0=" crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-highlight/prism-line-highlight.min.css"
+        integrity="sha256-FFGTaA49ZxFi2oUiWjxtTBqoda+t1Uw8GffYkdt9aco=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="index.css">
+
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" 
+            integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    <![endif]-->
+
+    <title>Halaman Utama | HIlir Ilmu</title>
+</head>
+
+<body class="noscroll">
+    <div class="cover" id="coverLoadingPage">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col mb-2">
+                    <img src="img/loading-logo-tidak-terhingga.gif" alt="Memuat Halaman">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p class="h1 mb-3">Tunggu sebentar..</p>
+                    <p class="h4 text-muted">Kita sedang meracik semuanya</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <noscript>
+        <div class="cover-noscript">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2 d-none d-md-block">
+                        <img src="img/no-entry.png" alt="Memuat Halaman" class="err">
+                    </div>
+                    <div class="offset-md-1 offset-lg-0 mr-lg-4"></div>
+                    <div class="col">
+                        <h1 class="mb-2">Oopss...</h1>
+                        <p class="mb-4">Maaf kamu tidak bisa melanjutkan menelusuri Hilir Ilmu jika Javascriptmu tidak
+                            dinyalakan..
+                        </p>
+                        <p class="text-muted">Kesalahan : Javascript was blocked.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </noscript>
+
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-sm navbar-dark navbar-utama mb-4">
+            <div class="container">
+                <a class="navbar-brand" href="#">Hilir Ilmu</a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navcol">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navcol">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0 navbar-right">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown-Produk" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Produk</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                <a class="dropdown-item" href="#">Buku</a>
+                                <a class="dropdown-item" href="#">Video Tutorial</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown-Produk" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Artikel</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                <a class="dropdown-item goToTopik" href="#">Matematika</a>
+                                <a class="dropdown-item goToTopik" href="#">Ilmu Komputer</a>
+                                <hr>
+                                <a class="dropdown-item" href="#">Materi SMP</a>
+                                <a class="dropdown-item" href="#">Materi SMA</a>
+                                <a class="dropdown-item" href="#">Materi Kuliah</a>
+                                <a class="dropdown-item" href="#">Materi Olimpiade</a>
+                                <hr>
+                                <a class="dropdown-item" href="#">Tips & Triks</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Kotak Saran</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Kontak</a>
+                        </li>
+
+                        <li class="nav-item" id="cari-list-trig">
+                            <a class="nav-link" id="cari-trig" href="#"><i class="fa fa-search fa-fw">
+                                    <div class="sr-only">Cari</div>
+                                </i></a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0 d-none" id="cari" method="GET" action="utama.html">
+                        <input class="form-control ml-sm-2" type="search" name="q" placeholder="Cari" id="form-cari"
+                            aria-label="Search">
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- END OF NAVBAR -->
+    </header>
+
+    <!-- Go To Top  -->
+    <div class="goTop-container">
+        <button class="btn btn-dark d-none" id="goToUp" title="Ke Atas">
+            <i class="fa fa-chevron-up"></i>
+            <div class="sr-only">Ke Atas</div>
+        </button>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-11 col-md-10 col-lg-8 mx-auto">
+                    <article>
+                        <div class="navigasi">
+                            <div class="container">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#">Utama</a></li>
+                                        <li class="breadcrumb-item"><a href="#">Kategori 1</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Judul Artikel</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <h1 class="mb-4">Judul Artikel</h1>
+
+                        <div class="container mb-2">
+                            <div class="row mb-1">
+                                <div class="col-1">
+                                    <div class="ml-1 circle-img rounded-circle"
+                                        style="background-image: url('img/bamboo.png');">
+                                    </div>
+                                </div>
+                                <div class="offset-1 offset-md-0"></div>
+                                <div class="col pl-lg-4 pl-md-5">
+                                    <p class="text-muted c-author mb-0">Bayu Samudra</p>
+                                    <small class="text-muted c-calendar mt-0">28 Desember 2019 • 2 menit dibaca</small>
+                                </div>
+                                <div class="col-1 d-flex item-align-center">
+                                    <!-- AddToAny BEGIN -->
+                                    <div class="a2a_kit a2a_kit_size_32 a2a_default_style share-bar">
+                                        <a class="a2a_dd" href="https://www.addtoany.com/share" id="share"><i
+                                                class="fa fa-share-alt"></i></a>
+                                    </div>
+                                    <script async src="https://static.addtoany.com/menu/page.js"></script>
+                                    <!-- AddToAny END -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ============================================================ -->
+                        <!-- BLOG CONTENT -->
+                        <div class="isi-konten">
+                            <blockquote>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptates minus ad
+                                reiciendis tenetur at culpa, dolores labore harum itaque, facilis quidem sapiente quos,
+                                adipisci iusto iste. Minus, cumque modi?
+                                <cite>Cita-cita</cite>
+                            </blockquote>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit fuga vel quo inventore
+                                reprehenderit rerum, aliquid accusantium eligendi ullam labore assumenda asperiores
+                                adipisci? Voluptate nemo, expedita exercitationem doloremque tempore rem.Fugiat mollitia
+                                minus nobis, magnam voluptatibus rerum inventore enim error ducimus aspernatur sunt
+                                necessitatibus sequi ipsam iste minima facilis modi beatae iure, sed quod. Dicta omnis
+                                quia rerum facilis maxime!</p>
+                            <p>Bacon ipsum dolor amet landjaeger salami drumstick, bacon brisket ham hock venison rump
+                                ground round short ribs meatloaf picanha filet mignon leberkas bresaola. Salami tail
+                                beef ribs sirloin, short loin doner turkey sausage kielbasa tri-tip corned beef t-bone
+                                pig bresaola venison. Tri-tip short loin buffalo meatloaf ham, kielbasa landjaeger
+                                porchetta shankle capicola beef prosciutto shank chicken jerky. Pig ribeye landjaeger,
+                                tri-tip tongue ham shoulder. Leberkas beef prosciutto pork, pig andouille cupim sausage
+                                kielbasa cow jerky ground round chicken alcatra short ribs. Landjaeger chuck spare ribs
+                                swine, ball tip corned beef tongue ham hock. Pancetta jerky filet mignon hamburger beef
+                                tail meatloaf pig.
+                            </p>
+                            <h2 class="point" id="sb-1">Sub Judul 1</h2>
+                            <img src="img/universe.jpg" alt="Universe">
+                            <p>Chislic doner rump sirloin pastrami biltong. Prosciutto chicken picanha, kevin sausage
+                                pancetta short ribs. Short ribs swine turkey, short loin shank chuck landjaeger sirloin
+                                ground round picanha salami tail. Hamburger kielbasa turkey tenderloin jowl ground
+                                round, beef boudin porchetta rump tongue flank andouille shoulder. Jowl strip steak
+                                fatback, picanha short ribs tail bacon leberkas pork filet mignon t-bone pork belly
+                                meatloaf.
+                            </p>
+                            <p>
+                                Turkey tri-tip pig filet mignon meatball cupim salami ham bacon ground round pork belly
+                                sausage swine. Biltong cow salami bacon. Brisket beef ribs kevin tongue venison, ball
+                                tip
+                                pastrami. Pig shankle meatball, pork bresaola shoulder corned beef biltong filet mignon
+                                landjaeger chuck meatloaf.
+                            </p>
+                            <p>
+                                T-bone capicola ground round meatball beef ribs brisket picanha filet mignon cupim
+                                venison biltong. Ball tip short ribs capicola shankle short loin sirloin. Meatloaf doner
+                                jowl andouille. Pork burgdoggen salami turducken, swine sausage pork belly. Picanha tail
+                                filet mignon, alcatra pork drumstick swine turducken flank shankle jerky meatloaf.
+                            </p>
+                            <p>
+                                Ball tip chislic strip steak, venison pork belly tenderloin bacon ham hock ground round
+                                pastrami flank kevin. Pork belly prosciutto corned beef shank ham jerky boudin kielbasa
+                                chuck beef ribs hamburger sausage. Burgdoggen picanha chicken doner, porchetta pork chop
+                                swine biltong turkey jerky. Jowl drumstick turducken swine pork belly buffalo porchetta
+                                ham picanha shoulder ground round.
+                            </p>
+                            <h2 class="point" id="sb-2">Sub Judul 2</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo laborum suscipit iure enim
+                                porro quaerat eveniet explicabo at cum consequuntur cupigoToTopm est exercitationem
+                                labore
+                                vel, animi fugiat quisquam.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores qui est autem fugit,
+                                voluptates recusandae, ad, delectus at aperiam quaerat dolor alias magnam rerum sunt
+                                doloremque dolorum. Cumque, voluptate fuga.
+                                Esse dignissimos assumenda similique, laudantium architecto consequuntur unde dolorem
+                                aliquid sint quas officia explicabo doloremque dolore soluta omnis! Nemo incidunt
+                                voluptatibus cupiditate magni repellendus consequatur. Inventore necessitatibus
+                                voluptatem saepe praesentium.
+                                Accusantium sint possimus obcaecati veritatis eligendi explicabo aut iste, earum minus
+                                consequuntur debitis! Sapiente, temporibus! A pariatur aut mollitia, facere aliquam
+                                inventore quia voluptatum deleniti sunt voluptas tempore iure minus.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 offset-md-1 offset-lg-0 col-lg">RIGHT</div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    Komentar
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="p-3 mb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col h6 mb-0">
+                    <p>Dibuat dengan ❤️ oleh Tim Hilir Ilmu.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Javascript Collection -->
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous">
+    </script>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.5.6/plyr.min.js"
+        integrity="sha256-voP3sbDhk+YDZKsGO8dpMGk9qzne1cf3f1CRgjwRnrk=" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    </script>
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"
+        integrity="sha256-HWJnMZHGx7U1jmNfxe4yaQedmpo/mtxWSIXvcJkLIf4=" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"
+        integrity="sha256-ht8ay6ZTPZfuixYB99I5oRpCLsCq7Do2LjEYLwbe+X8=" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/command-line/prism-command-line.min.js"
+        integrity="sha256-pySw63TmypHJ7LQU3ycJreLDfrxg59cI+famzPcGH5Q=" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-numbers/prism-line-numbers.min.js"
+        integrity="sha256-hep5s8952MqR7Y79JYfCXZD6vQjVHs7sOu/ZGrs1OEQ=" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/toolbar/prism-toolbar.min.js"
+        integrity="sha256-SyBDbq8Z29N+/5vK9bf2HpTtvAEGUIiLKw0iepvhLQg=" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-highlight/prism-line-highlight.min.js"
+        integrity="sha256-i1I0MEGBEKKEtBLlagkEPdef5OGDQEUdcjCPYo47a3Y=" crossorigin="anonymous">
+    </script>
+    <script src="index.js">
+    </script>
+</body>
+
+</html>

@@ -9,16 +9,6 @@ $(document).ready(function () {
         }
     });
 
-    window.onscroll = function () {
-        if ($("body").scrollTop > 20 ||
-            document.documentElement.scrollTop > 20 ||
-            document.body.scrollTop > 20) {
-            $("#goToUp").fadeIn("slow");
-        } else {
-            $("#goToUp").fadeOut("slow");
-        }
-    };
-
     $("#goToUp").click(function () {
         $("html,body").animate({
             scrollTop: 0
@@ -48,7 +38,7 @@ $(document).ready(function () {
         $("html,body").animate({
             scrollTop: $("#topik").offset().top
         }, 2000);
-    })
+    });
 
     $("#materiALjabar").click(function () {
         window.location.href = "#aljabar";
@@ -87,7 +77,36 @@ $(document).ready(function () {
         window.location.href = "#programming";
     });
 
+    // Load Table of Content
+    $(".daftar").toggleClass("d-none");
+    $(".daftar").hide();
+
+    // $(".point").each(function () {
+    //     var txt = $(this).text();
+    //     $("#daftarIsi").append('<li onclick="goto(\'#' + $(this).attr("id") + '\')">' + txt + "</li>");
+    // });
+
+    window.onscroll = function () {
+        if ($("body").scrollTop > 20 ||
+            document.documentElement.scrollTop > 20 ||
+            document.body.scrollTop > 20) {
+            // $(".daftar").fadeIn("slow");
+            $("#goToUp").fadeIn("slow");
+        } else {
+            // $(".daftar").fadeOut("slow");
+            $("#goToUp").fadeOut("slow");
+        }
+    };
+
     // FREE THE FREEZE
     $("body").toggleClass("noscroll");
     $("#coverLoadingPage").fadeOut("slow");
+
+    $("#share").children("span").toggleClass("d-none");
 });
+
+function goto(identiifier) {
+    $("html,body").animate({
+        scrollTop: $(identiifier).offset().top
+    }, 2000);
+}
