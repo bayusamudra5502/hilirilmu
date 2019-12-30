@@ -98,6 +98,10 @@ $(document).ready(function () {
         }
     };
 
+    $("#badanKomentar").click(function () {
+        $("#kolomKomentar").focus();
+    });
+
     // FREE THE FREEZE
     $("body").toggleClass("noscroll");
     $("#coverLoadingPage").fadeOut("slow");

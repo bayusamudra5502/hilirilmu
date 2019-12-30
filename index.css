@@ -185,7 +185,7 @@ img.emoji {
 }
 
 article {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .isi-konten blockquote {
@@ -219,11 +219,33 @@ article h2 {
     font-weight: 600;
 }
 
+.point {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
 .isi-konten {
     line-height: 2;
     font-size: 1rem;
     text-align: justify;
 }
+
+.komentar-box {
+    border: none;
+    resize: none;
+}
+
+.komentar {
+    cursor: text;
+}
+
+.pic-komentar {
+    width: 5rem;
+    height: 5rem;
+    background-position: center;
+    background-size: cover;
+}
+
 
 .daftar {
     width: 100%;
