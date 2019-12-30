@@ -118,11 +118,19 @@ a.kategori:hover {
     .card-column {
         column-count: 2;
     }
+
+    .error-logo {
+        font-size: 3em;
+    }
 }
 
 @media only screen and (min-width:992px) {
     .card-column {
         column-count: 3;
+    }
+
+    .error-logo {
+        font-size: 4em;
     }
 }
 
@@ -279,6 +287,24 @@ article h2 {
     color: #2c2c5f;
 }
 
+.cover-error {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    opacity: 1;
+    background: #2c2c5f;
+    border-radius: 0px;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.error-message h1 {
+    color: #fff;
+}
+
 /* LOADING OVERLAY */
 
 .cover {
@@ -324,8 +350,16 @@ article h2 {
 }
 
 .bq-awal {
-    font-weight: 300;
+    font-size: 2rem;
 }
+
+
+@media only screen and (min-width:768px) {
+    .bq-awal {
+        font-size: 2.5rem;
+    }
+}
+
 
 .sec2 {
     background-color: #22709f;
