@@ -204,6 +204,14 @@ article {
     border-left: #2d4059 solid .25rem;
 }
 
+@media only print {
+    .isi-konten blockquote {
+        padding-left: 0;
+        font-style: italic;
+        border: none;
+    }
+}
+
 .isi-konten blockquote cite {
     font-size: 1rem;
     display: block;
@@ -340,6 +348,10 @@ article h2 {
 .noscroll {
     /* BODY OVERLAY */
     overflow: hidden;
+}
+
+.d-print-img {
+    width: 5rem;
 }
 
 /* END OF GLOBAL */

@@ -46,40 +46,40 @@ $(document).ready(function () {
     });
 
     $("#materiALjabar").click(function () {
-        window.location.href = "#aljabar";
+        window.location.href = "/search/label/Aljabar";
     });
 
     $("#materiMatdis").click(function () {
-        window.location.href = "#matdis";
+        window.location.href = "/search/label/Matematika%20Diskrit";
     });
 
     $("#materiGeometri").click(function () {
-        window.location.href = "#geometri";
+        window.location.href = "/search/label/Geometri";
     });
 
     $("#materiLogika").click(function () {
-        window.location.href = "#logika";
+        window.location.href = "/search/label/Logika";
     });
 
 
     $("#materiTeoBilr").click(function () {
-        window.location.href = "#teobil";
+        window.location.href = "/search/label/Teori%20Bilangan";
     });
 
     $("#materiStatistika").click(function () {
-        window.location.href = "#statistika";
+        window.location.href = "/search/label/Statistika";
     });
 
     $("#materiKalkulus").click(function () {
-        window.location.href = "#kalkulus";
+        window.location.href = "/search/label/Kalkulus";
     });
 
     $("#materiAlgoritma").click(function () {
-        window.location.href = "#algoritma";
+        window.location.href = "/search/label/Algoritma";
     });
 
     $("#materiPemrograman").click(function () {
-        window.location.href = "#programming";
+        window.location.href = "/search/label/Programming";
     });
 
     // Load Table of Content

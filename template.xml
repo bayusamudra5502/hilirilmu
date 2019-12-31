@@ -1,16 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html lang='id' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<html lang='id'>
 
 <head>
     <meta charset='UTF-8'/>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
     <meta content='ie=edge' http-equiv='X-UA-Compatible'/>
 
+    <meta content='blogger' name='generator'/>
+    <link expr:href='data:blog.homepageUrl + &quot;favicon.ico&quot;' rel='icon' type='image/x-icon'/>
+    <link expr:href='data:blog.url' rel='canonical'/>
+    <link expr:href='data:blog.homepageUrl + &quot;feeds/posts/default&quot;' expr:title='data:blog.title + &quot; - Atom&quot;' rel='alternate' type='application/atom+xml'/>
+    <link expr:href='data:blog.homepageUrl + &quot;feeds/posts/default?alt=rss&quot;' expr:title='data:blog.title + &quot; - RSS&quot;' rel='alternate' type='application/rss+xml'/>
+    <link expr:href='&quot;http://www.blogger.com/feeds/&quot; + data:blog.blogId + &quot;/posts/default&quot;' expr:title='data:blog.title + &quot; - Atom&quot;' rel='alternate' type='application/atom+xml'/>
+    <link href='http://www.blogger.com/openid-server.g' rel='openid.server'/>
+    <link expr:href='data:blog.homepageUrl' rel='openid.delegate'/>
+    <b:if cond='data:blog.pageType == &quot;item&quot;'>
+        <b:if cond='data:blog.postImageThumbnailUrl'>
+            <link expr:href='data:blog.postImageThumbnailUrl' rel='image_src'/>
+        </b:if>
+
+        <b:if cond='data:blog.metaDescription != &quot;&quot;'>
+            <meta expr:content='data:blog.metaDescription' name='description'/>
+        <b:else/>
+            <meta expr:content='data:blog.pageName + &quot; - &quot; + data:blog.title' name='description'/>
+        </b:if>
+    </b:if>
+
+    <b:if cond='data:blog.url == data:blog.homepageUrl and data:blog.pageType == "index"'>
+        <title>Halaman Utama | HIlir Ilmu</title>
+    <b:elseif cond='data:blog.pageType == "error_page"'/>
+        <title>Halaman tidak ditemukan (404) | HIlir Ilmu</title>
+    <b:else/>
+        <title><data:blog.pageTitle /> | HIlir Ilmu></title>
+    </b:if>
+    
+
     <!-- Style -->
     <link crossorigin='anonymous' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' integrity='sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=' rel='stylesheet'/>
     <link href='https://fonts.googleapis.com/css?family%3DPoppins%3A300%2C400%2C600%26display%3Dswap' rel='stylesheet'/>
-    <!-- https%3A%2F%2Ffonts.googleapis.com%2Fcss%3F -->
     <link crossorigin='anonymous' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' rel='stylesheet'/>
     <link crossorigin='anonymous' href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.min.css' integrity='sha256-77qGXu2p8NpfcBpTjw4jsMeQnz0vyh74f5do0cWjQ/Q=' rel='stylesheet'/>
     <link crossorigin='anonymous' href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/command-line/prism-command-line.css' integrity='sha256-UvoA9bIYCYQkCMTYG5p2LM8ZpJmnC4G8k0oIc89nuQA=' rel='stylesheet'/>
@@ -18,401 +46,412 @@
     <link crossorigin='anonymous' href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/toolbar/prism-toolbar.min.css' integrity='sha256-P45OhhEWm49G8sadt2n5rDaWLa3xZbDOQhJliuaojH0=' rel='stylesheet'/>
     <link crossorigin='anonymous' href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-highlight/prism-line-highlight.min.css' integrity='sha256-FFGTaA49ZxFi2oUiWjxtTBqoda+t1Uw8GffYkdt9aco=' rel='stylesheet'/>
 
-  <b:skin><![CDATA[
-    @import url(https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap);
-      #navbar{
-		display:none;}
-      
-/* GLOBAL STYLE */
-.err {
-    width: 10rem;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
-.navbar-utama {
-    background-color: #2c2c5f;
-}
-
-.navbar-toggler {
-    border: 0;
-}
-
-.dropdown-item:active {
-    background-color: transparent;
-    color: inherit;
-}
-
-#searchbox {
-    width: 100%;
-}
-
-
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #2c2c5f;
-    font-weight: 600;
-}
-
-h1>a,
-h2>a,
-h3>a,
-h4>a,
-h5>a,
-h6>a {
-    color: #2c2c5f;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-h1>a:hover,
-h2>a:hover,
-h3>a:hover,
-h4>a:hover,
-h5>a:hover,
-h6>a:hover {
-    color: #706fd3;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.text-light h1,
-.text-light h2,
-.text-light h3,
-.text-light h4,
-.text-light h5,
-.text-light h6 {
-    color: #fff;
-}
-
-
-.circle-img {
-    height: 3rem;
-    width: 3rem;
-    background-position: center;
-    background-size: cover;
-    display: inline-block;
-}
-
-.c-author {
-    font-weight: 600;
-}
-
-.c-calendar {
-    font-weight: 200;
-}
-
-.bookmark {
-    font-size: 2rem;
-}
-
-.bookmark>a,
-.text-muted-super {
-    color: rgba(0, 0, 0, 0.25) !important;
-}
-
-a.kategori {
-    display: inline-block;
-    border-radius: .75em;
-    padding: 0;
-    background-color: rgba(0, 0, 0, 0.15) !important;
-    color: rgba(0, 0, 0, 0.5);
-    font-size: .75em;
-    font-weight: 600;
-    padding: .187em .375em;
-}
-
-a.kategori:hover {
-    background-color: rgba(0, 0, 0, 0.25) !important;
-    color: rgba(0, 0, 0, 0.75);
-    text-decoration: none;
-}
-
-.card-column {
-    column-count: 1;
-}
-
-@media only screen and (min-width:768px) {
-    .card-column {
-        column-count: 2;
-    }
-
-    .error-logo {
-        font-size: 3em;
-    }
-}
-
-@media only screen and (min-width:992px) {
-    .card-column {
-        column-count: 3;
-    }
-
-    .error-logo {
-        font-size: 4em;
-    }
-}
-
-.card {
-    display: inline-block;
-    margin-bottom: 1rem;
-}
-
-.team {
-    width: 5rem;
-    height: 5rem;
-    background-position: center;
-    background-size: cover;
-}
-
-@media only screen and (min-width:992px) {
-    .team {
-        width: 10rem;
-        height: 10rem;
-        background-position: center;
-        background-size: cover;
-    }
-}
-
-
-.jabatan {
-    font-weight: 600;
-}
-
-footer {
-    background-color: #2d4059;
-    color: white;
-    text-align: center;
-}
-
-img.emoji {
-    height: 1em;
-    width: 1em;
-    margin: 0 .05em 0 .1em;
-    vertical-align: -0.1em;
-}
-
-.goTop-container {
-    position: fixed;
-    right: 3rem;
-    bottom: 3rem;
-    z-index: 900;
-}
-
-.breadcrumb-item+.breadcrumb-item::before {
-    content: ">";
-}
-
-
-.breadcrumb {
-    background-color: transparent;
-    font-size: .8rem;
-    padding-left: 0;
-    margin-bottom: .5rem;
-}
-
-article {
-    margin-bottom: 3rem;
-}
-
-.isi-konten blockquote {
-    font-weight: 300;
-    padding-left: 1rem;
-    border-left: #2d4059 solid .25rem;
-}
-
-.isi-konten blockquote cite {
-    font-size: 1rem;
-    display: block;
-    text-align: right;
-}
-
-.isi-konten blockquote cite::before {
-    content: "—   ";
-}
-
-.isi-konten img {
-    margin: 1rem 0;
-    width: 100%;
-}
-
-article .container {
-    padding-left: 0;
-}
-
-article h2 {
-    margin: 2rem 0 .5rem 0;
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-.point {
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-.isi-konten {
-    line-height: 2;
-    font-size: 1rem;
-    text-align: justify;
-}
-
-.komentar-box {
-    border: none;
-    resize: none;
-}
-
-.komentar {
-    cursor: text;
-}
-
-.pic-komentar {
-    width: 5rem;
-    height: 5rem;
-    background-position: center;
-    background-size: cover;
-}
-
-
-.daftar {
-    width: 100%;
-    top: 20%;
-    position: fixed;
-    color: rgba(0, 0, 0, 0.5);
-    max-width: 10rem;
-    text-align: left;
-}
-
-.daftar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.daftar ul li {
-    display: block;
-    border-radius: .1rem;
-    margin: .15rem 0;
-}
-
-.daftar ul li:hover {
-    color: rgba(0, 0, 0, 0.75);
-    cursor: pointer;
-}
-
-.share-bar a {
-    text-align: right;
-    font-size: 1.5em;
-    color: #2c2c5f;
-}
-
-.cover-error {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: absolute;
-    align-items: center;
-    opacity: 1;
-    background: #2c2c5f;
-    border-radius: 0px;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.error-message h1 {
-    color: #fff;
-}
-
-/* LOADING OVERLAY */
-
-.cover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 999;
-    opacity: 1;
-    background: #fff;
-    border-radius: 4px;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.cover-noscript {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 1000;
-    opacity: 1;
-    background: #fff;
-    border-radius: 4px;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.noscroll {
-    /* BODY OVERLAY */
-    overflow: hidden;
-}
-
-/* END OF GLOBAL */
-/* ============================================ */
-/* MAIN PAGE ONLY  */
-
-.flat {
-    background-color: #2c2c5f;
-    color: white;
-}
-
-.bq-awal {
-    font-size: 2rem;
-}
-
-
-@media only screen and (min-width:768px) {
-    .bq-awal {
-        font-size: 2.5rem;
-    }
-}
-
-
-.sec2 {
-    background-color: #22709f;
-}
-
-.btn-topik {
-    height: 5rem;
-    font-size: 1.2rem;
-    font-weight: 200;
-}
-
-.img-topik {
-    width: 2.5rem;
-}
-
-.text-vertical-center {
-    vertical-align: middle;
-    line-height: 3rem;
-}
-   
-    ]]></b:skin>
+  <b:skin>
+        <![CDATA[
+            @import url(https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap);
+
+            /* GLOBAL STYLE */
+            .err {
+                width: 10rem;
+            }
+
+            body {
+                font-family: 'Poppins', sans-serif;
+            }
+
+            .navbar-utama {
+                background-color: #2c2c5f;
+            }
+
+            .navbar-toggler {
+                border: 0;
+            }
+
+            .dropdown-item:active {
+                background-color: transparent;
+                color: inherit;
+            }
+
+            #searchbox {
+                width: 100%;
+            }
+
+
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                color: #2c2c5f;
+                font-weight: 600;
+            }
+
+            h1>a,
+            h2>a,
+            h3>a,
+            h4>a,
+            h5>a,
+            h6>a {
+                color: #2c2c5f;
+                text-decoration: none;
+                font-weight: 600;
+            }
+
+            h1>a:hover,
+            h2>a:hover,
+            h3>a:hover,
+            h4>a:hover,
+            h5>a:hover,
+            h6>a:hover {
+                color: #706fd3;
+                text-decoration: none;
+                font-weight: 600;
+            }
+
+            .text-light h1,
+            .text-light h2,
+            .text-light h3,
+            .text-light h4,
+            .text-light h5,
+            .text-light h6 {
+                color: #fff;
+            }
+
+
+            .circle-img {
+                height: 3rem;
+                width: 3rem;
+                background-position: center;
+                background-size: cover;
+                display: inline-block;
+            }
+
+            .c-author {
+                font-weight: 600;
+            }
+
+            .c-calendar {
+                font-weight: 200;
+            }
+
+            .bookmark {
+                font-size: 2rem;
+            }
+
+            .bookmark>a,
+            .text-muted-super {
+                color: rgba(0, 0, 0, 0.25) !important;
+            }
+
+            a.kategori {
+                display: inline-block;
+                border-radius: .75em;
+                padding: 0;
+                background-color: rgba(0, 0, 0, 0.15) !important;
+                color: rgba(0, 0, 0, 0.5);
+                font-size: .75em;
+                font-weight: 600;
+                padding: .187em .375em;
+            }
+
+            a.kategori:hover {
+                background-color: rgba(0, 0, 0, 0.25) !important;
+                color: rgba(0, 0, 0, 0.75);
+                text-decoration: none;
+            }
+
+            .card-column {
+                column-count: 1;
+            }
+
+            @media only screen and (min-width:768px) {
+                .card-column {
+                    column-count: 2;
+                }
+
+                .error-logo {
+                    font-size: 3em;
+                }
+            }
+
+            @media only screen and (min-width:992px) {
+                .card-column {
+                    column-count: 3;
+                }
+
+                .error-logo {
+                    font-size: 4em;
+                }
+            }
+
+            .card {
+                display: inline-block;
+                margin-bottom: 1rem;
+            }
+
+            .team {
+                width: 5rem;
+                height: 5rem;
+                background-position: center;
+                background-size: cover;
+            }
+
+            @media only screen and (min-width:992px) {
+                .team {
+                    width: 10rem;
+                    height: 10rem;
+                    background-position: center;
+                    background-size: cover;
+                }
+            }
+
+
+            .jabatan {
+                font-weight: 600;
+            }
+
+            footer {
+                background-color: #2d4059;
+                color: white;
+                text-align: center;
+            }
+
+            img.emoji {
+                height: 1em;
+                width: 1em;
+                margin: 0 .05em 0 .1em;
+                vertical-align: -0.1em;
+            }
+
+            .goTop-container {
+                position: fixed;
+                right: 3rem;
+                bottom: 3rem;
+                z-index: 900;
+            }
+
+            .breadcrumb-item+.breadcrumb-item::before {
+                content: ">";
+            }
+
+
+            .breadcrumb {
+                background-color: transparent;
+                font-size: .8rem;
+                padding-left: 0;
+                margin-bottom: .5rem;
+            }
+
+            article {
+                margin-bottom: 3rem;
+            }
+
+            .isi-konten blockquote {
+                font-weight: 300;
+                padding-left: 1rem;
+                border-left: #2d4059 solid .25rem;
+            }
+
+            @media only print {
+                .isi-konten blockquote {
+                    padding-left: 0;
+                    font-style: italic;
+                    border: none;
+                }
+            }
+
+            .isi-konten blockquote cite {
+                font-size: 1rem;
+                display: block;
+                text-align: right;
+            }
+
+            .isi-konten blockquote cite::before {
+                content: "—   ";
+            }
+
+            .isi-konten img {
+                margin: 1rem 0;
+                width: 100%;
+            }
+
+            article .container {
+                padding-left: 0;
+            }
+
+            article h2 {
+                margin: 2rem 0 .5rem 0;
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+
+            .point {
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+
+            .isi-konten {
+                line-height: 2;
+                font-size: 1rem;
+                text-align: justify;
+            }
+
+            .komentar-box {
+                border: none;
+                resize: none;
+            }
+
+            .komentar {
+                cursor: text;
+            }
+
+            .pic-komentar {
+                width: 5rem;
+                height: 5rem;
+                background-position: center;
+                background-size: cover;
+            }
+
+
+            .daftar {
+                width: 100%;
+                top: 20%;
+                position: fixed;
+                color: rgba(0, 0, 0, 0.5);
+                max-width: 10rem;
+                text-align: left;
+            }
+
+            .daftar ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .daftar ul li {
+                display: block;
+                border-radius: .1rem;
+                margin: .15rem 0;
+            }
+
+            .daftar ul li:hover {
+                color: rgba(0, 0, 0, 0.75);
+                cursor: pointer;
+            }
+
+            .share-bar a {
+                text-align: right;
+                font-size: 1.5em;
+                color: #2c2c5f;
+            }
+
+            .cover-error {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                position: absolute;
+                align-items: center;
+                opacity: 1;
+                background: #2c2c5f;
+                border-radius: 0px;
+                margin: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .error-message h1 {
+                color: #fff;
+            }
+
+            /* LOADING OVERLAY */
+
+            .cover {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                z-index: 999;
+                opacity: 1;
+                background: #fff;
+                border-radius: 4px;
+                margin: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .cover-noscript {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                z-index: 1000;
+                opacity: 1;
+                background: #fff;
+                border-radius: 4px;
+                margin: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .noscroll {
+                /* BODY OVERLAY */
+                overflow: hidden;
+            }
+
+            .d-print-img {
+                width: 5rem;
+            }
+
+            /* END OF GLOBAL */
+            /* ============================================ */
+            /* MAIN PAGE ONLY  */
+
+            .flat {
+                background-color: #2c2c5f;
+                color: white;
+            }
+
+            .bq-awal {
+                font-size: 2rem;
+            }
+
+
+            @media only screen and (min-width:768px) {
+                .bq-awal {
+                    font-size: 2.5rem;
+                }
+            }
+
+
+            .sec2 {
+                background-color: #22709f;
+            }
+
+            .btn-topik {
+                height: 5rem;
+                font-size: 1.2rem;
+                font-weight: 200;
+            }
+
+            .img-topik {
+                width: 2.5rem;
+            }
+
+            .text-vertical-center {
+                vertical-align: middle;
+                line-height: 3rem;
+            }
+
+        ]]>
+    </b:skin>
 
     <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" 
             integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
     <![endif]-->
 
-    <title>Halaman Utama | HIlir Ilmu</title>
 </head>
 
 <body class='noscroll'>
@@ -454,6 +493,10 @@ article h2 {
 
     <header>
         <!-- Navbar -->
+        <b:section id="navbarHalaman" maxwidgets="1" showaddelement="no">
+             <b:widget id="Navbar1" locked="yes" type="Navbar" />
+        </b:section>
+
         <nav class='navbar navbar-expand-sm navbar-dark navbar-utama'>
             <div class='container'>
                 <a class='navbar-brand' href='#'>Hilir Ilmu</a>
@@ -499,7 +542,7 @@ article h2 {
                                 </i></a>
                         </li>
                     </ul>
-                    <form action='utama.html' class='form-inline my-2 my-lg-0 d-none' id='cari' method='GET'>
+                    <form action='/search' class='form-inline my-2 my-lg-0 d-none' id='cari' method='GET'>
                         <input aria-label='Search' class='form-control ml-sm-2' id='form-cari' name='q' placeholder='Cari' type='search'/>
                     </form>
                 </div>
@@ -545,7 +588,7 @@ article h2 {
                 </div>
                 <div class='row'>
                     <div class='col-12 col-md-10 mx-auto'>
-                        <form action='utama.html' class='form my-2' method='GET'>
+                        <form action='/search' class='form my-2' method='GET'>
                             <div class='input-group mb-3 input-group-lg'>
                                 <div class='input-group-prepend'>
                                     <span class='input-group-text bg-transparent border-right-0'><i class='fa fa-search fa-fw'>
@@ -904,7 +947,7 @@ article h2 {
     </script>
 
     <script src='https://polyfill.io/v3/polyfill.min.js?features=es6'/>
-    <script async='true' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'/>
+    <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'/>
     <script crossorigin='anonymous' integrity='sha256-voP3sbDhk+YDZKsGO8dpMGk9qzne1cf3f1CRgjwRnrk=' src='https://cdnjs.cloudflare.com/ajax/libs/plyr/3.5.6/plyr.min.js'>
     </script>
     <script crossorigin='anonymous' integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=' src='https://code.jquery.com/jquery-3.4.1.min.js'>
