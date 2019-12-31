@@ -1,3 +1,29 @@
+function fetch(str) {
+    var o = $(str);
+    var arr = new Array;
+    $(o.children()[6]).children().each(function (i, n) {
+        arr[i] = $(n).text();
+    });
+
+
+    var result = {
+        "title": $(o.children()[0]).text(),
+        "subTitle": $(o.children()[1]).text(),
+        "text": $(o.children()[2]).text(),
+        "author": {
+            "name": $($(o.children()[3]).children()[0]).text(),
+            "photoUrl": "https:" + $($(o.children()[3]).children()[1]).text(),
+            "profileUrl": $($(o.children()[3]).children()[2]).text()
+        },
+        "postTime": $(o.children()[4]).text(),
+        "link": $(o.children()[5]).text(),
+        "coverPicture": getChildFirstPicUrl((o.children()[7])),
+        "tags": arr
+    }
+
+    return result;
+}
+
 function goto(identiifier) {
     $("html,body").animate({
         scrollTop: $(identiifier).offset().top
@@ -39,7 +65,7 @@ function blok(judulArtikel, subtitleArtikel, teks,
 
     template += '';
     template += '<div class="row mb-1"><div class="col-1"><div class="ml-1 circle-img rounded-circle"';
-    template += 'style="background-image: url(\"' + author.photoUrl + '\");"></div></div>';
+    template += 'style="background-image: url(\'' + author.photoUrl + '\');"></div></div>';
     template += '<div class="offset-1"></div><div class="col-7 pl-4">';
     template += '<a  class="d-block text-muted c-author mb-1">' + author.name + '</a>';
     template += '<small class="text-muted c-calendar mt-0">' + postTime + '</small>';
@@ -52,7 +78,7 @@ function blok(judulArtikel, subtitleArtikel, teks,
 
 function mediaL(name, role, srcPic, about) {
     var template = '<div class="media mb-5"> <div class = "mr-4 team rounded-circle"' +
-        'style = "background-image: url(' + srcPic + ');" > </div> <' +
+        'style = "background-image: url(\'' + srcPic + '\');" > </div> <' +
         'div class = "media-body" > ';
 
     template += '<h5 class="mt-0">' + name + '</h5>' +
@@ -67,7 +93,7 @@ function mediaR(name, role, srcPic, about) {
         '<h5 class="mt-0">' + name + '</h5>' +
         '<p class="text-muted jabatan">' + role + '</p>' +
         '<p>' + about + '</p></div>' +
-        '<div class="ml-4 team rounded-circle" style="background-image: url(' + srcPic + ');"></div></div>';
+        '<div class="ml-4 team rounded-circle" style="background-image: url(\'' + srcPic + '\');"></div></div>';
 
     return template;
 }
@@ -194,14 +220,21 @@ $(document).ready(function () {
     }
 
     // POST LAUNCHER
+    var posts = new Array;
+    $("#main-contents").children().each(function (i, n) {
+        posts[i] = fetch(n)
+    });
+
+    $("#main-contents").remove();
+
     for (var a of posts) {
         $("#newArticle").append(blok(a.title, a.subTitle, a.text, a.author, a.postTime, a.link,
             (a.tags == undefined) ? [] : a.tags, (a.coverPicture == undefined) ? "" : a.coverPicture));
     }
 
 
-    $.getJSON("https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/database.json", function (obj) {
-        console.log("OK");
+
+    $.getJSON("https://raw.githubusercontent.com/bayusamudra5502/hilirilmu/master/database.json", function (obj) {
         for (var i = 0; i < obj.teams.length; i++) {
             $("#teams").append(!(i & 1) ? mediaL(obj.teams[i].name, obj.teams[i].role, obj.teams[i].img, obj
                     .teams[i].about) :
@@ -209,7 +242,6 @@ $(document).ready(function () {
                     obj.teams[i].role, obj.teams[i].img, obj.teams[i].about));
         }
     });
-
 
     // FREE THE FREEZE
     $("body").toggleClass("noscroll");

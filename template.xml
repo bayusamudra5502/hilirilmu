@@ -828,32 +828,288 @@
     <script crossorigin='anonymous' integrity='sha256-i1I0MEGBEKKEtBLlagkEPdef5OGDQEUdcjCPYo47a3Y=' src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-highlight/prism-line-highlight.min.js'>
     </script>
 
-    <script>
-            var posts = [
-            <b:loop var="post" values="data:posts">
-                 {
-                    "title": "<data:post.title/>",
-                    "subTitle": "Artikel",
-                    "text": "<data:post.snippet/>",
-                    "author": {
-                        "name": "<data:post.author/>",
-                        "photoUrl": "<data:post.authorPhoto.url/>",
-                        "profileUrl": "<data:post.authorProfileUrl/>"
-                    },
-                    "postTime": "<data:post.timestamp/>",
-                    "link": "<data:post.url/>",
-                    "coverPicture": getChildFirstPicUrl('<data:post.body/>'),
-                    "tags": [
-                        <b:loop var="label" values="data:post.labels">
-							<data:label.name/>,
-						</b:loop>
-                    ]
-                }
-			</b:loop>
-            ];
-    </script>
+````<b:section id="main" class="main" showaddelement="yes">
+````	<b:widget id="Blog1" locked="yes" type="Blog">
+````		<b:includable id="main">
+````            <div id="main-contents">
+````                        <b:loop var="post" values="data:posts">
+````                            <div>
+````                                <div><data:post.title/></div>
+````                                <div>Artikel</div>
+````                                <div><data:post.snippet/></div>
+````                                <div>
+````                                    <div><data:post.author/></div>
+````                                    <div><data:post.authorPhoto.url/></div>
+````                                    <div><data:post.authorProfileUrl/></div>
+````                                </div>
+````                                <div><data:post.timestamp/></div>
+````                                <div><data:post.url/></div>
+````                                <div>
+````                                        <b:loop var="label" values="data:post.labels">
+````							                <div><data:label.name/></div>
+````						                </b:loop>
+````                                </div>
+````                                <div><data:post.body/></div>
+````                            </div>
+````                        </b:loop>
+````                    </div>
+````		</b:includable>
+````	</b:widget>
+```` </b:section>
+                    
 
-    <script src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/index.js'/>
+
+    <script>
+    function fetch(str) {
+    var o = $(str);
+    var arr = new Array;
+    $(o.children()[6]).children().each(function (i, n) {
+        arr[i] = $(n).text();
+    });
+
+
+    var result = {
+        &#x22;title&#x22;: $(o.children()[0]).text(),
+        &#x22;subTitle&#x22;: $(o.children()[1]).text(),
+        &#x22;text&#x22;: $(o.children()[2]).text(),
+        &#x22;author&#x22;: {
+            &#x22;name&#x22;: $($(o.children()[3]).children()[0]).text(),
+            &#x22;photoUrl&#x22;: &#x22;https:&#x22; + $($(o.children()[3]).children()[1]).text(),
+            &#x22;profileUrl&#x22;: $($(o.children()[3]).children()[2]).text()
+        },
+        &#x22;postTime&#x22;: $(o.children()[4]).text(),
+        &#x22;link&#x22;: $(o.children()[5]).text(),
+        &#x22;coverPicture&#x22;: getChildFirstPicUrl((o.children()[7])),
+        &#x22;tags&#x22;: arr
+    }
+
+    return result;
+}
+
+function goto(identiifier) {
+    $(&#x22;html,body&#x22;).animate({
+        scrollTop: $(identiifier).offset().top
+    }, 2000);
+}
+
+function lamaBaca(cntTag) {
+    var value = $(cntTag).text();
+    return Math.ceil(value / 180);
+}
+
+function blok(obj) {
+    console.log(obj.postTime);
+
+    return blok(obj.title, obj.subTitle, obj.text, obj.author, obj.postTime, obj.link,
+        (obj.tags == undefined) ? [] : obj.tags, (obj.coverPicture == undefined) ? &#x22;&#x22; : obj.coverPicture);
+
+}
+
+function blok(judulArtikel, subtitleArtikel, teks,
+    author, postTime, link, tags = [], srcPicture = &#x22;&#x22;) {
+
+    var template = &#x27;&#x3C;div class=&#x22;card shadow&#x22; style=&#x22;min-width: 18rem;&#x22;&#x3E;&#x27;;
+    template += (srcPicture != &#x22;&#x22;) ? &#x27;&#x3C;img src=&#x22;&#x27; + srcPicture + &#x27;&#x22; class=&#x22;card-img-top&#x22; alt=&#x22;Universe&#x22; /&#x3E;&#x27; : &#x22;&#x22;;
+    template += &#x27;&#x3C;div class=&#x22;card-body&#x22;&#x3E; &#x3C;div class=&#x22;container&#x22;&#x3E;&#x3C;div class=&#x22;row mb-1&#x22;&#x3E; &#x3C;div class=&#x22;col&#x22;&#x3E;&#x27;;
+    template += &#x27; &#x3C;h5 class=&#x22;card-title text-dark&#x22;&#x3E; &#x3C;a href=&#x22;&#x27; + link + &#x27;&#x22;&#x3E;&#x27; + judulArtikel + &#x27;&#x3C;/a&#x3E;&#x3C;/h5&#x3E;&#x27;;
+    template += &#x27;&#x3C;h6 class=&#x22;card-subtitle mb-2 text-muted&#x22;&#x3E;&#x27; + subtitleArtikel + &#x27;&#x3C;/h6&#x3E;&#x27;;
+    template += &#x27; &#x3C;/div&#x3E;&#x3C;/div&#x3E;&#x3C;div class=&#x22;row mb-3&#x22;&#x3E;&#x3C;div class=&#x22;col&#x22;&#x3E;&#x3C;p class=&#x22;card-text text-justify&#x22;&#x3E;&#x27;;
+    template += teks;
+    template += &#x27;&#x3C;/p&#x3E;&#x3C;/div&#x3E;&#x3C;/div&#x3E;&#x3C;div class=&#x22;row mb-3&#x22;&#x3E;&#x27;;
+
+    if (tags.length &#x3E; 0) {
+        template += &#x27;&#x3C;div class=&#x22;col-1 h4&#x22;&#x3E;&#x3C;i class=&#x22;fas fa-tag text-muted-super&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/div&#x3E;&#x3C;div class=&#x22;col ml-1&#x22;&#x3E;&#x3C;p class=&#x22;card-text text-justify&#x22;&#x3E;&#x27;;
+        for (var i of tags) {
+            template += &#x27; &#x3C;a class=&#x22;kategori&#x22; href=&#x22;&#x27; + encodeURI(&#x27;/search/label/&#x27; + i) + &#x27;&#x22;&#x3E;&#x27; + i + &#x27;&#x3C;/a&#x3E;&#x27;;
+        }
+        template += &#x27;&#x3C;/p&#x3E;&#x3C;/div&#x3E;&#x3C;/div&#x3E;&#x27;;
+    }
+
+    template += &#x27;&#x27;;
+    template += &#x27;&#x3C;div class=&#x22;row mb-1&#x22;&#x3E;&#x3C;div class=&#x22;col-1&#x22;&#x3E;&#x3C;div class=&#x22;ml-1 circle-img rounded-circle&#x22;&#x27;;
+    template += &#x27;style=&#x22;background-image: url(\&#x27;&#x27; + author.photoUrl + &#x27;\&#x27;);&#x22;&#x3E;&#x3C;/div&#x3E;&#x3C;/div&#x3E;&#x27;;
+    template += &#x27;&#x3C;div class=&#x22;offset-1&#x22;&#x3E;&#x3C;/div&#x3E;&#x3C;div class=&#x22;col-7 pl-4&#x22;&#x3E;&#x27;;
+    template += &#x27;&#x3C;a  class=&#x22;d-block text-muted c-author mb-1&#x22;&#x3E;&#x27; + author.name + &#x27;&#x3C;/a&#x3E;&#x27;;
+    template += &#x27;&#x3C;small class=&#x22;text-muted c-calendar mt-0&#x22;&#x3E;&#x27; + postTime + &#x27;&#x3C;/small&#x3E;&#x27;;
+    template += &#x27;  &#x3C;/div&#x3E;&#x3C;div class=&#x22;col-1 d-flex align-item-end&#x22;&#x3E;&#x3C;div class=&#x22;bookmark p-2 mx-auto&#x22;&#x3E;&#x27;;
+    template += &#x27;&#x3C;a href=&#x22;&#x27; + link + &#x27;&#x22;&#x3E;&#x3C;i class=&#x22;far fa-bookmark&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;div class=&#x22;sr-only&#x22;&#x3E;Pergi ke laman&#x3C;/div&#x3E;&#x3C;/a&#x3E; &#x3C;/div&#x3E;&#x27;;
+    template += &#x27;&#x3C;/div&#x3E;&#x3C;/div&#x3E;&#x3C;/div&#x3E;&#x3C;/div&#x3E;&#x3C;/div&#x3E;&#x27;;
+
+    return template;
+}
+
+function mediaL(name, role, srcPic, about) {
+    var template = &#x27;&#x3C;div class=&#x22;media mb-5&#x22;&#x3E; &#x3C;div class = &#x22;mr-4 team rounded-circle&#x22;&#x27; +
+        &#x27;style = &#x22;background-image: url(\&#x27;&#x27; + srcPic + &#x27;\&#x27;);&#x22; &#x3E; &#x3C;/div&#x3E; &#x3C;&#x27; +
+        &#x27;div class = &#x22;media-body&#x22; &#x3E; &#x27;;
+
+    template += &#x27;&#x3C;h5 class=&#x22;mt-0&#x22;&#x3E;&#x27; + name + &#x27;&#x3C;/h5&#x3E;&#x27; +
+        &#x27;&#x3C;p class=&#x22;text-muted jabatan&#x22;&#x3E;&#x27; + role + &#x27;&#x3C;/p&#x3E;&#x27; +
+        &#x27;&#x3C;p&#x3E;&#x27; + about + &#x27;&#x3C;/p&#x3E;&#x3C;/div&#x3E;&#x3C;/div&#x3E;&#x27;;
+
+    return template;
+}
+
+function mediaR(name, role, srcPic, about) {
+    var template = &#x27;&#x3C;div class=&#x22;media mb-5&#x22;&#x3E;&#x3C;div class=&#x22;media-body text-right mr-1&#x22;&#x3E;&#x27; +
+        &#x27;&#x3C;h5 class=&#x22;mt-0&#x22;&#x3E;&#x27; + name + &#x27;&#x3C;/h5&#x3E;&#x27; +
+        &#x27;&#x3C;p class=&#x22;text-muted jabatan&#x22;&#x3E;&#x27; + role + &#x27;&#x3C;/p&#x3E;&#x27; +
+        &#x27;&#x3C;p&#x3E;&#x27; + about + &#x27;&#x3C;/p&#x3E;&#x3C;/div&#x3E;&#x27; +
+        &#x27;&#x3C;div class=&#x22;ml-4 team rounded-circle&#x22; style=&#x22;background-image: url(\&#x27;&#x27; + srcPic + &#x27;\&#x27;);&#x22;&#x3E;&#x3C;/div&#x3E;&#x3C;/div&#x3E;&#x27;;
+
+    return template;
+}
+
+function getChildFirstPicUrl(txt) {
+    var o = $(&#x22;&#x3C;div&#x3E;&#x3C;/div&#x3E;&#x22;);
+    o.html(txt);
+
+    return $(&#x22;img&#x22;, o).attr(&#x22;src&#x22;);
+}
+
+$(document).ready(function () {
+    $(&#x22;#goToUp&#x22;).toggleClass(&#x22;d-none&#x22;);
+    $(&#x22;#goToUp&#x22;).hide();
+
+    // Main Init
+    twemoji.parse(document.body, {
+        callback: function (icon, options) {
+            return &#x27;&#x27;.concat(options.base, options.size, &#x27;/&#x27;, icon, options.ext);
+        }
+    });
+
+    $(&#x22;#goToUp&#x22;).click(function () {
+        $(&#x22;html,body&#x22;).animate({
+            scrollTop: 0
+        }, 2000);
+    });
+
+    // Header Trigger 
+    $(&#x22;#cari-trig&#x22;).click(function () {
+        $(&#x22;#cari-list-trig&#x22;).hide();
+        $(&#x22;#cari&#x22;).toggleClass(&#x22;d-none&#x22;);
+        $(&#x22;#form-cari&#x22;).focus();
+    });
+
+    $(&#x22;#form-cari&#x22;).blur(function () {
+        $(&#x22;#cari-list-trig&#x22;).fadeIn(&#x22;slow&#x22;);
+        $(&#x22;#cari&#x22;).toggleClass(&#x22;d-none&#x22;);
+    });
+
+    // Index Main
+    $(&#x22;#btnToCari&#x22;).click(function () {
+        $(&#x22;html,body&#x22;).animate({
+            scrollTop: $(&#x22;#pencarian&#x22;).offset().top
+        }, 2000);
+    });
+
+    $(&#x22;.goToTopik&#x22;).click(function () {
+        $(&#x22;html,body&#x22;).animate({
+            scrollTop: $(&#x22;#topik&#x22;).offset().top
+        }, 2000);
+    });
+
+    $(&#x22;#materiALjabar&#x22;).click(function () {
+        window.location.href = &#x22;/search/label/Aljabar&#x22;;
+    });
+
+    $(&#x22;#materiMatdis&#x22;).click(function () {
+        window.location.href = &#x22;/search/label/Matematika%20Diskrit&#x22;;
+    });
+
+    $(&#x22;#materiGeometri&#x22;).click(function () {
+        window.location.href = &#x22;/search/label/Geometri&#x22;;
+    });
+
+    $(&#x22;#materiLogika&#x22;).click(function () {
+        window.location.href = &#x22;/search/label/Logika&#x22;;
+    });
+
+
+    $(&#x22;#materiTeoBilr&#x22;).click(function () {
+        window.location.href = &#x22;/search/label/Teori%20Bilangan&#x22;;
+    });
+
+    $(&#x22;#materiStatistika&#x22;).click(function () {
+        window.location.href = &#x22;/search/label/Statistika&#x22;;
+    });
+
+    $(&#x22;#materiKalkulus&#x22;).click(function () {
+        window.location.href = &#x22;/search/label/Kalkulus&#x22;;
+    });
+
+    $(&#x22;#materiAlgoritma&#x22;).click(function () {
+        window.location.href = &#x22;/search/label/Algoritma&#x22;;
+    });
+
+    $(&#x22;#materiPemrograman&#x22;).click(function () {
+        window.location.href = &#x22;/search/label/Programming&#x22;;
+    });
+
+    // Load Table of Content
+    $(&#x22;.daftar&#x22;).toggleClass(&#x22;d-none&#x22;);
+    $(&#x22;.daftar&#x22;).hide();
+
+    // $(&#x22;.point&#x22;).each(function () {
+    //     var txt = $(this).text();
+    //     $(&#x22;#daftarIsi&#x22;).append(&#x27;&#x3C;li onclick=&#x22;goto(\&#x27;#&#x27; + $(this).attr(&#x22;id&#x22;) + &#x27;\&#x27;)&#x22;&#x3E;&#x27; + txt + &#x22;&#x3C;/li&#x3E;&#x22;);
+    // });
+
+    window.onscroll = function () {
+        if ($(&#x22;body&#x22;).scrollTop &#x3E; 20 ||
+            document.documentElement.scrollTop &#x3E; 20 ||
+            document.body.scrollTop &#x3E; 20) {
+            // $(&#x22;.daftar&#x22;).fadeIn(&#x22;slow&#x22;);
+            $(&#x22;#goToUp&#x22;).fadeIn(&#x22;slow&#x22;);
+        } else {
+            // $(&#x22;.daftar&#x22;).fadeOut(&#x22;slow&#x22;);
+            $(&#x22;#goToUp&#x22;).fadeOut(&#x22;slow&#x22;);
+        }
+    };
+
+    $(&#x22;#badanKomentar&#x22;).click(function () {
+        $(&#x22;#kolomKomentar&#x22;).focus();
+    });
+
+    if ($(&#x22;#namaPenulis&#x22;).length &#x3E; 0) {
+        $(&#x22;#share&#x22;).children(&#x22;span&#x22;).toggleClass(&#x22;d-none&#x22;);
+        $(&#x22;#waktuBaca&#x22;).text(lamaBaca(&#x22;#jumlahKata&#x22;));
+    }
+
+    if ($(&#x22;#namaPenulis&#x22;).length &#x3E; 0) {
+        $(&#x22;#jabatanPenulis&#x22;).text(team[$(&#x22;#namaPenulis&#x22;).text()][0]);
+        $(&#x22;#keteranganPenulis&#x22;).text(team[$(&#x22;#namaPenulis&#x22;).text()][1]);
+    }
+
+    // POST LAUNCHER
+    var posts = new Array;
+    $(&#x22;#main-contents&#x22;).children().each(function (i, n) {
+        posts[i] = fetch(n)
+    });
+
+    $(&#x22;#main-contents&#x22;).remove();
+
+    for (var a of posts) {
+        $(&#x22;#newArticle&#x22;).append(blok(a.title, a.subTitle, a.text, a.author, a.postTime, a.link,
+            (a.tags == undefined) ? [] : a.tags, (a.coverPicture == undefined) ? &#x22;&#x22; : a.coverPicture));
+    }
+
+
+
+    $.getJSON(&#x22;https://raw.githubusercontent.com/bayusamudra5502/hilirilmu/master/database.json&#x22;, function (obj) {
+        for (var i = 0; i &#x3C; obj.teams.length; i++) {
+            $(&#x22;#teams&#x22;).append(!(i &#x26; 1) ? mediaL(obj.teams[i].name, obj.teams[i].role, obj.teams[i].img, obj
+                    .teams[i].about) :
+                mediaR(obj.teams[i].name,
+                    obj.teams[i].role, obj.teams[i].img, obj.teams[i].about));
+        }
+    });
+
+    // FREE THE FREEZE
+    $(&#x22;body&#x22;).toggleClass(&#x22;noscroll&#x22;);
+    $(&#x22;#coverLoadingPage&#x22;).fadeOut(&#x22;slow&#x22;);
+});
+    </script>
 </body>
 
 </html>
