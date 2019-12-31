@@ -73,7 +73,7 @@
 					text-decoration: underline;
 				}
 			
-		]]></b:skin></style>'/>
+		]]></b:skin></style>
 		<b:include data='blog' name='google-analytics'/>
 		<title>Developer Info - <data:blog.pageTitle/></title>
 	</head>
