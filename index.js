@@ -1,3 +1,84 @@
+function goto(identiifier) {
+    $("html,body").animate({
+        scrollTop: $(identiifier).offset().top
+    }, 2000);
+}
+
+function lamaBaca(cntTag) {
+    var value = $(cntTag).text();
+    return Math.ceil(value / 180);
+}
+
+function blok(obj) {
+    console.log(obj.postTime);
+
+    return blok(obj.title, obj.subTitle, obj.text, obj.author, obj.postTime, obj.link,
+        (obj.tags == undefined) ? [] : obj.tags, (obj.coverPicture == undefined) ? "" : obj.coverPicture);
+
+}
+
+function blok(judulArtikel, subtitleArtikel, teks,
+    author, postTime, link, tags = [], srcPicture = "") {
+
+    var template = '<div class="card shadow" style="min-width: 18rem;">';
+    template += (srcPicture != "") ? '<img src="' + srcPicture + '" class="card-img-top" alt="Universe" />' : "";
+    template += '<div class="card-body"> <div class="container"><div class="row mb-1"> <div class="col">';
+    template += ' <h5 class="card-title text-dark"> <a href="' + link + '">' + judulArtikel + '</a></h5>';
+    template += '<h6 class="card-subtitle mb-2 text-muted">' + subtitleArtikel + '</h6>';
+    template += ' </div></div><div class="row mb-3"><div class="col"><p class="card-text text-justify">';
+    template += teks;
+    template += '</p></div></div><div class="row mb-3">';
+
+    if (tags.length > 0) {
+        template += '<div class="col-1 h4"><i class="fas fa-tag text-muted-super"></i></div><div class="col ml-1"><p class="card-text text-justify">';
+        for (var i of tags) {
+            template += ' <a class="kategori" href="' + encodeURI('/search/label/' + i) + '">' + i + '</a>';
+        }
+        template += '</p></div></div>';
+    }
+
+    template += '';
+    template += '<div class="row mb-1"><div class="col-1"><div class="ml-1 circle-img rounded-circle"';
+    template += 'style="background-image: url(' + author.photoUrl + ');"></div></div>';
+    template += '<div class="offset-1"></div><div class="col-7 pl-4">';
+    template += '<a  class="d-block text-muted c-author mb-1">' + author.name + '</a>';
+    template += '<small class="text-muted c-calendar mt-0">' + postTime + '</small>';
+    template += '  </div><div class="col-1 d-flex align-item-end"><div class="bookmark p-2 mx-auto">';
+    template += '<a href="' + link + '"><i class="far fa-bookmark"></i><div class="sr-only">Pergi ke laman</div></a> </div>';
+    template += '</div></div></div></div></div>';
+
+    return template;
+}
+
+function mediaL(name, role, srcPic, about) {
+    var template = '<div class="media mb-5"> <div class = "mr-4 team rounded-circle"' +
+        'style = "background-image: url(' + srcPic + ');" > </div> <' +
+        'div class = "media-body" > ';
+
+    template += '<h5 class="mt-0">' + name + '</h5>' +
+        '<p class="text-muted jabatan">' + role + '</p>' +
+        '<p>' + about + '</p></div></div>';
+
+    return template;
+}
+
+function mediaR(name, role, srcPic, about) {
+    var template = '<div class="media mb-5"><div class="media-body text-right mr-1">' +
+        '<h5 class="mt-0">' + name + '</h5>' +
+        '<p class="text-muted jabatan">' + role + '</p>' +
+        '<p>' + about + '</p></div>' +
+        '<div class="ml-4 team rounded-circle" style="background-image: url(' + srcPic + ');"></div></div>';
+
+    return template;
+}
+
+function getChildFirstPicUrl(txt) {
+    var o = $("<div></div>");
+    o.html(txt);
+
+    return $("img", o).attr("src");
+}
+
 $(document).ready(function () {
     $("#goToUp").toggleClass("d-none");
     $("#goToUp").hide();
@@ -134,84 +215,3 @@ $(document).ready(function () {
     $("body").toggleClass("noscroll");
     $("#coverLoadingPage").fadeOut("slow");
 });
-
-function goto(identiifier) {
-    $("html,body").animate({
-        scrollTop: $(identiifier).offset().top
-    }, 2000);
-}
-
-function lamaBaca(cntTag) {
-    var value = $(cntTag).text();
-    return Math.ceil(value / 180);
-}
-
-function blok(obj) {
-    console.log(obj.postTime);
-
-    return blok(obj.title, obj.subTitle, obj.text, obj.author, obj.postTime, obj.link,
-        (obj.tags == undefined) ? [] : obj.tags, (obj.coverPicture == undefined) ? "" : obj.coverPicture);
-
-}
-
-function blok(judulArtikel, subtitleArtikel, teks,
-    author, postTime, link, tags = [], srcPicture = "") {
-
-    var template = '<div class="card shadow" style="min-width: 18rem;">';
-    template += (srcPicture != "") ? '<img src="' + srcPicture + '" class="card-img-top" alt="Universe" />' : "";
-    template += '<div class="card-body"> <div class="container"><div class="row mb-1"> <div class="col">';
-    template += ' <h5 class="card-title text-dark"> <a href="' + link + '">' + judulArtikel + '</a></h5>';
-    template += '<h6 class="card-subtitle mb-2 text-muted">' + subtitleArtikel + '</h6>';
-    template += ' </div></div><div class="row mb-3"><div class="col"><p class="card-text text-justify">';
-    template += teks;
-    template += '</p></div></div><div class="row mb-3">';
-
-    if (tags.length > 0) {
-        template += '<div class="col-1 h4"><i class="fas fa-tag text-muted-super"></i></div><div class="col ml-1"><p class="card-text text-justify">';
-        for (var i of tags) {
-            template += ' <a class="kategori" href="' + encodeURI('/search/label/' + i) + '">' + i + '</a>';
-        }
-        template += '</p></div></div>';
-    }
-
-    template += '';
-    template += '<div class="row mb-1"><div class="col-1"><div class="ml-1 circle-img rounded-circle"';
-    template += 'style="background-image: url(' + author.photoUrl + ');"></div></div>';
-    template += '<div class="offset-1"></div><div class="col-7 pl-4">';
-    template += '<a  class="d-block text-muted c-author mb-1">' + author.name + '</a>';
-    template += '<small class="text-muted c-calendar mt-0">' + postTime + '</small>';
-    template += '  </div><div class="col-1 d-flex align-item-end"><div class="bookmark p-2 mx-auto">';
-    template += '<a href="' + link + '"><i class="far fa-bookmark"></i><div class="sr-only">Pergi ke laman</div></a> </div>';
-    template += '</div></div></div></div></div>';
-
-    return template;
-}
-
-function mediaL(name, role, srcPic, about) {
-    var template = '<div class="media mb-5"> <div class = "mr-4 team rounded-circle"' +
-        'style = "background-image: url(' + srcPic + ');" > </div> <' +
-        'div class = "media-body" > ';
-
-    template += '<h5 class="mt-0">' + name + '</h5>' +
-        '<p class="text-muted jabatan">' + role + '</p>' +
-        '<p>' + about + '</p></div></div>';
-
-    return template;
-}
-
-function mediaR(name, role, srcPic, about) {
-    var template = '<div class="media mb-5"><div class="media-body text-right mr-1">' +
-        '<h5 class="mt-0">' + name + '</h5>' +
-        '<p class="text-muted jabatan">' + role + '</p>' +
-        '<p>' + about + '</p></div>' +
-        '<div class="ml-4 team rounded-circle" style="background-image: url(' + srcPic + ');"></div></div>';
-
-    return template;
-}
-
-function getChildFirstPicUrl(txt) {
-    var o = $("<div></div>");
-    o.html(txt);
-
-    return $("img", o).attr("src");
-}
