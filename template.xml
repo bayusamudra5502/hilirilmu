@@ -46,42 +46,36 @@
     <link crossorigin='anonymous' href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/toolbar/prism-toolbar.min.css' integrity='sha256-P45OhhEWm49G8sadt2n5rDaWLa3xZbDOQhJliuaojH0=' rel='stylesheet'/>
     <link crossorigin='anonymous' href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-highlight/prism-line-highlight.min.css' integrity='sha256-FFGTaA49ZxFi2oUiWjxtTBqoda+t1Uw8GffYkdt9aco=' rel='stylesheet'/>
 
-  <b:skin>
+    <b:skin>
         <![CDATA[
             @import url(https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap);
 
             /* GLOBAL STYLE */
-            a.text-muted:hover {
-                text-decoration: none;
-            }
-
             .err {
                 width: 10rem;
             }
-
+            
             body {
                 font-family: 'Poppins', sans-serif;
             }
-
+            
             .navbar-utama {
                 background-color: #2c2c5f;
             }
-
+            
             .navbar-toggler {
                 border: 0;
             }
-
+            
             .dropdown-item:active {
                 background-color: transparent;
                 color: inherit;
             }
-
+            
             #searchbox {
                 width: 100%;
-            }
-
-
-
+            }      
+            
             h1,
             h2,
             h3,
@@ -91,7 +85,7 @@
                 color: #2c2c5f;
                 font-weight: 600;
             }
-
+            
             h1>a,
             h2>a,
             h3>a,
@@ -102,7 +96,7 @@
                 text-decoration: none;
                 font-weight: 600;
             }
-
+            
             h1>a:hover,
             h2>a:hover,
             h3>a:hover,
@@ -113,7 +107,7 @@
                 text-decoration: none;
                 font-weight: 600;
             }
-
+            
             .text-light h1,
             .text-light h2,
             .text-light h3,
@@ -122,8 +116,8 @@
             .text-light h6 {
                 color: #fff;
             }
-
-
+            
+            
             .circle-img {
                 height: 3rem;
                 width: 3rem;
@@ -131,24 +125,24 @@
                 background-size: cover;
                 display: inline-block;
             }
-
+            
             .c-author {
                 font-weight: 600;
             }
-
+            
             .c-calendar {
                 font-weight: 200;
             }
-
+            
             .bookmark {
                 font-size: 2rem;
             }
-
+            
             .bookmark>a,
             .text-muted-super {
                 color: rgba(0, 0, 0, 0.25) !important;
             }
-
+            
             a.kategori {
                 display: inline-block;
                 border-radius: .75em;
@@ -159,49 +153,49 @@
                 font-weight: 600;
                 padding: .187em .375em;
             }
-
+            
             a.kategori:hover {
                 background-color: rgba(0, 0, 0, 0.25) !important;
                 color: rgba(0, 0, 0, 0.75);
                 text-decoration: none;
             }
-
+            
             .card-column {
                 column-count: 1;
             }
-
+            
             @media only screen and (min-width:768px) {
                 .card-column {
                     column-count: 2;
                 }
-
+            
                 .error-logo {
                     font-size: 3em;
                 }
             }
-
+            
             @media only screen and (min-width:992px) {
                 .card-column {
                     column-count: 3;
                 }
-
+            
                 .error-logo {
                     font-size: 4em;
                 }
             }
-
+            
             .card {
                 display: inline-block;
                 margin-bottom: 1rem;
             }
-
+            
             .team {
                 width: 5rem;
                 height: 5rem;
                 background-position: center;
                 background-size: cover;
             }
-
+            
             @media only screen and (min-width:992px) {
                 .team {
                     width: 10rem;
@@ -210,54 +204,54 @@
                     background-size: cover;
                 }
             }
-
-
+            
+            
             .jabatan {
                 font-weight: 600;
             }
-
+            
             footer {
                 background-color: #2d4059;
                 color: white;
                 text-align: center;
             }
-
+            
             img.emoji {
                 height: 1em;
                 width: 1em;
                 margin: 0 .05em 0 .1em;
                 vertical-align: -0.1em;
             }
-
+            
             .goTop-container {
                 position: fixed;
                 right: 3rem;
                 bottom: 3rem;
                 z-index: 900;
             }
-
+            
             .breadcrumb-item+.breadcrumb-item::before {
                 content: ">";
             }
-
-
+            
+            
             .breadcrumb {
                 background-color: transparent;
                 font-size: .8rem;
                 padding-left: 0;
                 margin-bottom: .5rem;
             }
-
+            
             article {
                 margin-bottom: 3rem;
             }
-
+            
             .isi-konten blockquote {
                 font-weight: 300;
                 padding-left: 1rem;
                 border-left: #2d4059 solid .25rem;
             }
-
+            
             @media only print {
                 .isi-konten blockquote {
                     padding-left: 0;
@@ -265,60 +259,60 @@
                     border: none;
                 }
             }
-
+            
             .isi-konten blockquote cite {
                 font-size: 1rem;
                 display: block;
                 text-align: right;
             }
-
+            
             .isi-konten blockquote cite::before {
                 content: "—   ";
             }
-
+            
             .isi-konten img {
                 margin: 1rem 0;
                 width: 100%;
             }
-
+            
             article .container {
                 padding-left: 0;
             }
-
+            
             article h2 {
                 margin: 2rem 0 .5rem 0;
                 font-size: 1.5rem;
                 font-weight: 600;
             }
-
+            
             .point {
                 font-size: 1.2rem;
                 font-weight: 600;
             }
-
+            
             .isi-konten {
                 line-height: 2;
                 font-size: 1rem;
                 text-align: justify;
             }
-
+            
             .komentar-box {
                 border: none;
                 resize: none;
             }
-
+            
             .komentar {
                 cursor: text;
             }
-
+            
             .pic-komentar {
                 width: 5rem;
                 height: 5rem;
                 background-position: center;
                 background-size: cover;
             }
-
-
+            
+            
             .daftar {
                 width: 100%;
                 top: 20%;
@@ -327,30 +321,30 @@
                 max-width: 10rem;
                 text-align: left;
             }
-
+            
             .daftar ul {
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
             }
-
+            
             .daftar ul li {
                 display: block;
                 border-radius: .1rem;
                 margin: .15rem 0;
             }
-
+            
             .daftar ul li:hover {
                 color: rgba(0, 0, 0, 0.75);
                 cursor: pointer;
             }
-
+            
             .share-bar a {
                 text-align: right;
                 font-size: 1.5em;
                 color: #2c2c5f;
             }
-
+            
             .cover-error {
                 display: flex;
                 flex-wrap: wrap;
@@ -364,13 +358,13 @@
                 width: 100%;
                 height: 100%;
             }
-
+            
             .error-message h1 {
                 color: #fff;
             }
-
+            
             /* LOADING OVERLAY */
-
+            
             .cover {
                 display: flex;
                 justify-content: center;
@@ -384,7 +378,7 @@
                 width: 100%;
                 height: 100%;
             }
-
+            
             .cover-noscript {
                 display: flex;
                 justify-content: center;
@@ -398,56 +392,59 @@
                 width: 100%;
                 height: 100%;
             }
-
+            
             .noscroll {
                 /* BODY OVERLAY */
                 overflow: hidden;
             }
-
+            
             .d-print-img {
                 width: 5rem;
             }
-
+            
             /* END OF GLOBAL */
             /* ============================================ */
             /* MAIN PAGE ONLY  */
-
+            
             .flat {
                 background-color: #2c2c5f;
                 color: white;
             }
-
+            
             .bq-awal {
                 font-size: 2rem;
             }
-
-
+            
+            
             @media only screen and (min-width:768px) {
                 .bq-awal {
                     font-size: 2.5rem;
                 }
             }
-
-
+            
+            
             .sec2 {
                 background-color: #22709f;
             }
-
+            
             .btn-topik {
                 height: 5rem;
                 font-size: 1.2rem;
                 font-weight: 200;
             }
-
+            
             .img-topik {
                 width: 2.5rem;
             }
-
+            
             .text-vertical-center {
                 vertical-align: middle;
                 line-height: 3rem;
             }
-
+            
+            a.text-muted:hover {
+                text-decoration: none;
+            }
         ]]>
     </b:skin>
 
@@ -769,62 +766,7 @@
                 </div>
                 <div class='row'>
                     <div class='col-12'>
-                        <div class='card-column'>
-
-                            <!-- START CARD -->
-                            <div class='card shadow' style='min-width: 18rem;'>
-                                <img alt='Universe' class='card-img-top' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/universe.jpg'/>
-                                <div class='card-body'>
-                                    <div class='container'>
-                                        <div class='row mb-1'>
-                                            <div class='col'>
-                                                <h5 class='card-title text-dark'> <a href='#'>Judul Artikel</a></h5>
-                                                <h6 class='card-subtitle mb-2 text-muted'>Card subtitle</h6>
-                                            </div>
-                                        </div>
-                                        <div class='row mb-3'>
-                                            <div class='col'>
-                                                <p class='card-text text-justify'>
-                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
-                                                    beatae ab perferendis molestias illo,
-                                                    dignissimos
-                                                    cumque, veniam laudantium!
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class='row mb-3'>
-                                            <div class='col-1 h4'>
-                                                <i class='fas fa-tag text-muted-super'/>
-                                            </div>
-                                            <div class='col ml-1'>
-                                                <p class='card-text text-justify'>
-                                                    <a class='kategori' href='#'>Pemrograman</a>
-                                                    <a class='kategori' href='#'>Algoritma</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class='row mb-1'>
-                                            <div class='col-1'>
-                                                <div class='ml-1 circle-img rounded-circle' style='background-image: url(&apos;https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/bamboo.png&apos;);'>
-                                                </div>
-                                            </div>
-                                            <div class='offset-1'/>
-                                            <div class='col-7 pl-4'>
-                                                <p class='text-muted c-author mb-1'>Bayu Samudra</p>
-                                                <small class='text-muted c-calendar mt-0'>28 Desember 2019</small>
-                                            </div>
-                                            <div class='col-1 d-flex align-item-end'>
-                                                <div class='bookmark p-2 mx-auto'> <a href='#'><i class='far fa-bookmark'/>
-                                                        <div class='sr-only'>Pergi ke laman</div>
-                                                    </a> </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- END OF CARD -->
-
+                        <div class='card-column' id="newArticle">
                         </div>
                     </div>
                 </div>
@@ -832,104 +774,17 @@
         </div>
         <!-- END SECTION 3 -->
 
-        <!-- START SECTION 4 : Video Terbaru -->
-        <div class='sec3 my-4 p-4' id='videoBaru'>
-            <div class='container'>
-                <div class='row text-center'>
-                    <div class='col'>
-                        <h2 class='mb-4'>Video Terbaru</h2>
-                        <p class='h5 mb-3'>Inilah video terbaru kami</p>
-                    </div>
-                </div>
-                <div class='row'>
-                    <div class='col-12'>
-                        <div class='card-column'>
-
-                            <!-- START CARD -->
-                            <div class='card shadow' style='min-width: 18rem;'>
-                                <img alt='Universe' class='card-img-top' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/universe.jpg'/>
-                                <div class='card-body'>
-                                    <div class='container'>
-                                        <div class='row mb-1'>
-                                            <div class='col'>
-                                                <h5 class='card-title text-dark'> <a href='#'>Judul Artikel</a></h5>
-                                                <h6 class='card-subtitle mb-2 text-muted'>Card subtitle</h6>
-                                            </div>
-                                        </div>
-                                        <div class='row mb-3'>
-                                            <div class='col'>
-                                                <p class='card-text text-justify'>
-                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
-                                                    beatae ab perferendis molestias illo,
-                                                    dignissimos
-                                                    cumque, veniam laudantium!
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class='row mb-1'>
-                                            <div class='col-1'>
-                                                <div class='ml-1 circle-img rounded-circle' style='background-image: url(&apos;https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/bamboo.png&apos;);'>
-                                                </div>
-                                            </div>
-                                            <div class='offset-1'/>
-                                            <div class='col-7 pl-4'>
-                                                <p class='text-muted c-author mb-1'>Bayu Samudra</p>
-                                                <small class='text-muted c-calendar mt-0'>28 Desember 2019</small>
-                                            </div>
-                                            <div class='col-1 d-flex align-item-end'>
-                                                <div class='bookmark p-2 mx-auto'> <a href='#'><i class='far fa-bookmark'/>
-                                                        <div class='sr-only'>Pergi ke laman</div>
-                                                    </a> </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- END OF CARD -->
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- END SECTION 4 -->
-
         <!-- SECTION 5 : TIm -->
-        <div class='sec5 my-4 p-4' id='tim'>
-            <div class='container'>
-                <div class='row text-center mb-4'>
-                    <div class='col'>
-                        <h2 class='mb-4'>Tim Kami</h2>
-                        <p class='h5 mb-3'>Inilah daftar tim kami</p>
+        <div class="sec5 my-4 p-4" id="tim">
+            <div class="container">
+                <div class="row text-center mb-4">
+                    <div class="col">
+                        <h2 class="mb-4">Tim Kami</h2>
+                        <p class="h5 mb-3">Inilah daftar tim kami</p>
                     </div>
                 </div>
-                <div class='row'>
-                    <div class='col'>
-                        <div class='media mb-5'>
-                            <div class='mr-4 team rounded-circle' style='background-image: url(&apos;https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/w40-nebula (1).jpg&apos;);'/>
-                            <div class='media-body'>
-                                <h5 class='mt-0'>Bayu Samudra</h5>
-                                <p class='text-muted jabatan'>Founder</p>
-                                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
-                                    sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus
-                                    viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
-                                    congue felis in faucibus.</p>
-                            </div>
-                        </div>
-                        <div class='media mb-5'>
-
-                            <div class='media-body text-right'>
-                                <h5 class='mt-0'>Bayu Samudra</h5>
-                                <p class='text-muted jabatan'>Co-Founder</p>
-                                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
-                                    sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus
-                                    viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
-                                    congue felis in faucibus.</p>
-                            </div>
-                            <div class='ml-4 team rounded-circle' style='background-image: url(&apos;https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/universe.jpg&apos;);'>
-                            </div>
-                        </div>
+                <div class="row">
+                    <div class="col" id="teams">
                     </div>
                 </div>
             </div>
@@ -972,6 +827,32 @@
     </script>
     <script crossorigin='anonymous' integrity='sha256-i1I0MEGBEKKEtBLlagkEPdef5OGDQEUdcjCPYo47a3Y=' src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-highlight/prism-line-highlight.min.js'>
     </script>
+
+    <script>
+            var posts = [
+            <b:loop var="post" values="data:posts">
+                 {
+                    "title": "<data:post.title/>",
+                    "subTitle": "Artikel",
+                    "text": "<data:post.snippet/>",
+                    "author": {
+                        "name": "<data:post.author/>",
+                        "photoUrl": "<data:post.authorPhoto.url/>",
+                        "profileUrl": "<data:post.authorProfileUrl/>"
+                    },
+                    "postTime": "<data:post.timestamp/>",
+                    "link": "<data:post.url/>",
+                    "coverPicture": getChildFirstPicUrl('<data:post.body/>'),
+                    "tags": [
+                        <b:loop var="label" values="data:post.labels">
+							<data:label.name/>,
+						</b:loop>
+                    ]
+                }
+			</b:loop>
+            ];
+    </script>
+
     <script src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/index.js'/>
 </body>
 

@@ -371,7 +371,7 @@
         <!-- END SECTION 3 -->
 
         <!-- START SECTION 4 : Video Terbaru -->
-        <div class="sec3 my-4 p-4" id="videoBaru">
+        <!-- <div class="sec3 my-4 p-4" id="videoBaru">
             <div class="container">
                 <div class="row text-center">
                     <div class="col">
@@ -384,7 +384,7 @@
                         <div class="card-column">
 
                             <!-- START CARD -->
-                            <div class="card shadow" style="min-width: 18rem;">
+        <!-- <div class="card shadow" style="min-width: 18rem;">
                                 <img src="img/universe.jpg" class="card-img-top" alt="Universe" />
                                 <div class="card-body">
                                     <div class="container">
@@ -426,13 +426,13 @@
 
                                 </div>
                             </div>
-                            <!-- END OF CARD -->
+                            END OF CARD -->
 
-                        </div>
+        <!-- </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --> -->
         <!-- END SECTION 4 -->
 
         <!-- SECTION 5 : TIm -->
@@ -462,12 +462,14 @@
         </div>
     </footer>
 
+    <div id="dummy" class="d-none"></div>
+
     <!-- Javascript Collection -->
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous">
     </script>
 
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async="true" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.5.6/plyr.min.js"
         integrity="sha256-voP3sbDhk+YDZKsGO8dpMGk9qzne1cf3f1CRgjwRnrk=" crossorigin="anonymous">
     </script>
@@ -582,7 +584,6 @@
         ];
 
         $.getJSON("database.json", function (obj) {
-
             for (var i = 0; i < obj.teams.length; i++) {
                 $("#teams").append(!(i & 1) ? mediaL(obj.teams[i].name, obj.teams[i].role, obj.teams[i].img, obj
                         .teams[i].about) :
@@ -591,7 +592,7 @@
             }
         });
     </script>
-    <script src="index.js">
+    <script src="index.js"></script>
     </script>
 </body>
 

@@ -112,10 +112,22 @@ $(document).ready(function () {
         $("#keteranganPenulis").text(team[$("#namaPenulis").text()][1]);
     }
 
+    // POST LAUNCHER
     for (var a of posts) {
         $("#newArticle").append(blok(a.title, a.subTitle, a.text, a.author, a.postTime, a.link,
             (a.tags == undefined) ? [] : a.tags, (a.coverPicture == undefined) ? "" : a.coverPicture));
     }
+
+
+    $.getJSON("https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/database.json", function (obj) {
+        for (var i = 0; i < obj.teams.length; i++) {
+            $("#teams").append(!(i & 1) ? mediaL(obj.teams[i].name, obj.teams[i].role, obj.teams[i].img, obj
+                    .teams[i].about) :
+                mediaR(obj.teams[i].name,
+                    obj.teams[i].role, obj.teams[i].img, obj.teams[i].about));
+        }
+    });
+
 
     // FREE THE FREEZE
     $("body").toggleClass("noscroll");
@@ -194,4 +206,11 @@ function mediaR(name, role, srcPic, about) {
         '<div class="ml-4 team rounded-circle" style="background-image: url(' + srcPic + ');"></div></div>';
 
     return template;
+}
+
+function getChildFirstPicUrl(txt) {
+    var o = $("<div></div>");
+    o.html(txt);
+
+    return $("img", o).attr("src");
 }
