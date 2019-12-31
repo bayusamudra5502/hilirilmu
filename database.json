@@ -2,7 +2,7 @@
     "teams": [{
         "name": "Bayu Samudra",
         "role": "FOunder",
-        "img": "img/bamboo.png",
+        "img": "https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/bamboo.png",
         "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo velit est similique ut praesentium laborum quae ratione. Fuga eum dolor reiciendis? Excepturi quis ratione, repellendus enim illo asperiores. Tempora, ea?"
     }]
 }

@@ -39,7 +39,7 @@ function blok(judulArtikel, subtitleArtikel, teks,
 
     template += '';
     template += '<div class="row mb-1"><div class="col-1"><div class="ml-1 circle-img rounded-circle"';
-    template += 'style="background-image: url(' + author.photoUrl + ');"></div></div>';
+    template += 'style="background-image: url("' + author.photoUrl + '");"></div></div>';
     template += '<div class="offset-1"></div><div class="col-7 pl-4">';
     template += '<a  class="d-block text-muted c-author mb-1">' + author.name + '</a>';
     template += '<small class="text-muted c-calendar mt-0">' + postTime + '</small>';
