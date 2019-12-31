@@ -9,8 +9,6 @@
     <!-- Style -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
         integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family%3DPoppins%3A300%2C400%2C600%26display%3Dswap" />
     <!-- https%3A%2F%2Ffonts.googleapis.com%2Fcss%3F -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
@@ -363,63 +361,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <div class="card-column">
-
-                            <!-- START CARD -->
-                            <div class="card shadow" style="min-width: 18rem;">
-                                <img src="img/universe.jpg" class="card-img-top" alt="Universe" />
-                                <div class="card-body">
-                                    <div class="container">
-                                        <div class="row mb-1">
-                                            <div class="col">
-                                                <h5 class="card-title text-dark"> <a href="#">Judul Artikel</a></h5>
-                                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-3">
-                                            <div class="col">
-                                                <p class="card-text text-justify">
-                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
-                                                    beatae ab perferendis molestias illo,
-                                                    dignissimos
-                                                    cumque, veniam laudantium!
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-3">
-                                            <div class="col-1 h4">
-                                                <i class="fas fa-tag text-muted-super"></i>
-                                            </div>
-                                            <div class="col ml-1">
-                                                <p class="card-text text-justify">
-                                                    <a class="kategori" href="#">Pemrograman</a>
-                                                    <a class="kategori" href="#">Algoritma</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-1">
-                                            <div class="col-1">
-                                                <div class="ml-1 circle-img rounded-circle"
-                                                    style="background-image: url('img/bamboo.png');">
-                                                </div>
-                                            </div>
-                                            <div class="offset-1"></div>
-                                            <div class="col-7 pl-4">
-                                                <p class="text-muted c-author mb-1">Bayu Samudra</p>
-                                                <small class="text-muted c-calendar mt-0">28 Desember 2019</small>
-                                            </div>
-                                            <div class="col-1 d-flex align-item-end">
-                                                <div class="bookmark p-2 mx-auto"> <a href="#"><i
-                                                            class="far fa-bookmark"></i>
-                                                        <div class="sr-only">Pergi ke laman</div>
-                                                    </a> </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- END OF CARD -->
+                        <div class="card-column" id="newArticle">
 
                         </div>
                     </div>
@@ -503,32 +445,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col">
-                        <div class="media mb-5">
-                            <div class="mr-4 team rounded-circle"
-                                style="background-image: url('img/w40-nebula (1).jpg');"></div>
-                            <div class="media-body">
-                                <h5 class="mt-0">Bayu Samudra</h5>
-                                <p class="text-muted jabatan">Founder</p>
-                                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
-                                    sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus
-                                    viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
-                                    congue felis in faucibus.</p>
-                            </div>
-                        </div>
-                        <div class="media mb-5">
-
-                            <div class="media-body text-right">
-                                <h5 class="mt-0">Bayu Samudra</h5>
-                                <p class="text-muted jabatan">Co-Founder</p>
-                                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
-                                    sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus
-                                    viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
-                                    congue felis in faucibus.</p>
-                            </div>
-                            <div class="ml-4 team rounded-circle" style="background-image: url('img/universe.jpg');">
-                            </div>
-                        </div>
+                    <div class="col" id="teams">
                     </div>
                 </div>
             </div>
@@ -580,6 +497,99 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-highlight/prism-line-highlight.min.js"
         integrity="sha256-i1I0MEGBEKKEtBLlagkEPdef5OGDQEUdcjCPYo47a3Y=" crossorigin="anonymous">
+    </script>
+
+    <script>
+        // INDEX PREPARATION
+        var posts = [{
+                "title": "Judul Artikel",
+                "subTitle": "Artikel",
+                "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt eius officiis unde, numquam provident debitis aliquam fugiat aliquid vel incidunt totam quibusdam. Repudiandae dicta, debitis sed minus explicabo quod doloribus?",
+                "author": {
+                    "name": "Bayu Samudra",
+                    "photoUrl": "img/bamboo.png",
+                    "profileUrl": "#"
+                },
+                "postTime": "TUDEY",
+                "link": "#",
+                "coverPicture": "img/w40-nebula (1).jpg",
+                "tags": ["Den"]
+            },
+            {
+                "title": "Judul Artikel",
+                "subTitle": "Artikel",
+                "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt eius officiis unde, numquam provident debitis aliquam fugiat aliquid vel incidunt totam quibusdam. Repudiandae dicta, debitis sed minus explicabo quod doloribus?",
+                "author": {
+                    "name": "Bayu Samudra",
+                    "photoUrl": "img/bamboo.png",
+                    "profileUrl": "#"
+                },
+                "postTime": "TUDEY",
+                "link": "#",
+                "coverPicture": "img/w40-nebula (1).jpg",
+                "tags": ["Pingk"]
+            }, {
+                "title": "Judul Artikelku",
+                "subTitle": "Artikel",
+                "text": "Lorem ipsum dolor, sittotam quibusdam. Repudiandae dicta, debitis sed minus explicabo quod doloribus?",
+                "author": {
+                    "name": "Bayu Samudra",
+                    "photoUrl": "img/bamboo.png",
+                    "profileUrl": "#"
+                },
+                "postTime": "TUDEY",
+                "link": "#",
+                "coverPicture": "img/w40-nebula (1).jpg",
+                "tags": ["Pingk"]
+            }, {
+                "title": "Judul Artikelku yang kedua",
+                "subTitle": "Artikel",
+                "text": "Lorem ipsu doloribus?",
+                "author": {
+                    "name": "Bayu Samudra",
+                    "photoUrl": "img/bamboo.png",
+                    "profileUrl": "#"
+                },
+                "postTime": "TUDEY",
+                "link": "#",
+                "coverPicture": "img/universe.jpg",
+                "tags": ["Matematika Diskrit"]
+
+            }, {
+                "title": "Judul Artikelku yang kedua",
+                "subTitle": "Artikel",
+                "text": "Lorem ipsu doloribus?",
+                "author": {
+                    "name": "Bayu Samudra",
+                    "photoUrl": "img/bamboo.png",
+                    "profileUrl": "#"
+                },
+                "postTime": "TUDEY",
+                "link": "#",
+                "tags": ["Matematika Diskrit"]
+            }, {
+                "title": "Judul Artikelku yang kedua Tigaaaa",
+                "subTitle": "Artikel",
+                "text": "Lorem ipsu doloribus?",
+                "author": {
+                    "name": "Bayu Samudra",
+                    "photoUrl": "img/bamboo.png",
+                    "profileUrl": "#"
+                },
+                "postTime": "TUDEY",
+                "link": "#",
+            }
+        ];
+
+        $.getJSON("database.json", function (obj) {
+
+            for (var i = 0; i < obj.teams.length; i++) {
+                $("#teams").append(!(i & 1) ? mediaL(obj.teams[i].name, obj.teams[i].role, obj.teams[i].img, obj
+                        .teams[i].about) :
+                    mediaR(obj.teams[i].name,
+                        obj.teams[i].role, obj.teams[i].img, obj.teams[i].about));
+            }
+        });
     </script>
     <script src="index.js">
     </script>

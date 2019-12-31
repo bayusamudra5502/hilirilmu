@@ -393,3 +393,7 @@ article h2 {
     vertical-align: middle;
     line-height: 3rem;
 }
+
+a.text-muted:hover {
+    text-decoration: none;
+}

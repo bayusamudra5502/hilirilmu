@@ -51,6 +51,10 @@
             @import url(https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap);
 
             /* GLOBAL STYLE */
+            a.text-muted:hover {
+                text-decoration: none;
+            }
+
             .err {
                 width: 10rem;
             }
@@ -508,32 +512,32 @@
                         <li class='nav-item dropdown'>
                             <a aria-expanded='false' aria-haspopup='true' class='nav-link dropdown-toggle' data-toggle='dropdown' href='#' id='dropdown-Produk'>Produk</a>
                             <div class='dropdown-menu'>
-                                <a class='dropdown-item' href='#'>Buku</a>
-                                <a class='dropdown-item' href='#'>Video Tutorial</a>
+                                <a class='dropdown-item' href='/p/buku.html'>Buku</a>
+                                <a class='dropdown-item' href='/p/video.html'>Video Tutorial</a>
                             </div>
                         </li>
 
                         <li class='nav-item dropdown'>
                             <a aria-expanded='false' aria-haspopup='true' class='nav-link dropdown-toggle' data-toggle='dropdown' href='#' id='dropdown-Artikel'>Artikel</a>
                             <div class='dropdown-menu'>
-                                <a class='dropdown-item goToTopik' href='#'>Matematika</a>
-                                <a class='dropdown-item goToTopik' href='#'>Ilmu Komputer</a>
+                                <a class='dropdown-item goToTopik' href='#topik'>Matematika</a>
+                                <a class='dropdown-item goToTopik' href='#topik'>Ilmu Komputer</a>
                                 <hr/>
-                                <a class='dropdown-item' href='#'>Materi SMP</a>
-                                <a class='dropdown-item' href='#'>Materi SMA</a>
-                                <a class='dropdown-item' href='#'>Materi Kuliah</a>
-                                <a class='dropdown-item' href='#'>Materi Olimpiade</a>
+                                <a class='dropdown-item' href='/p/materi-smp.html'>Materi SMP</a>
+                                <a class='dropdown-item' href='/p/materi-sma.html'>Materi SMA</a>
+                                <a class='dropdown-item' href='/search/label/Kuliah'>Materi Kuliah</a>
+                                <a class='dropdown-item' href='/search/label/Olimpiade'>Materi Olimpiade</a>
                                 <hr/>
-                                <a class='dropdown-item' href='#'>Tips &amp; Triks</a>
+                                <a class='dropdown-item' href='/search/label/Tips-n-Triks'>Tips &amp; Triks</a>
                             </div>
                         </li>
 
                         <li class='nav-item'>
-                            <a class='nav-link' href='#'>Kotak Saran</a>
+                            <a class='nav-link' href='/p/saran.html'>Kotak Saran</a>
                         </li>
 
                         <li class='nav-item'>
-                            <a class='nav-link' href='#'>Kontak</a>
+                            <a class='nav-link' href='/p/kontak.html'>Kontak</a>
                         </li>
 
                         <li class='nav-item' id='cari-list-trig'>

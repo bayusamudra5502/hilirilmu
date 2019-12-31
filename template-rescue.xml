@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html lang='id'>
+
+<head>
+    <meta charset='UTF-8'/>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+    <meta content='ie=edge' http-equiv='X-UA-Compatible'/>
+
+    <meta content='blogger' name='generator'/>
+    <link expr:href='data:blog.homepageUrl + &quot;favicon.ico&quot;' rel='icon' type='image/x-icon'/>
+    <link expr:href='data:blog.url' rel='canonical'/>
+    <link expr:href='data:blog.homepageUrl + &quot;feeds/posts/default&quot;' expr:title='data:blog.title + &quot; - Atom&quot;' rel='alternate' type='application/atom+xml'/>
+    <link expr:href='data:blog.homepageUrl + &quot;feeds/posts/default?alt=rss&quot;' expr:title='data:blog.title + &quot; - RSS&quot;' rel='alternate' type='application/rss+xml'/>
+    <link expr:href='&quot;http://www.blogger.com/feeds/&quot; + data:blog.blogId + &quot;/posts/default&quot;' expr:title='data:blog.title + &quot; - Atom&quot;' rel='alternate' type='application/atom+xml'/>
+    <link href='http://www.blogger.com/openid-server.g' rel='openid.server'/>
+    <link expr:href='data:blog.homepageUrl' rel='openid.delegate'/>
+    <b:if cond='data:blog.pageType == &quot;item&quot;'>
+        <b:if cond='data:blog.postImageThumbnailUrl'>
+            <link expr:href='data:blog.postImageThumbnailUrl' rel='image_src'/>
+        </b:if>
+
+        <b:if cond='data:blog.metaDescription != &quot;&quot;'>
+            <meta expr:content='data:blog.metaDescription' name='description'/>
+        <b:else/>
+            <meta expr:content='data:blog.pageName + &quot; - &quot; + data:blog.title' name='description'/>
+        </b:if>
+    </b:if>
+
+    <b:if cond='data:blog.url == data:blog.homepageUrl and data:blog.pageType == "index"'>
+        <title>Halaman Utama | HIlir Ilmu</title>
+    <b:elseif cond='data:blog.pageType == "error_page"'/>
+        <title>Halaman tidak ditemukan (404) | HIlir Ilmu</title>
+    <b:else/>
+        <title><data:blog.pageTitle /> | HIlir Ilmu></title>
+    </b:if>
+    
+
+    <!-- Style -->
+    <link crossorigin='anonymous' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' integrity='sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=' rel='stylesheet'/>
+    <link href='https://fonts.googleapis.com/css?family%3DPoppins%3A300%2C400%2C600%26display%3Dswap' rel='stylesheet'/>
+    <link crossorigin='anonymous' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' rel='stylesheet'/>
+    <link crossorigin='anonymous' href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.min.css' integrity='sha256-77qGXu2p8NpfcBpTjw4jsMeQnz0vyh74f5do0cWjQ/Q=' rel='stylesheet'/>
+    <link crossorigin='anonymous' href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/command-line/prism-command-line.css' integrity='sha256-UvoA9bIYCYQkCMTYG5p2LM8ZpJmnC4G8k0oIc89nuQA=' rel='stylesheet'/>
+    <link crossorigin='anonymous' href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-numbers/prism-line-numbers.min.css' integrity='sha256-Afz2ZJtXw+OuaPX10lZHY7fN1+FuTE/KdCs+j7WZTGc=' rel='stylesheet'/>
+    <link crossorigin='anonymous' href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/toolbar/prism-toolbar.min.css' integrity='sha256-P45OhhEWm49G8sadt2n5rDaWLa3xZbDOQhJliuaojH0=' rel='stylesheet'/>
+    <link crossorigin='anonymous' href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-highlight/prism-line-highlight.min.css' integrity='sha256-FFGTaA49ZxFi2oUiWjxtTBqoda+t1Uw8GffYkdt9aco=' rel='stylesheet'/>
+
+  <b:skin>
+        <![CDATA[
+            @import url(https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap);
+
+            /* GLOBAL STYLE */
+            a.text-muted:hover {
+                text-decoration: none;
+            }
+
+            .err {
+                width: 10rem;
+            }
+
+            body {
+                font-family: 'Poppins', sans-serif;
+            }
+
+            .navbar-utama {
+                background-color: #2c2c5f;
+            }
+
+            .navbar-toggler {
+                border: 0;
+            }
+
+            .dropdown-item:active {
+                background-color: transparent;
+                color: inherit;
+            }
+
+            #searchbox {
+                width: 100%;
+            }
+
+
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                color: #2c2c5f;
+                font-weight: 600;
+            }
+
+            h1>a,
+            h2>a,
+            h3>a,
+            h4>a,
+            h5>a,
+            h6>a {
+                color: #2c2c5f;
+                text-decoration: none;
+                font-weight: 600;
+            }
+
+            h1>a:hover,
+            h2>a:hover,
+            h3>a:hover,
+            h4>a:hover,
+            h5>a:hover,
+            h6>a:hover {
+                color: #706fd3;
+                text-decoration: none;
+                font-weight: 600;
+            }
+
+            .text-light h1,
+            .text-light h2,
+            .text-light h3,
+            .text-light h4,
+            .text-light h5,
+            .text-light h6 {
+                color: #fff;
+            }
+
+
+            .circle-img {
+                height: 3rem;
+                width: 3rem;
+                background-position: center;
+                background-size: cover;
+                display: inline-block;
+            }
+
+            .c-author {
+                font-weight: 600;
+            }
+
+            .c-calendar {
+                font-weight: 200;
+            }
+
+            .bookmark {
+                font-size: 2rem;
+            }
+
+            .bookmark>a,
+            .text-muted-super {
+                color: rgba(0, 0, 0, 0.25) !important;
+            }
+
+            a.kategori {
+                display: inline-block;
+                border-radius: .75em;
+                padding: 0;
+                background-color: rgba(0, 0, 0, 0.15) !important;
+                color: rgba(0, 0, 0, 0.5);
+                font-size: .75em;
+                font-weight: 600;
+                padding: .187em .375em;
+            }
+
+            a.kategori:hover {
+                background-color: rgba(0, 0, 0, 0.25) !important;
+                color: rgba(0, 0, 0, 0.75);
+                text-decoration: none;
+            }
+
+            .card-column {
+                column-count: 1;
+            }
+
+            @media only screen and (min-width:768px) {
+                .card-column {
+                    column-count: 2;
+                }
+
+                .error-logo {
+                    font-size: 3em;
+                }
+            }
+
+            @media only screen and (min-width:992px) {
+                .card-column {
+                    column-count: 3;
+                }
+
+                .error-logo {
+                    font-size: 4em;
+                }
+            }
+
+            .card {
+                display: inline-block;
+                margin-bottom: 1rem;
+            }
+
+            .team {
+                width: 5rem;
+                height: 5rem;
+                background-position: center;
+                background-size: cover;
+            }
+
+            @media only screen and (min-width:992px) {
+                .team {
+                    width: 10rem;
+                    height: 10rem;
+                    background-position: center;
+                    background-size: cover;
+                }
+            }
+
+
+            .jabatan {
+                font-weight: 600;
+            }
+
+            footer {
+                background-color: #2d4059;
+                color: white;
+                text-align: center;
+            }
+
+            img.emoji {
+                height: 1em;
+                width: 1em;
+                margin: 0 .05em 0 .1em;
+                vertical-align: -0.1em;
+            }
+
+            .goTop-container {
+                position: fixed;
+                right: 3rem;
+                bottom: 3rem;
+                z-index: 900;
+            }
+
+            .breadcrumb-item+.breadcrumb-item::before {
+                content: ">";
+            }
+
+
+            .breadcrumb {
+                background-color: transparent;
+                font-size: .8rem;
+                padding-left: 0;
+                margin-bottom: .5rem;
+            }
+
+            article {
+                margin-bottom: 3rem;
+            }
+
+            .isi-konten blockquote {
+                font-weight: 300;
+                padding-left: 1rem;
+                border-left: #2d4059 solid .25rem;
+            }
+
+            @media only print {
+                .isi-konten blockquote {
+                    padding-left: 0;
+                    font-style: italic;
+                    border: none;
+                }
+            }
+
+            .isi-konten blockquote cite {
+                font-size: 1rem;
+                display: block;
+                text-align: right;
+            }
+
+            .isi-konten blockquote cite::before {
+                content: "—   ";
+            }
+
+            .isi-konten img {
+                margin: 1rem 0;
+                width: 100%;
+            }
+
+            article .container {
+                padding-left: 0;
+            }
+
+            article h2 {
+                margin: 2rem 0 .5rem 0;
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+
+            .point {
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+
+            .isi-konten {
+                line-height: 2;
+                font-size: 1rem;
+                text-align: justify;
+            }
+
+            .komentar-box {
+                border: none;
+                resize: none;
+            }
+
+            .komentar {
+                cursor: text;
+            }
+
+            .pic-komentar {
+                width: 5rem;
+                height: 5rem;
+                background-position: center;
+                background-size: cover;
+            }
+
+
+            .daftar {
+                width: 100%;
+                top: 20%;
+                position: fixed;
+                color: rgba(0, 0, 0, 0.5);
+                max-width: 10rem;
+                text-align: left;
+            }
+
+            .daftar ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .daftar ul li {
+                display: block;
+                border-radius: .1rem;
+                margin: .15rem 0;
+            }
+
+            .daftar ul li:hover {
+                color: rgba(0, 0, 0, 0.75);
+                cursor: pointer;
+            }
+
+            .share-bar a {
+                text-align: right;
+                font-size: 1.5em;
+                color: #2c2c5f;
+            }
+
+            .cover-error {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                position: absolute;
+                align-items: center;
+                opacity: 1;
+                background: #2c2c5f;
+                border-radius: 0px;
+                margin: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .error-message h1 {
+                color: #fff;
+            }
+
+            /* LOADING OVERLAY */
+
+            .cover {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                z-index: 999;
+                opacity: 1;
+                background: #fff;
+                border-radius: 4px;
+                margin: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .cover-noscript {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                z-index: 1000;
+                opacity: 1;
+                background: #fff;
+                border-radius: 4px;
+                margin: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .noscroll {
+                /* BODY OVERLAY */
+                overflow: hidden;
+            }
+
+            .d-print-img {
+                width: 5rem;
+            }
+
+            /* END OF GLOBAL */
+            /* ============================================ */
+            /* MAIN PAGE ONLY  */
+
+            .flat {
+                background-color: #2c2c5f;
+                color: white;
+            }
+
+            .bq-awal {
+                font-size: 2rem;
+            }
+
+
+            @media only screen and (min-width:768px) {
+                .bq-awal {
+                    font-size: 2.5rem;
+                }
+            }
+
+
+            .sec2 {
+                background-color: #22709f;
+            }
+
+            .btn-topik {
+                height: 5rem;
+                font-size: 1.2rem;
+                font-weight: 200;
+            }
+
+            .img-topik {
+                width: 2.5rem;
+            }
+
+            .text-vertical-center {
+                vertical-align: middle;
+                line-height: 3rem;
+            }
+
+        ]]>
+    </b:skin>
+
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" 
+            integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    <![endif]-->
+
+</head>
+
+<body class='noscroll'>
+    <div class='cover' id='coverLoadingPage'>
+        <div class='container text-center'>
+            <div class='row'>
+                <div class='col mb-2'>
+                    <img alt='Memuat Halaman' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/loading-logo-tidak-terhingga.gif'/>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col'>
+                    <p class='h1 mb-3'>Tunggu sebentar..</p>
+                    <p class='h4 text-muted'>Kita sedang meracik semuanya</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <noscript>
+        <div class='cover-noscript'>
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-2 d-none d-md-block'>
+                        <img alt='Memuat Halaman' class='err' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/no-entry.png'/>
+                    </div>
+                    <div class='offset-md-1 offset-lg-0 mr-lg-4'/>
+                    <div class='col'>
+                        <h1 class='mb-2'>Oopss...</h1>
+                        <p class='mb-4'>Maaf kamu tidak bisa melanjutkan menelusuri Hilir Ilmu jika Javascriptmu tidak
+                            dinyalakan..
+                        </p>
+                        <p class='text-muted'>Kesalahan : Javascript was blocked.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </noscript>
+
+    <header>
+        <!-- Navbar -->
+        <b:section id="navbarHalaman" maxwidgets="1" showaddelement="no">
+             <b:widget id="Navbar1" locked="yes" type="Navbar" />
+        </b:section>
+
+        <nav class='navbar navbar-expand-sm navbar-dark navbar-utama'>
+            <div class='container'>
+                <a class='navbar-brand' href='#'>Hilir Ilmu</a>
+                <button class='navbar-toggler d-lg-none ml-auto' data-target='#navcol' data-toggle='collapse' type='button'>
+                    <span class='navbar-toggler-icon'/>
+                </button>
+                <div class='collapse navbar-collapse' id='navcol'>
+                    <ul class='navbar-nav ml-auto mt-2 mt-lg-0 navbar-right'>
+                        <li class='nav-item dropdown'>
+                            <a aria-expanded='false' aria-haspopup='true' class='nav-link dropdown-toggle' data-toggle='dropdown' href='#' id='dropdown-Produk'>Produk</a>
+                            <div class='dropdown-menu'>
+                                <a class='dropdown-item' href='/p/buku.html'>Buku</a>
+                                <a class='dropdown-item' href='/p/video.html'>Video Tutorial</a>
+                            </div>
+                        </li>
+
+                        <li class='nav-item dropdown'>
+                            <a aria-expanded='false' aria-haspopup='true' class='nav-link dropdown-toggle' data-toggle='dropdown' href='#' id='dropdown-Artikel'>Artikel</a>
+                            <div class='dropdown-menu'>
+                                <a class='dropdown-item goToTopik' href='#topik'>Matematika</a>
+                                <a class='dropdown-item goToTopik' href='#topik'>Ilmu Komputer</a>
+                                <hr/>
+                                <a class='dropdown-item' href='/p/materi-smp.html'>Materi SMP</a>
+                                <a class='dropdown-item' href='/p/materi-sma.html'>Materi SMA</a>
+                                <a class='dropdown-item' href='/search/label/Kuliah'>Materi Kuliah</a>
+                                <a class='dropdown-item' href='/search/label/Olimpiade'>Materi Olimpiade</a>
+                                <hr/>
+                                <a class='dropdown-item' href='/search/label/Tips-n-Triks'>Tips &amp; Triks</a>
+                            </div>
+                        </li>
+
+                        <li class='nav-item'>
+                            <a class='nav-link' href='/p/saran.html'>Kotak Saran</a>
+                        </li>
+
+                        <li class='nav-item'>
+                            <a class='nav-link' href='/p/kontak.html'>Kontak</a>
+                        </li>
+
+                        <li class='nav-item' id='cari-list-trig'>
+                            <a class='nav-link' href='#' id='cari-trig'><i class='fa fa-search fa-fw'>
+                                    <span class='sr-only'>Cari</span>
+                                </i></a>
+                        </li>
+                    </ul>
+                    <form action='/search' class='form-inline my-2 my-lg-0 d-none' id='cari' method='GET'>
+                        <input aria-label='Search' class='form-control ml-sm-2' id='form-cari' name='q' placeholder='Cari' type='search'/>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- END OF NAVBAR -->
+    </header>
+
+    <!-- Go To Top  -->
+    <div class='goTop-container'>
+        <button class='btn btn-dark d-none' id='goToUp' title='Ke Atas'>
+            <i class='fa fa-chevron-up'/>
+            <span class='sr-only'>Ke Atas</span>
+        </button>
+    </div>
+
+
+    <!-- START FLYER -->
+    <div class='w-100 py-5 flat text-center'>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-lg-7 col-11 col-md-9 mx-auto'>
+                    <blockquote class='h1 bq-awal'>
+                        Janganlah pernah letih untuk menggali ilmu karena ilmu
+                        akan
+                        menjagamu dari segala keburukan.</blockquote>
+                    <button class='btn btn-outline-light btn-lg my-4' id='btnToCari'>Let&#39;s do it</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END FLYER-->
+
+    <main>
+        <!-- FORM SEARCH SECTION -->
+        <div class='sec1 my-4 text-center p-5' id='pencarian'>
+            <div class='container'>
+                <div class='row'>
+                    <div class='col'>
+                        <h2 class='mb-4'>Pencarian</h2>
+                        <p class='h5 mb-3'>Yuk cari artikel apa yang ingin kau tahu...</p>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-12 col-md-10 mx-auto'>
+                        <form action='/search' class='form my-2' method='GET'>
+                            <div class='input-group mb-3 input-group-lg'>
+                                <div class='input-group-prepend'>
+                                    <span class='input-group-text bg-transparent border-right-0'><i class='fa fa-search fa-fw'>
+                                            <span class='sr-only'>Cari</span>
+                                        </i> </span>
+                                </div>
+                                <input class='form-control border-left-0' name='q' placeholder='Tulis kata kunci disini' type='text'/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END SECTION 1 -->
+
+        <!-- START SECTION 2 : Topik -->
+        <div class='sec2 my-4 text-center p-5 text-light' id='topik'>
+            <div class='container'>
+                <div class='row'>
+                    <div class='col'>
+                        <h2 class='mb-4'>Topik</h2>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <p class='h5 mb-4'>Yuk telusuri topik yang ada di Hilir Ilmu</p>
+                    </div>
+                </div>
+                <div class='row my-2'>
+                    <div class='col'>
+                        <h3 class='h4'>Matematika</h3>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-10 mx-md-auto'>
+                        <button class='btn btn-light btn-topik my-2 mx-sm-3 mx-auto' id='materiALjabar'>
+                            <span class='container d-flex'>
+                                <span class='row'>
+                                    <span class='col-4 d-block'>
+                                        <img alt='Materi Tentang Aljabar' class='img-topik' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/materi-tentang-aljabar.png'/>
+                                    </span>
+                                    <span class='col d-block'>
+                                        Aljabar
+                                    </span>
+                                </span>
+                            </span>
+                        </button>
+
+                        <button class='btn btn-light btn-topik my-2 mx-sm-3 mx-auto' id='materiMatdis'>
+                            <span class='container d-flex'>
+                                <span class='row'>
+                                    <span class='col-1 d-block'>
+                                        <img alt='Materi Tentang Aljabar' class='img-topik' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/materi-tentang-peluang-kombinatorika-diskrit.png'/>
+                                    </span>
+                                    <span class='col d-block text-vertical-center ml-3 mr-0'>
+                                        <i>Discrete Math</i>
+                                    </span>
+                                </span>
+                            </span>
+                        </button>
+
+                        <button class='btn btn-light btn-topik my-2 mx-sm-3 mx-auto' id='materiGeometri'>
+                            <span class='container d-flex'>
+                                <span class='row'>
+                                    <span class='col-4 d-block'>
+                                        <img alt='Materi Tentang Aljabar' class='img-topik' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/materi-tentang-geometri.png'/>
+                                    </span>
+                                    <span class='col d-block text-vertical-center'>
+                                        Geometri
+                                    </span>
+                                </span>
+                            </span>
+                        </button>
+
+                        <button class='btn btn-light btn-topik my-2 mx-sm-3 mx-auto' id='materiLogika'>
+                            <span class='container d-flex'>
+                                <span class='row'>
+                                    <span class='d-block col-4'>
+                                        <img alt='Materi Tentang Aljabar' class='img-topik' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/materi-tentang-logika.png'/>
+                                    </span>
+                                    <span class='col d-block text-vertical-center'>
+                                        Logika
+                                    </span>
+                                </span>
+                            </span>
+                        </button>
+
+                        <button class='btn btn-light btn-topik my-2 mx-sm-3 mx-auto' id='materiTeoBilr'>
+                            <span class='container d-flex'>
+                                <span class='row'>
+                                    <span class='col-2 d-block'>
+                                        <img alt='Materi Tentang Aljabar' class='img-topik' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/materi-tentang-teori-bilangan.png'/>
+                                    </span>
+                                    <span class='col ml-3 mr-0 d-block'>
+                                        Teori Bilangan
+                                    </span>
+                                </span>
+                            </span>
+                        </button>
+
+                        <button class='btn btn-light btn-topik my-2 mx-sm-3 mx-auto' id='materiStatistika'>
+                            <span class='container d-flex'>
+                                <span class='row'>
+                                    <span class='col-4 d-block'>
+                                        <img alt='Materi Tentang Aljabar' class='img-topik' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/materi-tentang-statistika.png'/>
+                                    </span>
+                                    <span class='col d-block text-vertical-center'>
+                                        Statistika
+                                    </span>
+                                </span>
+                            </span>
+                        </button>
+
+                        <button class='btn btn-light btn-topik my-2 mx-sm-3 mx-auto' id='materiKalkulus'>
+                            <span class='container d-flex'>
+                                <span class='row'>
+                                    <span class='col-4 d-block'>
+                                        <img alt='Materi Tentang Aljabar' class='img-topik' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/materi-tentang-kalkulus.png'/>
+                                    </span>
+                                    <span class='col text-vertical-center d-block'>
+                                        Kalkulus
+                                    </span>
+                                </span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <!-- END MATEMATIKA -->
+                <div class='row mt-3 mb-2'>
+                    <div class='col'>
+                        <h3 class='h4'>Teori Komputer</h3>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-10 mx-md-auto'>
+                        <button class='btn btn-light btn-topik my-2 mx-sm-3 mx-auto' id='materiAlgoritma'>
+                            <span class='container d-flex'>
+                                <span class='row'>
+                                    <span class='d-block col-4'>
+                                        <img alt='Materi Tentang Aljabar' class='img-topik' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/materi-tentang-algoritma.png'/>
+                                    </span>
+                                    <span class='d-block col text-vertical-center'>
+                                        Algoritma
+                                    </span>
+                                </span>
+                            </span>
+                        </button>
+                        <button class='btn btn-light btn-topik my-2 mx-sm-3 mx-auto' id='materiPemrograman'>
+                            <span class='container d-flex'>
+                                <span class='row'>
+                                    <span class='col-2 d-block'>
+                                        <img alt='Materi Tentang Aljabar' class='img-topik' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/materi-tentang-pemrograman.png'/>
+                                    </span>
+                                    <span class='col d-block'>
+                                        Pemrograman
+                                    </span>
+                                </span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END SECTION 2 -->
+
+        <!-- START SECTION 3 : Artikel Terbaru -->
+        <div class='sec3 my-4 p-4' id='artikelBaru'>
+            <div class='container'>
+                <div class='row text-center'>
+                    <div class='col'>
+                        <h2 class='mb-4'>Artikel Terbaru</h2>
+                        <p class='h5 mb-3'>Inilah artikel terbaru kami</p>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-12'>
+                        <div class='card-column'>
+
+                            <!-- START CARD -->
+                            <div class='card shadow' style='min-width: 18rem;'>
+                                <img alt='Universe' class='card-img-top' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/universe.jpg'/>
+                                <div class='card-body'>
+                                    <div class='container'>
+                                        <div class='row mb-1'>
+                                            <div class='col'>
+                                                <h5 class='card-title text-dark'> <a href='#'>Judul Artikel</a></h5>
+                                                <h6 class='card-subtitle mb-2 text-muted'>Card subtitle</h6>
+                                            </div>
+                                        </div>
+                                        <div class='row mb-3'>
+                                            <div class='col'>
+                                                <p class='card-text text-justify'>
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                                                    beatae ab perferendis molestias illo,
+                                                    dignissimos
+                                                    cumque, veniam laudantium!
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class='row mb-3'>
+                                            <div class='col-1 h4'>
+                                                <i class='fas fa-tag text-muted-super'/>
+                                            </div>
+                                            <div class='col ml-1'>
+                                                <p class='card-text text-justify'>
+                                                    <a class='kategori' href='#'>Pemrograman</a>
+                                                    <a class='kategori' href='#'>Algoritma</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class='row mb-1'>
+                                            <div class='col-1'>
+                                                <div class='ml-1 circle-img rounded-circle' style='background-image: url(&apos;https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/bamboo.png&apos;);'>
+                                                </div>
+                                            </div>
+                                            <div class='offset-1'/>
+                                            <div class='col-7 pl-4'>
+                                                <p class='text-muted c-author mb-1'>Bayu Samudra</p>
+                                                <small class='text-muted c-calendar mt-0'>28 Desember 2019</small>
+                                            </div>
+                                            <div class='col-1 d-flex align-item-end'>
+                                                <div class='bookmark p-2 mx-auto'> <a href='#'><i class='far fa-bookmark'/>
+                                                        <div class='sr-only'>Pergi ke laman</div>
+                                                    </a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- END OF CARD -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END SECTION 3 -->
+
+        <!-- START SECTION 4 : Video Terbaru -->
+        <div class='sec3 my-4 p-4' id='videoBaru'>
+            <div class='container'>
+                <div class='row text-center'>
+                    <div class='col'>
+                        <h2 class='mb-4'>Video Terbaru</h2>
+                        <p class='h5 mb-3'>Inilah video terbaru kami</p>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-12'>
+                        <div class='card-column'>
+
+                            <!-- START CARD -->
+                            <div class='card shadow' style='min-width: 18rem;'>
+                                <img alt='Universe' class='card-img-top' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/universe.jpg'/>
+                                <div class='card-body'>
+                                    <div class='container'>
+                                        <div class='row mb-1'>
+                                            <div class='col'>
+                                                <h5 class='card-title text-dark'> <a href='#'>Judul Artikel</a></h5>
+                                                <h6 class='card-subtitle mb-2 text-muted'>Card subtitle</h6>
+                                            </div>
+                                        </div>
+                                        <div class='row mb-3'>
+                                            <div class='col'>
+                                                <p class='card-text text-justify'>
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                                                    beatae ab perferendis molestias illo,
+                                                    dignissimos
+                                                    cumque, veniam laudantium!
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class='row mb-1'>
+                                            <div class='col-1'>
+                                                <div class='ml-1 circle-img rounded-circle' style='background-image: url(&apos;https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/bamboo.png&apos;);'>
+                                                </div>
+                                            </div>
+                                            <div class='offset-1'/>
+                                            <div class='col-7 pl-4'>
+                                                <p class='text-muted c-author mb-1'>Bayu Samudra</p>
+                                                <small class='text-muted c-calendar mt-0'>28 Desember 2019</small>
+                                            </div>
+                                            <div class='col-1 d-flex align-item-end'>
+                                                <div class='bookmark p-2 mx-auto'> <a href='#'><i class='far fa-bookmark'/>
+                                                        <div class='sr-only'>Pergi ke laman</div>
+                                                    </a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- END OF CARD -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END SECTION 4 -->
+
+        <!-- SECTION 5 : TIm -->
+        <div class='sec5 my-4 p-4' id='tim'>
+            <div class='container'>
+                <div class='row text-center mb-4'>
+                    <div class='col'>
+                        <h2 class='mb-4'>Tim Kami</h2>
+                        <p class='h5 mb-3'>Inilah daftar tim kami</p>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <div class='media mb-5'>
+                            <div class='mr-4 team rounded-circle' style='background-image: url(&apos;https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/w40-nebula (1).jpg&apos;);'/>
+                            <div class='media-body'>
+                                <h5 class='mt-0'>Bayu Samudra</h5>
+                                <p class='text-muted jabatan'>Founder</p>
+                                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
+                                    sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus
+                                    viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+                                    congue felis in faucibus.</p>
+                            </div>
+                        </div>
+                        <div class='media mb-5'>
+
+                            <div class='media-body text-right'>
+                                <h5 class='mt-0'>Bayu Samudra</h5>
+                                <p class='text-muted jabatan'>Co-Founder</p>
+                                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
+                                    sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus
+                                    viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+                                    congue felis in faucibus.</p>
+                            </div>
+                            <div class='ml-4 team rounded-circle' style='background-image: url(&apos;https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/universe.jpg&apos;);'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class='p-3 mb-0'>
+        <div class='container'>
+            <div class='row'>
+                <div class='col h6 mb-0'>
+                    <p>Dibuat dengan &#10084;&#65039; oleh Tim Hilir Ilmu.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Javascript Collection -->
+    <script crossorigin='anonymous' src='https://twemoji.maxcdn.com/v/latest/twemoji.min.js'>
+    </script>
+
+    <script src='https://polyfill.io/v3/polyfill.min.js?features=es6'/>
+    <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'/>
+    <script crossorigin='anonymous' integrity='sha256-voP3sbDhk+YDZKsGO8dpMGk9qzne1cf3f1CRgjwRnrk=' src='https://cdnjs.cloudflare.com/ajax/libs/plyr/3.5.6/plyr.min.js'>
+    </script>
+    <script crossorigin='anonymous' integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=' src='https://code.jquery.com/jquery-3.4.1.min.js'>
+    </script>
+    <script crossorigin='anonymous' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'>
+    </script>
+    <script crossorigin='anonymous' integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6' src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js'>
+    </script>
+    <script crossorigin='anonymous' integrity='sha256-HWJnMZHGx7U1jmNfxe4yaQedmpo/mtxWSIXvcJkLIf4=' src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js'>
+    </script>
+    <script crossorigin='anonymous' integrity='sha256-ht8ay6ZTPZfuixYB99I5oRpCLsCq7Do2LjEYLwbe+X8=' src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js'>
+    </script>
+    <script crossorigin='anonymous' integrity='sha256-pySw63TmypHJ7LQU3ycJreLDfrxg59cI+famzPcGH5Q=' src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/command-line/prism-command-line.min.js'>
+    </script>
+    <script crossorigin='anonymous' integrity='sha256-hep5s8952MqR7Y79JYfCXZD6vQjVHs7sOu/ZGrs1OEQ=' src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-numbers/prism-line-numbers.min.js'>
+    </script>
+    <script crossorigin='anonymous' integrity='sha256-SyBDbq8Z29N+/5vK9bf2HpTtvAEGUIiLKw0iepvhLQg=' src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/toolbar/prism-toolbar.min.js'>
+    </script>
+    <script crossorigin='anonymous' integrity='sha256-i1I0MEGBEKKEtBLlagkEPdef5OGDQEUdcjCPYo47a3Y=' src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-highlight/prism-line-highlight.min.js'>
+    </script>
+    <script src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/index.js'/>
+</body>
+
+</html>
