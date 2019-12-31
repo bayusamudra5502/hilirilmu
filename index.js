@@ -120,6 +120,7 @@ $(document).ready(function () {
 
 
     $.getJSON("https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/database.json", function (obj) {
+        console.log("OK");
         for (var i = 0; i < obj.teams.length; i++) {
             $("#teams").append(!(i & 1) ? mediaL(obj.teams[i].name, obj.teams[i].role, obj.teams[i].img, obj
                     .teams[i].about) :

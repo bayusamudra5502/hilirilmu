@@ -582,18 +582,9 @@
                 "link": "#",
             }
         ];
-
-        $.getJSON("database.json", function (obj) {
-            for (var i = 0; i < obj.teams.length; i++) {
-                $("#teams").append(!(i & 1) ? mediaL(obj.teams[i].name, obj.teams[i].role, obj.teams[i].img, obj
-                        .teams[i].about) :
-                    mediaR(obj.teams[i].name,
-                        obj.teams[i].role, obj.teams[i].img, obj.teams[i].about));
-            }
-        });
     </script>
     <script src="index.js"></script>
-    </script>
+
 </body>
 
 </html>
