@@ -464,7 +464,7 @@
 
 </head>
 
-<body class='noscroll'>
+<body class='noscroll d-flex flex-column'>
     <div class='cover' id='coverLoadingPage'>
         <div class='container text-center'>
             <div class='row'>
@@ -619,39 +619,39 @@
             <b:section id='navbarHalaman' maxwidgets='1' showaddelement='no'>
               <b:widget id='Navbar1' locked='true' title='Navbar' type='Navbar' version='1'>
                 <b:includable id='main'>&lt;script type=&quot;text/javascript&quot;&gt;
-    function setAttributeOnload(object, attribute, val) {
-      if(window.addEventListener) {
-        window.addEventListener(&#39;load&#39;,
-          function(){ object[attribute] = val; }, false);
-      } else {
-        window.attachEvent(&#39;onload&#39;, function(){ object[attribute] = val; });
-      }
-    }
-  &lt;/script&gt;
-&lt;div id=&quot;navbar-iframe-container&quot;&gt;&lt;/div&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://apis.google.com/js/plusone.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-      gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
-        if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
-          gapi.iframes.getContext().openChild({
-              url: &#39;https://www.blogger.com/navbar.g?targetBlogID\x3d3302654278462726980\x26blogName\x3dTekno225\x26publishMode\x3dPUBLISH_MODE_BLOGSPOT\x26navbarType\x3dLIGHT\x26layoutType\x3dLAYOUTS\x26searchRoot\x3dhttps://tekno225.blogspot.com/search\x26blogLocale\x3din\x26v\x3d2\x26homepageUrl\x3dhttps://tekno225.blogspot.com/\x26vt\x3d8255741677992150163&#39;,
-              where: document.getElementById(&quot;navbar-iframe-container&quot;),
-              id: &quot;navbar-iframe&quot;
-          });
-        }
-      });
-    &lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt;
-(function() {
-var script = document.createElement(&#39;script&#39;);
-script.type = &#39;text/javascript&#39;;
-script.src = &#39;//pagead2.googlesyndication.com/pagead/js/google_top_exp.js&#39;;
-var head = document.getElementsByTagName(&#39;head&#39;)[0];
-if (head) {
-head.appendChild(script);
-}})();
-&lt;/script&gt;
-</b:includable>
-              </b:widget>
+                        function setAttributeOnload(object, attribute, val) {
+                          if(window.addEventListener) {
+                            window.addEventListener(&#39;load&#39;,
+                              function(){ object[attribute] = val; }, false);
+                          } else {
+                            window.attachEvent(&#39;onload&#39;, function(){ object[attribute] = val; });
+                          }
+                        }
+                      &lt;/script&gt;
+                    &lt;div id=&quot;navbar-iframe-container&quot;&gt;&lt;/div&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;https://apis.google.com/js/plusone.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;&gt;
+                          gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
+                            if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
+                              gapi.iframes.getContext().openChild({
+                                  url: &#39;https://www.blogger.com/navbar.g?targetBlogID\x3d3302654278462726980\x26blogName\x3dTekno225\x26publishMode\x3dPUBLISH_MODE_BLOGSPOT\x26navbarType\x3dLIGHT\x26layoutType\x3dLAYOUTS\x26searchRoot\x3dhttps://tekno225.blogspot.com/search\x26blogLocale\x3din\x26v\x3d2\x26homepageUrl\x3dhttps://tekno225.blogspot.com/\x26vt\x3d8255741677992150163&#39;,
+                                  where: document.getElementById(&quot;navbar-iframe-container&quot;),
+                                  id: &quot;navbar-iframe&quot;
+                              });
+                            }
+                          });
+                        &lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt;
+                    (function() {
+                    var script = document.createElement(&#39;script&#39;);
+                    script.type = &#39;text/javascript&#39;;
+                    script.src = &#39;//pagead2.googlesyndication.com/pagead/js/google_top_exp.js&#39;;
+                    var head = document.getElementsByTagName(&#39;head&#39;)[0];
+                    if (head) {
+                    head.appendChild(script);
+                    }})();
+                    &lt;/script&gt;
+                    </b:includable>
+                </b:widget>
             </b:section>
     
             <nav class='navbar navbar-expand-sm navbar-dark navbar-utama'>
@@ -938,7 +938,7 @@ head.appendChild(script);
             </main>
 
         <b:else/>
-             <main>
+             <main class="mb-auto">
                 <div class='container'>
                     <div class='row'>
                         <div class='col-11 col-md-10 col-lg-8 mx-auto'>
