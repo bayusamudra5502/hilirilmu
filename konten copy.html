@@ -35,6 +35,9 @@
 
     <title>Judul Konten | HIlir Ilmu</title>
 </head>
+<script>
+    let item = false;
+</script>
 
 <body class="noscroll">
     <div class="cover" id="coverLoadingPage">
@@ -150,135 +153,22 @@
                             <div class="container">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="#">Utama</a></li>
-                                        <li class="breadcrumb-item"><a href="#">Kategori 1</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Judul Artikel</li>
+                                        <li class="breadcrumb-item"><a href="/">Utama</a></li>
+                                        <li class="breadcrumb-item"><a href="/#cari">Pencarian</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Hasil Pencarian</li>
                                     </ol>
                                 </nav>
                             </div>
                         </div>
 
-                        <h1 class="mb-4">Judul Artikel</h1>
-
-                        <div class="container mb-2">
-                            <div class="row mb-1">
-                                <div class="col-1 d-print-none">
-                                    <div class="ml-1 circle-img rounded-circle"
-                                        style="background-image: url('img/bamboo.png');">
-                                    </div>
-                                </div>
-                                <div class="offset-1 offset-md-0 d-print-none"></div>
-                                <div class="col pl-lg-4 pl-md-5">
-                                    <p class="text-muted c-author mb-0"><span
-                                            class="text-mute d-none d-print-inline">Ditulis oleh </span>Bayu Samudra</p>
-                                    <small class="text-muted c-calendar mt-0">28 Desember 2019 • <span
-                                            id="waktuBaca"></span> menit
-                                        dibaca</small>
-                                </div>
-                                <div class="col-1 d-flex item-align-center d-print-none">
-                                    <!-- AddToAny BEGIN -->
-                                    <div class="a2a_kit a2a_kit_size_32 a2a_default_style share-bar">
-                                        <a class="a2a_dd" href="https://www.addtoany.com/share" id="share"><i
-                                                class="fa fa-share-alt"></i></a>
-                                    </div>
-                                    <script async src="https://static.addtoany.com/menu/page.js"></script>
-                                    <!-- AddToAny END -->
-                                </div>
-                            </div>
-                        </div>
+                        <h1 class="mb-4">Hasil Pencarian ""</h1>
 
                         <!-- ============================================================ -->
                         <!-- BLOG CONTENT -->
                         <div class="isi-konten">
-                            <span id="jumlahKata" class="d-none">2000</span>
-                            <blockquote>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptates minus ad
-                                reiciendis tenetur at culpa, dolores labore harum itaque, facilis quidem sapiente quos,
-                                adipisci iusto iste. Minus, cumque modi?
-                                <cite>Cita-cita</cite>
-                            </blockquote>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit fuga vel quo inventore
-                                reprehenderit rerum, aliquid accusantium eligendi ullam labore assumenda asperiores
-                                adipisci? Voluptate nemo, expedita exercitationem doloremque tempore rem.Fugiat mollitia
-                                minus nobis, magnam voluptatibus rerum inventore enim error ducimus aspernatur sunt
-                                necessitatibus sequi ipsam iste minima facilis modi beatae iure, sed quod. Dicta omnis
-                                quia rerum facilis maxime!</p>
-                            <p>Bacon ipsum dolor amet landjaeger salami drumstick, bacon brisket ham hock venison rump
-                                ground round short ribs meatloaf picanha filet mignon leberkas bresaola. Salami tail
-                                beef ribs sirloin, short loin doner turkey sausage kielbasa tri-tip corned beef t-bone
-                                pig bresaola venison. Tri-tip short loin buffalo meatloaf ham, kielbasa landjaeger
-                                porchetta shankle capicola beef prosciutto shank chicken jerky. Pig ribeye landjaeger,
-                                tri-tip tongue ham shoulder. Leberkas beef prosciutto pork, pig andouille cupim sausage
-                                kielbasa cow jerky ground round chicken alcatra short ribs. Landjaeger chuck spare ribs
-                                swine, ball tip corned beef tongue ham hock. Pancetta jerky filet mignon hamburger beef
-                                tail meatloaf pig.
-                            </p>
-                            <h2 class="point" id="sb-1">Sub Judul 1</h2>
-                            <img src="img/universe.jpg" alt="Universe">
-                            <p>Chislic doner rump sirloin pastrami biltong. Prosciutto chicken picanha, kevin sausage
-                                pancetta short ribs. Short ribs swine turkey, short loin shank chuck landjaeger sirloin
-                                ground round picanha salami tail. Hamburger kielbasa turkey tenderloin jowl ground
-                                round, beef boudin porchetta rump tongue flank andouille shoulder. Jowl strip steak
-                                fatback, picanha short ribs tail bacon leberkas pork filet mignon t-bone pork belly
-                                meatloaf.
-                            </p>
-                            <p>
-                                Turkey tri-tip pig filet mignon meatball cupim salami ham bacon ground round pork belly
-                                sausage swine. Biltong cow salami bacon. Brisket beef ribs kevin tongue venison, ball
-                                tip
-                                pastrami. Pig shankle meatball, pork bresaola shoulder corned beef biltong filet mignon
-                                landjaeger chuck meatloaf.
-                            </p>
-                            <p>
-                                T-bone capicola ground round meatball beef ribs brisket picanha filet mignon cupim
-                                venison biltong. Ball tip short ribs capicola shankle short loin sirloin. Meatloaf doner
-                                jowl andouille. Pork burgdoggen salami turducken, swine sausage pork belly. Picanha tail
-                                filet mignon, alcatra pork drumstick swine turducken flank shankle jerky meatloaf.
-                            </p>
-                            <p>
-                                Ball tip chislic strip steak, venison pork belly tenderloin bacon ham hock ground round
-                                pastrami flank kevin. Pork belly prosciutto corned beef shank ham jerky boudin kielbasa
-                                chuck beef ribs hamburger sausage. Burgdoggen picanha chicken doner, porchetta pork chop
-                                swine biltong turkey jerky. Jowl drumstick turducken swine pork belly buffalo porchetta
-                                ham picanha shoulder ground round.
-                            </p>
-                            <h2 class="point" id="sb-2">Sub Judul 2</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo laborum suscipit iure enim
-                                porro quaerat eveniet explicabo at cum consequuntur cupigoToTopm est exercitationem
-                                labore
-                                vel, animi fugiat quisquam.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores qui est autem fugit,
-                                voluptates recusandae, ad, delectus at aperiam quaerat dolor alias magnam rerum sunt
-                                doloremque dolorum. Cumque, voluptate fuga.
-                                Esse dignissimos assumenda similique, laudantium architecto consequuntur unde dolorem
-                                aliquid sint quas officia explicabo doloremque dolore soluta omnis! Nemo incidunt
-                                voluptatibus cupiditate magni repellendus consequatur. Inventore necessitatibus
-                                voluptatem saepe praesentium.
-                                Accusantium sint possimus obcaecati veritatis eligendi explicabo aut iste, earum minus
-                                consequuntur debitis! Sapiente, temporibus! A pariatur aut mollitia, facere aliquam
-                                inventore quia voluptatum deleniti sunt voluptas tempore iure minus.</p>
-                        </div>
                     </article>
-
-                    <div class="penulis">
-                        <h2 class="point">Tentang Penulis</h2>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="media d-flex d-flex-row">
-                                    <div class="mr-4 team rounded-circle d-md-block d-none"
-                                        style="background-image: url('img/bamboo.png');"></div>
-                                    <img src="img/bamboo.png" alt="nama penulis"
-                                        class="d-none d-print-block mr-3 d-print-img" />
-
-                                    <div class="media-body">
-                                        <h5 class="card-title" id="namaPenulis">Bayu Samudra</h5>
-                                        <p class="text-muted jabatan" id="jabatanPenulis"></p>
-                                        <p class="card-text" id="keteranganPenulis"></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    Kambing
+                    </article>
 
                 </div>
                 <div class="col-11 offset-lg-0 col-lg mx-auto d-print-none">

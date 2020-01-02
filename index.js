@@ -1,4 +1,27 @@
-function fetch(str) {
+function popularFormatter(title, subTitle, text, href) {
+    var result = "<div class='card'>" +
+        "<div class='card-body'>" +
+        "<div class='container'>" +
+        "<div class='row mb-1'>" +
+        "<div class='col'>" +
+        "<h5 class='card-title text-dark'><a href='" + href + "'>" + title + "</a></h5>" +
+        "<h6 class='card-subtitle mb-2 text-muted'>" + subTitle + "</h6>" +
+        "</div>" +
+        "</div>" +
+        "<div class='row mb-3'>" +
+        "<div class='col'>" +
+        "<p class='card-text text-justify'>" + text +
+        "</p>" +
+        "</div>" +
+        "</div>" +
+        "</div>" +
+        "</div>" +
+        "</div>";
+
+    return result;
+}
+
+function fetch(str, b) {
     var o = $(str);
     var arr = new Array;
     $(o.children()[6]).children().each(function (i, n) {
@@ -6,19 +29,36 @@ function fetch(str) {
     });
 
 
-    var result = {
-        "title": $(o.children()[0]).text(),
-        "subTitle": $(o.children()[1]).text(),
-        "text": $(o.children()[2]).text(),
-        "author": {
-            "name": $($(o.children()[3]).children()[0]).text(),
-            "photoUrl": "https:" + $($(o.children()[3]).children()[1]).text(),
-            "profileUrl": $($(o.children()[3]).children()[2]).text()
-        },
-        "postTime": $(o.children()[4]).text(),
-        "link": $(o.children()[5]).text(),
-        "coverPicture": getChildFirstPicUrl((o.children()[7])),
-        "tags": arr
+    if (b) {
+        var result = {
+            "title": $(o.children()[0]).text(),
+            "subTitle": $(o.children()[1]).text(),
+            "text": $(o.children()[2]).text(),
+            "author": {
+                "name": $($(o.children()[3]).children()[0]).text(),
+                "photoUrl": "https:" + $($(o.children()[3]).children()[1]).text(),
+                "profileUrl": $($(o.children()[3]).children()[2]).text()
+            },
+            "postTime": $(o.children()[4]).text(),
+            "link": $(o.children()[5]).text(),
+            "body": o.children()[7],
+            "tags": arr
+        }
+    } else {
+        var result = {
+            "title": $(o.children()[0]).text(),
+            "subTitle": $(o.children()[1]).text(),
+            "text": $(o.children()[2]).text(),
+            "author": {
+                "name": $($(o.children()[3]).children()[0]).text(),
+                "photoUrl": "https:" + $($(o.children()[3]).children()[1]).text(),
+                "profileUrl": $($(o.children()[3]).children()[2]).text()
+            },
+            "postTime": $(o.children()[4]).text(),
+            "link": $(o.children()[5]).text(),
+            "coverPicture": getChildFirstPicUrl((o.children()[7])),
+            "tags": arr
+        }
     }
 
     return result;
@@ -64,7 +104,7 @@ function blok(judulArtikel, subtitleArtikel, teks,
     }
 
     template += '';
-    template += '<div class="row mb-1"><div class="col-1"><div class="ml-1 circle-img rounded-circle"';
+    template += '<div class="row mb-1 ml-1"><div class="col-1"><div class="ml-1 circle-img rounded-circle"';
     template += 'style="background-image: url(\'' + author.photoUrl + '\');"></div></div>';
     template += '<div class="offset-1"></div><div class="col-7 pl-4">';
     template += '<a  class="d-block text-muted c-author mb-1">' + author.name + '</a>';
@@ -188,10 +228,10 @@ $(document).ready(function () {
     $(".daftar").toggleClass("d-none");
     $(".daftar").hide();
 
-    // $(".point").each(function () {
-    //     var txt = $(this).text();
-    //     $("#daftarIsi").append('<li onclick="goto(\'#' + $(this).attr("id") + '\')">' + txt + "</li>");
-    // });
+    $(".point").each(function () {
+        var txt = $(this).text();
+        $("#daftarIsi").append('<li onclick="goto(\'#' + $(this).attr("id") + '\')">' + txt + "</li>");
+    });
 
     window.onscroll = function () {
         if ($("body").scrollTop > 20 ||
@@ -209,30 +249,66 @@ $(document).ready(function () {
         $("#kolomKomentar").focus();
     });
 
-    if ($("#namaPenulis").length > 0) {
-        $("#share").children("span").toggleClass("d-none");
-        $("#waktuBaca").text(lamaBaca("#jumlahKata"));
-    }
-
-    if ($("#namaPenulis").length > 0) {
-        $("#jabatanPenulis").text(team[$("#namaPenulis").text()][0]);
-        $("#keteranganPenulis").text(team[$("#namaPenulis").text()][1]);
-    }
-
     // POST LAUNCHER
     var posts = new Array;
     $("#main-contents").children().each(function (i, n) {
-        posts[i] = fetch(n)
+        posts[i] = fetch(n, (item != undefined) ? true : false);
     });
 
     $("#main-contents").remove();
 
-    for (var a of posts) {
-        $("#newArticle").append(blok(a.title, a.subTitle, a.text, a.author, a.postTime, a.link,
-            (a.tags == undefined) ? [] : a.tags, (a.coverPicture == undefined) ? "" : a.coverPicture));
+    if (item) {
+        $("header").toggleClass("mb-2");
+        $("#tags").append("<li class=\"breadcrumb-item\"><a href=\"/\">Utama</a></li>");
+        for (var i of posts[0].tags) {
+            $("#tags").append("<li class=\"breadcrumb-item\"><a href=\"" + encodeURI('/search/label/' + i) + "\">" + i + "</a></li>");
+        }
+        $("#tags").append('<li class="breadcrumb-item active" aria-current="page">' + posts[0].title + '</li>');
+
+        $(".titleArticle").text(posts[0].title);
+        $(".author").text(posts[0].author.name);
+        $(".time").text(posts[0].postTime);
+        $("#contentMaster").html(posts[0].body);
+        $(".authorPicture").css("background-image", posts[0].author.photoUrl);
+        $.getJSON("https://raw.githubusercontent.com/bayusamudra5502/hilirilmu/master/database.json", function (obj) {
+            for (var i of obj.teams) {
+                if ($("#namaPenulis").text().localeCompare(i.name) == 0) {
+                    $("#jabatanPenulis").text(i.role);
+                    $("#keteranganPenulis").text(i.about);
+                }
+            }
+        });
+
+        $("#postPopularData").children().each(function (i, n) {
+            var r = fetch(n, true);
+            $("#wadahPopuler").append(popularFormatter(r.title, r.subTitle, r.text, r.link));
+        });
+    } else if (archive) {
+        $("header").toggleClass("mb-2");
+        $("#postPopularData").remove();
+        var dat = url.split("/");
+        $(".titleArticle").text("Arsip Blog pada " + ((isNaN([dat[dat.length - 3] - 1])) ? dat[dat.length - 2] : (["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus",
+            "September", "Oktober", "November", "Desember"
+        ][dat[dat.length - 2] - 1] + " " + dat[dat.length - 3])));
+        $("#dataBar").remove();
+        $("#contentMaster").append("<p>Berikut ini adalah hasil penelusuran dari "++["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus",
+            "September", "Oktober", "November", "Desember"
+        ][dat[dat.length - 2] - 1] + " " + dat[dat.length - 1] + "</p>");
+        for (var a of posts) {
+            $("#contentMaster").append(blok(a.title, a.subTitle, a.text, a.author, a.postTime, a.link,
+                (a.tags == undefined) ? [] : a.tags, (a.coverPicture == undefined) ? "" : a.coverPicture));
+        }
+    } else {
+        for (var a of posts) {
+            $("#newArticle").append(blok(a.title, a.subTitle, a.text, a.author, a.postTime, a.link,
+                (a.tags == undefined) ? [] : a.tags, (a.coverPicture == undefined) ? "" : a.coverPicture));
+        }
     }
 
-
+    if ($("#namaPenulis").length > 0) {
+        $("#share").children("span").toggleClass("d-none");
+        $("#waktuBaca").text(lamaBaca("#jumlahKata"));
+    }
 
     $.getJSON("https://raw.githubusercontent.com/bayusamudra5502/hilirilmu/master/database.json", function (obj) {
         for (var i = 0; i < obj.teams.length; i++) {

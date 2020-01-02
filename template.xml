@@ -38,7 +38,6 @@
 
     <!-- Style -->
     <link crossorigin='anonymous' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' integrity='sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=' rel='stylesheet'/>
-    <link href='https://fonts.googleapis.com/css?family%3DPoppins%3A300%2C400%2C600%26display%3Dswap' rel='stylesheet'/>
     <link crossorigin='anonymous' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' rel='stylesheet'/>
     <link crossorigin='anonymous' href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.min.css' integrity='sha256-77qGXu2p8NpfcBpTjw4jsMeQnz0vyh74f5do0cWjQ/Q=' rel='stylesheet'/>
     <link crossorigin='anonymous' href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/command-line/prism-command-line.css' integrity='sha256-UvoA9bIYCYQkCMTYG5p2LM8ZpJmnC4G8k0oIc89nuQA=' rel='stylesheet'/>
@@ -492,66 +491,6 @@
         </div>
     </noscript>
 
-    <header>
-        <!-- Navbar -->
-        <b:section id="navbarHalaman" maxwidgets="1" showaddelement="no">
-             <b:widget id="Navbar1" locked="yes" type="Navbar" />
-        </b:section>
-
-        <nav class='navbar navbar-expand-sm navbar-dark navbar-utama'>
-            <div class='container'>
-                <a class='navbar-brand' href='#'>Hilir Ilmu</a>
-                <button class='navbar-toggler d-lg-none ml-auto' data-target='#navcol' data-toggle='collapse' type='button'>
-                    <span class='navbar-toggler-icon'/>
-                </button>
-                <div class='collapse navbar-collapse' id='navcol'>
-                    <ul class='navbar-nav ml-auto mt-2 mt-lg-0 navbar-right'>
-                        <li class='nav-item dropdown'>
-                            <a aria-expanded='false' aria-haspopup='true' class='nav-link dropdown-toggle' data-toggle='dropdown' href='#' id='dropdown-Produk'>Produk</a>
-                            <div class='dropdown-menu'>
-                                <a class='dropdown-item' href='/p/buku.html'>Buku</a>
-                                <a class='dropdown-item' href='/p/video.html'>Video Tutorial</a>
-                            </div>
-                        </li>
-
-                        <li class='nav-item dropdown'>
-                            <a aria-expanded='false' aria-haspopup='true' class='nav-link dropdown-toggle' data-toggle='dropdown' href='#' id='dropdown-Artikel'>Artikel</a>
-                            <div class='dropdown-menu'>
-                                <a class='dropdown-item goToTopik' href='#topik'>Matematika</a>
-                                <a class='dropdown-item goToTopik' href='#topik'>Ilmu Komputer</a>
-                                <hr/>
-                                <a class='dropdown-item' href='/p/materi-smp.html'>Materi SMP</a>
-                                <a class='dropdown-item' href='/p/materi-sma.html'>Materi SMA</a>
-                                <a class='dropdown-item' href='/search/label/Kuliah'>Materi Kuliah</a>
-                                <a class='dropdown-item' href='/search/label/Olimpiade'>Materi Olimpiade</a>
-                                <hr/>
-                                <a class='dropdown-item' href='/search/label/Tips-n-Triks'>Tips &amp; Triks</a>
-                            </div>
-                        </li>
-
-                        <li class='nav-item'>
-                            <a class='nav-link' href='/p/saran.html'>Kotak Saran</a>
-                        </li>
-
-                        <li class='nav-item'>
-                            <a class='nav-link' href='/p/kontak.html'>Kontak</a>
-                        </li>
-
-                        <li class='nav-item' id='cari-list-trig'>
-                            <a class='nav-link' href='#' id='cari-trig'><i class='fa fa-search fa-fw'>
-                                    <span class='sr-only'>Cari</span>
-                                </i></a>
-                        </li>
-                    </ul>
-                    <form action='/search' class='form-inline my-2 my-lg-0 d-none' id='cari' method='GET'>
-                        <input aria-label='Search' class='form-control ml-sm-2' id='form-cari' name='q' placeholder='Cari' type='search'/>
-                    </form>
-                </div>
-            </div>
-        </nav>
-        <!-- END OF NAVBAR -->
-    </header>
-
     <!-- Go To Top  -->
     <div class='goTop-container'>
         <button class='btn btn-dark d-none' id='goToUp' title='Ke Atas'>
@@ -559,248 +498,650 @@
             <span class='sr-only'>Ke Atas</span>
         </button>
     </div>
-
-
-    <!-- START FLYER -->
-    <div class='w-100 py-5 flat text-center'>
-        <div class='container'>
-            <div class='row'>
-                <div class='col-lg-7 col-11 col-md-9 mx-auto'>
-                    <blockquote class='h1 bq-awal'>
-                        Janganlah pernah letih untuk menggali ilmu karena ilmu
-                        akan
-                        menjagamu dari segala keburukan.</blockquote>
-                    <button class='btn btn-outline-light btn-lg my-4' id='btnToCari'>Let&#39;s do it</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--END FLYER-->
-
-    <main>
-        <!-- FORM SEARCH SECTION -->
-        <div class='sec1 my-4 text-center p-5' id='pencarian'>
-            <div class='container'>
-                <div class='row'>
-                    <div class='col'>
-                        <h2 class='mb-4'>Pencarian</h2>
-                        <p class='h5 mb-3'>Yuk cari artikel apa yang ingin kau tahu...</p>
-                    </div>
-                </div>
-                <div class='row'>
-                    <div class='col-12 col-md-10 mx-auto'>
-                        <form action='/search' class='form my-2' method='GET'>
-                            <div class='input-group mb-3 input-group-lg'>
-                                <div class='input-group-prepend'>
-                                    <span class='input-group-text bg-transparent border-right-0'><i class='fa fa-search fa-fw'>
-                                            <span class='sr-only'>Cari</span>
-                                        </i> </span>
+    
+    <b:if cond='data:blog.pageType == "error_page"'>
+            <header class="w-100 mb-auto">
+            <!-- Navbar -->
+            <!-- WARNING ! PERUBAHAN DISINI DARI KONTEN-->
+            <nav class="navbar navbar-expand-sm navbar-dark navbar-utama">
+                <div class='container'>
+                    <a class='navbar-brand' href='#'>Hilir Ilmu</a>
+                    <button class='navbar-toggler d-lg-none ml-auto' data-target='#navcol' data-toggle='collapse' type='button'>
+                        <span class='navbar-toggler-icon'/>
+                    </button>
+                    <div class='collapse navbar-collapse' id='navcol'>
+                        <ul class='navbar-nav ml-auto mt-2 mt-lg-0 navbar-right'>
+                            <li class='nav-item dropdown'>
+                                <a aria-expanded='false' aria-haspopup='true' class='nav-link dropdown-toggle' data-toggle='dropdown' href='#' id='dropdown-Produk'>Produk</a>
+                                <div class='dropdown-menu'>
+                                    <a class='dropdown-item' href='/p/buku.html'>Buku</a>
+                                    <a class='dropdown-item' href='/p/video.html'>Video Tutorial</a>
                                 </div>
-                                <input class='form-control border-left-0' name='q' placeholder='Tulis kata kunci disini' type='text'/>
-                            </div>
+                            </li>
+    
+                            <li class='nav-item dropdown'>
+                                <a aria-expanded='false' aria-haspopup='true' class='nav-link dropdown-toggle' data-toggle='dropdown' href='#' id='dropdown-Artikel'>Artikel</a>
+                                <div class='dropdown-menu'>
+                                    <a class='dropdown-item goToTopik' href='/#topik'>Matematika</a>
+                                    <a class='dropdown-item goToTopik' href='/#topik'>Ilmu Komputer</a>
+                                    <hr/>
+                                    <a class='dropdown-item' href='/p/materi-smp.html'>Materi SMP</a>
+                                    <a class='dropdown-item' href='/p/materi-sma.html'>Materi SMA</a>
+                                    <a class='dropdown-item' href='/search/label/Kuliah'>Materi Kuliah</a>
+                                    <a class='dropdown-item' href='/search/label/Olimpiade'>Materi Olimpiade</a>
+                                    <hr/>
+                                    <a class='dropdown-item' href='/search/label/Tips-n-Triks'>Tips &amp; Triks</a>
+                                </div>
+                            </li>
+    
+                            <li class='nav-item'>
+                                <a class='nav-link' href='/p/saran.html'>Kotak Saran</a>
+                            </li>
+    
+                            <li class='nav-item'>
+                                <a class='nav-link' href='/p/kontak.html'>Kontak</a>
+                            </li>
+    
+                            <li class='nav-item' id='cari-list-trig'>
+                                <a class='nav-link' href='#' id='cari-trig'><i class='fa fa-search fa-fw'>
+                                        <span class='sr-only'>Cari</span>
+                                    </i></a>
+                            </li>
+                        </ul>
+                        <form action='/search' class='form-inline my-2 my-lg-0 d-none' id='cari' method='GET'>
+                            <input aria-label='Search' class='form-control ml-sm-2' id='form-cari' name='q' placeholder='Cari' type='search'/>
                         </form>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- END SECTION 1 -->
+            </nav>
+            <!-- END OF NAVBAR -->
+        </header>
 
-        <!-- START SECTION 2 : Topik -->
-        <div class='sec2 my-4 text-center p-5 text-light' id='topik'>
-            <div class='container'>
-                <div class='row'>
-                    <div class='col'>
-                        <h2 class='mb-4'>Topik</h2>
-                    </div>
-                </div>
-                <div class='row'>
-                    <div class='col'>
-                        <p class='h5 mb-4'>Yuk telusuri topik yang ada di Hilir Ilmu</p>
-                    </div>
-                </div>
-                <div class='row my-2'>
-                    <div class='col'>
-                        <h3 class='h4'>Matematika</h3>
-                    </div>
-                </div>
-                <div class='row'>
-                    <div class='col-md-10 mx-md-auto'>
-                        <button class='btn btn-light btn-topik my-2 mx-sm-3 mx-auto' id='materiALjabar'>
-                            <span class='container d-flex'>
-                                <span class='row'>
-                                    <span class='col-4 d-block'>
-                                        <img alt='Materi Tentang Aljabar' class='img-topik' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/materi-tentang-aljabar.png'/>
-                                    </span>
-                                    <span class='col d-block'>
-                                        Aljabar
-                                    </span>
-                                </span>
-                            </span>
-                        </button>
-
-                        <button class='btn btn-light btn-topik my-2 mx-sm-3 mx-auto' id='materiMatdis'>
-                            <span class='container d-flex'>
-                                <span class='row'>
-                                    <span class='col-1 d-block'>
-                                        <img alt='Materi Tentang Aljabar' class='img-topik' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/materi-tentang-peluang-kombinatorika-diskrit.png'/>
-                                    </span>
-                                    <span class='col d-block text-vertical-center ml-3 mr-0'>
-                                        <i>Discrete Math</i>
-                                    </span>
-                                </span>
-                            </span>
-                        </button>
-
-                        <button class='btn btn-light btn-topik my-2 mx-sm-3 mx-auto' id='materiGeometri'>
-                            <span class='container d-flex'>
-                                <span class='row'>
-                                    <span class='col-4 d-block'>
-                                        <img alt='Materi Tentang Aljabar' class='img-topik' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/materi-tentang-geometri.png'/>
-                                    </span>
-                                    <span class='col d-block text-vertical-center'>
-                                        Geometri
-                                    </span>
-                                </span>
-                            </span>
-                        </button>
-
-                        <button class='btn btn-light btn-topik my-2 mx-sm-3 mx-auto' id='materiLogika'>
-                            <span class='container d-flex'>
-                                <span class='row'>
-                                    <span class='d-block col-4'>
-                                        <img alt='Materi Tentang Aljabar' class='img-topik' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/materi-tentang-logika.png'/>
-                                    </span>
-                                    <span class='col d-block text-vertical-center'>
-                                        Logika
-                                    </span>
-                                </span>
-                            </span>
-                        </button>
-
-                        <button class='btn btn-light btn-topik my-2 mx-sm-3 mx-auto' id='materiTeoBilr'>
-                            <span class='container d-flex'>
-                                <span class='row'>
-                                    <span class='col-2 d-block'>
-                                        <img alt='Materi Tentang Aljabar' class='img-topik' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/materi-tentang-teori-bilangan.png'/>
-                                    </span>
-                                    <span class='col ml-3 mr-0 d-block'>
-                                        Teori Bilangan
-                                    </span>
-                                </span>
-                            </span>
-                        </button>
-
-                        <button class='btn btn-light btn-topik my-2 mx-sm-3 mx-auto' id='materiStatistika'>
-                            <span class='container d-flex'>
-                                <span class='row'>
-                                    <span class='col-4 d-block'>
-                                        <img alt='Materi Tentang Aljabar' class='img-topik' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/materi-tentang-statistika.png'/>
-                                    </span>
-                                    <span class='col d-block text-vertical-center'>
-                                        Statistika
-                                    </span>
-                                </span>
-                            </span>
-                        </button>
-
-                        <button class='btn btn-light btn-topik my-2 mx-sm-3 mx-auto' id='materiKalkulus'>
-                            <span class='container d-flex'>
-                                <span class='row'>
-                                    <span class='col-4 d-block'>
-                                        <img alt='Materi Tentang Aljabar' class='img-topik' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/materi-tentang-kalkulus.png'/>
-                                    </span>
-                                    <span class='col text-vertical-center d-block'>
-                                        Kalkulus
-                                    </span>
-                                </span>
-                            </span>
-                        </button>
-                    </div>
-                </div>
-                <!-- END MATEMATIKA -->
-                <div class='row mt-3 mb-2'>
-                    <div class='col'>
-                        <h3 class='h4'>Teori Komputer</h3>
-                    </div>
-                </div>
-                <div class='row'>
-                    <div class='col-md-10 mx-md-auto'>
-                        <button class='btn btn-light btn-topik my-2 mx-sm-3 mx-auto' id='materiAlgoritma'>
-                            <span class='container d-flex'>
-                                <span class='row'>
-                                    <span class='d-block col-4'>
-                                        <img alt='Materi Tentang Aljabar' class='img-topik' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/materi-tentang-algoritma.png'/>
-                                    </span>
-                                    <span class='d-block col text-vertical-center'>
-                                        Algoritma
-                                    </span>
-                                </span>
-                            </span>
-                        </button>
-                        <button class='btn btn-light btn-topik my-2 mx-sm-3 mx-auto' id='materiPemrograman'>
-                            <span class='container d-flex'>
-                                <span class='row'>
-                                    <span class='col-2 d-block'>
-                                        <img alt='Materi Tentang Aljabar' class='img-topik' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/materi-tentang-pemrograman.png'/>
-                                    </span>
-                                    <span class='col d-block'>
-                                        Pemrograman
-                                    </span>
-                                </span>
-                            </span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- END SECTION 2 -->
-
-        <!-- START SECTION 3 : Artikel Terbaru -->
-        <div class='sec3 my-4 p-4' id='artikelBaru'>
-            <div class='container'>
-                <div class='row text-center'>
-                    <div class='col'>
-                        <h2 class='mb-4'>Artikel Terbaru</h2>
-                        <p class='h5 mb-3'>Inilah artikel terbaru kami</p>
-                    </div>
-                </div>
-                <div class='row'>
-                    <div class='col-12'>
-                        <div class='card-column' id="newArticle">
+        <main class="mx-auto">
+            <div class="error-message">
+                <div class="container text-light">
+                    <div class="row">
+                        <div class="col-1 ml-auto error-logo d-none d-md-block">
+                            <i class="far fa-compass fa-fw"></i>
+                        </div>
+                        <div class="col-11 col-md-10 ml-lg-2 ml-md-3 mr-md-auto mx-auto">
+                            <div class="container">
+                                <div class="row">
+                                    <h1>Oops..</h1>
+                                    <p class="h4">Sepertinya kamu tersesat... Coba perhatikan lagi alamat URL yang kamu
+                                        tuju
+                                        atau kamu bisa
+                                        cari konten yang kamu maksud disini.</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 p-0 mx-auto">
+                                        <form class="form my-2" method="GET" action="/search">
+                                            <div class="input-group mb-3 input-group-lg">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text bg-light border-right-0"><i
+                                                            class="fa fa-search fa-fw">
+                                                            <span class="sr-only">Cari</span>
+                                                        </i> </span>
+                                                </div>
+                                                <input type="text" class="form-control border-left-0"
+                                                    placeholder="Tulis kata kunci." name="q"/>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- END SECTION 3 -->
+        </main>
 
-        <!-- SECTION 5 : TIm -->
-        <div class="sec5 my-4 p-4" id="tim">
+        <footer class="p-3 mb-0 w-100 bg-transparent mt-auto">
             <div class="container">
-                <div class="row text-center mb-4">
-                    <div class="col">
-                        <h2 class="mb-4">Tim Kami</h2>
-                        <p class="h5 mb-3">Inilah daftar tim kami</p>
-                    </div>
-                </div>
                 <div class="row">
-                    <div class="col" id="teams">
+                    <div class="col h6 mb-0">
+                        <p>Dibuat dengan ❤️ oleh Tim Hilir Ilmu.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
-
-    <footer class='p-3 mb-0'>
-        <div class='container'>
-            <div class='row'>
-                <div class='col h6 mb-0'>
-                    <p>Dibuat dengan &#10084;&#65039; oleh Tim Hilir Ilmu.</p>
+        </footer>
+    <b:else/>
+        <header>
+            <!-- Navbar -->
+            <b:section id="navbarHalaman" maxwidgets="1" showaddelement="no">
+                 <b:widget id="Navbar1" locked="yes" type="Navbar" />
+            </b:section>
+    
+            <nav class='navbar navbar-expand-sm navbar-dark navbar-utama'>
+                <div class='container'>
+                    <a class='navbar-brand' href='#'>Hilir Ilmu</a>
+                    <button class='navbar-toggler d-lg-none ml-auto' data-target='#navcol' data-toggle='collapse' type='button'>
+                        <span class='navbar-toggler-icon'/>
+                    </button>
+                    <div class='collapse navbar-collapse' id='navcol'>
+                        <ul class='navbar-nav ml-auto mt-2 mt-lg-0 navbar-right'>
+                            <li class='nav-item dropdown'>
+                                <a aria-expanded='false' aria-haspopup='true' class='nav-link dropdown-toggle' data-toggle='dropdown' href='#' id='dropdown-Produk'>Produk</a>
+                                <div class='dropdown-menu'>
+                                    <a class='dropdown-item' href='/p/buku.html'>Buku</a>
+                                    <a class='dropdown-item' href='/p/video.html'>Video Tutorial</a>
+                                </div>
+                            </li>
+    
+                            <li class='nav-item dropdown'>
+                                <a aria-expanded='false' aria-haspopup='true' class='nav-link dropdown-toggle' data-toggle='dropdown' href='#' id='dropdown-Artikel'>Artikel</a>
+                                <div class='dropdown-menu'>
+                                    <a class='dropdown-item goToTopik' href='#topik'>Matematika</a>
+                                    <a class='dropdown-item goToTopik' href='#topik'>Ilmu Komputer</a>
+                                    <hr/>
+                                    <a class='dropdown-item' href='/p/materi-smp.html'>Materi SMP</a>
+                                    <a class='dropdown-item' href='/p/materi-sma.html'>Materi SMA</a>
+                                    <a class='dropdown-item' href='/search/label/Kuliah'>Materi Kuliah</a>
+                                    <a class='dropdown-item' href='/search/label/Olimpiade'>Materi Olimpiade</a>
+                                    <hr/>
+                                    <a class='dropdown-item' href='/search/label/Tips-n-Triks'>Tips &amp; Triks</a>
+                                </div>
+                            </li>
+    
+                            <li class='nav-item'>
+                                <a class='nav-link' href='/p/saran.html'>Kotak Saran</a>
+                            </li>
+    
+                            <li class='nav-item'>
+                                <a class='nav-link' href='/p/kontak.html'>Kontak</a>
+                            </li>
+    
+                            <li class='nav-item' id='cari-list-trig'>
+                                <a class='nav-link' href='#' id='cari-trig'><i class='fa fa-search fa-fw'>
+                                        <span class='sr-only'>Cari</span>
+                                    </i></a>
+                            </li>
+                        </ul>
+                        <form action='/search' class='form-inline my-2 my-lg-0 d-none' id='cari' method='GET'>
+                            <input aria-label='Search' class='form-control ml-sm-2' id='form-cari' name='q' placeholder='Cari' type='search'/>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+            <!-- END OF NAVBAR -->
+        </header>
+        <b:if cond='data:blog.url == data:blog.homepageUrl and data:blog.pageType == "index"'>
+            <!-- START FLYER -->
+            <div class='w-100 py-5 flat text-center'>
+                <div class='container'>
+                <div class='row'>
+                    <div class='col-lg-7 col-11 col-md-9 mx-auto'>
+                        <blockquote class='h1 bq-awal'>
+                            Janganlah pernah letih untuk menggali ilmu karena ilmu
+                            akan
+                            menjagamu dari segala keburukan.</blockquote>
+                        <button class='btn btn-outline-light btn-lg my-4' id='btnToCari'>Let&#39;s do it</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+            </div>
+            <!--END FLYER-->
 
+            <main>
+            <!-- FORM SEARCH SECTION -->
+            <div class='sec1 my-4 text-center p-5' id='pencarian'>
+                <div class='container'>
+                    <div class='row'>
+                        <div class='col'>
+                            <h2 class='mb-4'>Pencarian</h2>
+                            <p class='h5 mb-3'>Yuk cari artikel apa yang ingin kau tahu...</p>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-12 col-md-10 mx-auto'>
+                            <form action='/search' class='form my-2' method='GET'>
+                                <div class='input-group mb-3 input-group-lg'>
+                                    <div class='input-group-prepend'>
+                                        <span class='input-group-text bg-transparent border-right-0'><i class='fa fa-search fa-fw'>
+                                                <span class='sr-only'>Cari</span>
+                                            </i> </span>
+                                    </div>
+                                    <input class='form-control border-left-0' name='q' placeholder='Tulis kata kunci disini' type='text'/>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END SECTION 1 -->
+
+            <!-- START SECTION 2 : Topik -->
+            <div class='sec2 my-4 text-center p-5 text-light' id='topik'>
+                <div class='container'>
+                    <div class='row'>
+                        <div class='col'>
+                            <h2 class='mb-4'>Topik</h2>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col'>
+                            <p class='h5 mb-4'>Yuk telusuri topik yang ada di Hilir Ilmu</p>
+                        </div>
+                    </div>
+                    <div class='row my-2'>
+                        <div class='col'>
+                            <h3 class='h4'>Matematika</h3>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-10 mx-md-auto'>
+                            <button class='btn btn-light btn-topik my-2 mx-sm-3 mx-auto' id='materiALjabar'>
+                                <span class='container d-flex'>
+                                    <span class='row'>
+                                        <span class='col-4 d-block'>
+                                            <img alt='Materi Tentang Aljabar' class='img-topik' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/materi-tentang-aljabar.png'/>
+                                        </span>
+                                        <span class='col d-block'>
+                                            Aljabar
+                                        </span>
+                                    </span>
+                                </span>
+                            </button>
+
+                            <button class='btn btn-light btn-topik my-2 mx-sm-3 mx-auto' id='materiMatdis'>
+                                <span class='container d-flex'>
+                                    <span class='row'>
+                                        <span class='col-1 d-block'>
+                                            <img alt='Materi Tentang Aljabar' class='img-topik' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/materi-tentang-peluang-kombinatorika-diskrit.png'/>
+                                        </span>
+                                        <span class='col d-block text-vertical-center ml-3 mr-0'>
+                                            <i>Discrete Math</i>
+                                        </span>
+                                    </span>
+                                </span>
+                            </button>
+
+                            <button class='btn btn-light btn-topik my-2 mx-sm-3 mx-auto' id='materiGeometri'>
+                                <span class='container d-flex'>
+                                    <span class='row'>
+                                        <span class='col-4 d-block'>
+                                            <img alt='Materi Tentang Aljabar' class='img-topik' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/materi-tentang-geometri.png'/>
+                                        </span>
+                                        <span class='col d-block text-vertical-center'>
+                                            Geometri
+                                        </span>
+                                    </span>
+                                </span>
+                            </button>
+
+                            <button class='btn btn-light btn-topik my-2 mx-sm-3 mx-auto' id='materiLogika'>
+                                <span class='container d-flex'>
+                                    <span class='row'>
+                                        <span class='d-block col-4'>
+                                            <img alt='Materi Tentang Aljabar' class='img-topik' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/materi-tentang-logika.png'/>
+                                        </span>
+                                        <span class='col d-block text-vertical-center'>
+                                            Logika
+                                        </span>
+                                    </span>
+                                </span>
+                            </button>
+
+                            <button class='btn btn-light btn-topik my-2 mx-sm-3 mx-auto' id='materiTeoBilr'>
+                                <span class='container d-flex'>
+                                    <span class='row'>
+                                        <span class='col-2 d-block'>
+                                            <img alt='Materi Tentang Aljabar' class='img-topik' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/materi-tentang-teori-bilangan.png'/>
+                                        </span>
+                                        <span class='col ml-3 mr-0 d-block'>
+                                            Teori Bilangan
+                                        </span>
+                                    </span>
+                                </span>
+                            </button>
+
+                            <button class='btn btn-light btn-topik my-2 mx-sm-3 mx-auto' id='materiStatistika'>
+                                <span class='container d-flex'>
+                                    <span class='row'>
+                                        <span class='col-4 d-block'>
+                                            <img alt='Materi Tentang Aljabar' class='img-topik' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/materi-tentang-statistika.png'/>
+                                        </span>
+                                        <span class='col d-block text-vertical-center'>
+                                            Statistika
+                                        </span>
+                                    </span>
+                                </span>
+                            </button>
+
+                            <button class='btn btn-light btn-topik my-2 mx-sm-3 mx-auto' id='materiKalkulus'>
+                                <span class='container d-flex'>
+                                    <span class='row'>
+                                        <span class='col-4 d-block'>
+                                            <img alt='Materi Tentang Aljabar' class='img-topik' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/materi-tentang-kalkulus.png'/>
+                                        </span>
+                                        <span class='col text-vertical-center d-block'>
+                                            Kalkulus
+                                        </span>
+                                    </span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- END MATEMATIKA -->
+                    <div class='row mt-3 mb-2'>
+                        <div class='col'>
+                            <h3 class='h4'>Teori Komputer</h3>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-10 mx-md-auto'>
+                            <button class='btn btn-light btn-topik my-2 mx-sm-3 mx-auto' id='materiAlgoritma'>
+                                <span class='container d-flex'>
+                                    <span class='row'>
+                                        <span class='d-block col-4'>
+                                            <img alt='Materi Tentang Aljabar' class='img-topik' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/materi-tentang-algoritma.png'/>
+                                        </span>
+                                        <span class='d-block col text-vertical-center'>
+                                            Algoritma
+                                        </span>
+                                    </span>
+                                </span>
+                            </button>
+                            <button class='btn btn-light btn-topik my-2 mx-sm-3 mx-auto' id='materiPemrograman'>
+                                <span class='container d-flex'>
+                                    <span class='row'>
+                                        <span class='col-2 d-block'>
+                                            <img alt='Materi Tentang Aljabar' class='img-topik' src='https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/materi-tentang-pemrograman.png'/>
+                                        </span>
+                                        <span class='col d-block'>
+                                            Pemrograman
+                                        </span>
+                                    </span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END SECTION 2 -->
+
+            <!-- START SECTION 3 : Artikel Terbaru -->
+            <div class='sec3 my-4 p-4' id='artikelBaru'>
+                <div class='container'>
+                    <div class='row text-center'>
+                        <div class='col'>
+                            <h2 class='mb-4'>Artikel Terbaru</h2>
+                            <p class='h5 mb-3'>Inilah artikel terbaru kami</p>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-12'>
+                            <div class='card-column' id="newArticle">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END SECTION 3 -->
+
+            <!-- SECTION 5 : TIm -->
+            <div class="sec5 my-4 p-4" id="tim">
+                <div class="container">
+                    <div class="row text-center mb-4">
+                        <div class="col">
+                            <h2 class="mb-4">Tim Kami</h2>
+                            <p class="h5 mb-3">Inilah daftar tim kami</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" id="teams">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </main>
+
+        <b:else/>
+             <main>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-md-10 col-lg-8 mx-auto">
+                            <article>
+                                <div class="navigasi">
+                                    <div class="container">
+                                        <nav aria-label="breadcrumb">
+                                            <ol class="breadcrumb" id="tags">
+                                            </ol>
+                                        </nav>
+                                    </div>
+                                </div>
+
+                                <h1 class="mb-4 titleArticle"></h1>
+
+                                <div class="container mb-2">
+                                    <div class="row mb-1">
+                                        <div class="col-1 d-print-none">
+                                            <div class="ml-1 circle-img rounded-circle authorPicture"
+                                                >
+                                            </div>
+                                        </div>
+                                        <div class="offset-1 offset-md-0 d-print-none"></div>
+                                        <div class="col pl-lg-4 pl-md-5">
+                                            <p class="text-muted c-author mb-0"><span
+                                                    class="text-mute d-none d-print-inline">Ditulis oleh </span><span class="author"></span></p>
+                                            <small class="text-muted c-calendar mt-0"><span class="time"></span> • <span
+                                                    id="waktuBaca"></span> menit
+                                                dibaca</small>
+                                        </div>
+                                        <div class="col-1 d-flex item-align-center d-print-none">
+                                            <!-- AddToAny BEGIN -->
+                                            <div class="a2a_kit a2a_kit_size_32 a2a_default_style share-bar">
+                                                <a class="a2a_dd" href="https://www.addtoany.com/share" id="share"><i
+                                                        class="fa fa-share-alt"></i></a>
+                                            </div>
+                                            <script async src="https://static.addtoany.com/menu/page.js"></script>
+                                            <!-- AddToAny END -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ============================================================ -->
+                                <!-- BLOG CONTENT -->
+                                <div class="isi-konten" id="contentMaster">
+                                </div>
+                            </article>
+
+                            <div class="penulis">
+                                <h2 class="point">Tentang Penulis</h2>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="media d-flex d-flex-row">
+                                            <div class="mr-4 team rounded-circle d-md-block d-none authorPicture"
+                                                ></div>
+                                            <img src="img/bamboo.png" alt="nama penulis"
+                                                class="d-none d-print-block mr-3 d-print-img" />
+
+                                            <div class="media-body">
+                                                <h5 class="card-title" id="namaPenulis">Bayu Samudra</h5>
+                                                <p class="text-muted jabatan" id="jabatanPenulis"></p>
+                                                <p class="card-text" id="keteranganPenulis"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-11 offset-lg-0 col-lg mx-auto d-print-none">
+                            <div class="card text-left">
+                                <div class="card-body">
+
+                                    <p class="h5 card-title">Arsip Blog</p>
+                                    <p class="card-text">
+<b:widget id='BlogArchive2' locked='false' title='Arsip Blog' type='BlogArchive'>
+  <b:widget-settings>
+    <b:widget-setting name='showStyle'>HIERARCHY</b:widget-setting>
+    <b:widget-setting name='yearPattern'>yyyy</b:widget-setting>
+    <b:widget-setting name='showWeekEnd'>true</b:widget-setting>
+    <b:widget-setting name='monthPattern'>MMMM</b:widget-setting>
+    <b:widget-setting name='dayPattern'>MMM dd</b:widget-setting>
+    <b:widget-setting name='weekPattern'>MM/dd</b:widget-setting>
+    <b:widget-setting name='chronological'>false</b:widget-setting>
+    <b:widget-setting name='showPosts'>true</b:widget-setting>
+    <b:widget-setting name='frequency'>MONTHLY</b:widget-setting>
+  </b:widget-settings>
+  <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+  <div id='ArchiveList'>
+  <div expr:id='data:widget.instanceId + &quot;_ArchiveList&quot;'>
+    <b:include cond='data:style == &quot;HIERARCHY&quot;' data='data' name='interval'/>
+    <b:include cond='data:style == &quot;FLAT&quot;' data='data' name='flat'/>
+    <b:include cond='data:style == &quot;MENU&quot;' data='data' name='menu'/>
+  </div>
+  </div>
+  <b:include name='quickedit'/>
+  </div>
+</b:includable>
+  <b:includable id='flat' var='data'>
+  <ul class='flat'>
+    <b:loop values='data:data' var='i'>
+      <li class='archivedate'>
+        <a expr:href='data:i.url'><data:i.name/></a> (<data:i.post-count/>)
+      </li>
+    </b:loop>
+  </ul>
+</b:includable>
+  <b:includable id='interval' var='intervalData'>
+  <b:loop values='data:intervalData' var='interval'>
+    <ul class='hierarchy'>
+      <li expr:class='&quot;archivedate &quot; + data:interval.expclass'>
+        <b:include cond='data:interval.toggleId' data='interval' name='toggle'/>
+        <a class='post-count-link' expr:href='data:interval.url'>
+          <data:interval.name/>
+        </a>
+        <span class='post-count' dir='ltr'>(<data:interval.post-count/>)</span>
+        <b:include cond='data:interval.data' data='interval.data' name='interval'/>
+        <b:include cond='data:interval.posts' data='interval.posts' name='posts'/>
+      </li>
+    </ul>
+  </b:loop>
+</b:includable>
+  <b:includable id='menu' var='data'>
+  <select expr:id='data:widget.instanceId + &quot;_ArchiveMenu&quot;'>
+    <option value=''><data:title/></option>
+    <b:loop values='data:data' var='i'>
+      <option expr:value='data:i.url'><data:i.name/> (<data:i.post-count/>)</option>
+    </b:loop>
+  </select>
+</b:includable>
+  <b:includable id='posts' var='posts'>
+  <ul class='posts'>
+    <b:loop values='data:posts' var='post'>
+      <li><a expr:href='data:post.url'><data:post.title/></a></li>
+    </b:loop>
+  </ul>
+</b:includable>
+  <b:includable id='toggle' var='interval'>
+  <a class='toggle' href='javascript:void(0)'>
+    <span expr:class='&quot;zippy&quot; + (data:interval.expclass == &quot;expanded&quot; ? &quot; toggle-open&quot; : &quot;&quot;)'>
+      <b:if cond='data:interval.expclass == &quot;expanded&quot;'>
+        &#9660;&#160;
+      <b:elseif cond='data:blog.languageDirection == &quot;rtl&quot;'/>
+        &#9668;&#160;
+      <b:else/>
+        &#9658;&#160;
+      </b:if>
+    </span>
+  </a>
+</b:includable>
+</b:widget>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="card text-left">
+                                <div class="card-body">
+                                    <p class="h5 card-title">Arsip Blog</p>
+                                    <p class="card-text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo velit est similique ut
+                                        praesentium laborum quae ratione. Fuga eum dolor reiciendis? Excepturi quis ratione,
+                                        repellendus enim illo asperiores. Tempora, ea?
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row d-print-none">
+                        <div class="col-11 col-lg-12 mx-auto">
+                            <h2 class="point">Postingan Populer</h2>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row mb-1">
+                                            <div class="col">
+                                                <h5 class="card-title text-dark"><a href="#">Judul Artikel</a></h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <p class="card-text text-justify">
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                                                    beatae ab perferendis molestias illo,
+                                                    dignissimos
+                                                    cumque, veniam laudantium!
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-1 h4 text-center">
+                                                <i class="fas fa-tag text-muted-super"></i>
+                                            </div>
+                                            <div class="col">
+                                                <p class="card-text text-justify">
+                                                    <a class="kategori" href="#">Pemrograman</a>
+                                                    <a class="kategori" href="#">Algoritma</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-1">
+                                            <div class="col-1  d-none d-md-block">
+                                                <div class="ml-1 circle-img rounded-circle"
+                                                    style="background-image: url('img/bamboo.png');">
+                                                </div>
+                                            </div>
+                                            <div class="col-7 offset-md-1 pl-md-0 offset-lg-0 pl-lg-3 pl-xl-2">
+                                                <p class="text-muted c-author mb-1">Bayu Samudra</p>
+                                                <small class="text-muted c-calendar mt-0">28 Desember 2019</small>
+                                            </div>
+                                            <div class="col d-flex align-item-end">
+                                                <div class="bookmark p-2 ml-auto"> <a href="#"><i class="far fa-bookmark"></i>
+                                                        <div class="sr-only">Pergi ke laman</div>
+                                                    </a> </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+        </b:if>
+        
+        
+        <footer class='p-3 mb-0'>
+            <div class='container'>
+                <div class='row'>
+                    <div class='col h6 mb-0'>
+                        <p>Dibuat dengan &#10084;&#65039; oleh Tim Hilir Ilmu.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </b:if>
     <!-- Javascript Collection -->
     <script crossorigin='anonymous' src='https://twemoji.maxcdn.com/v/latest/twemoji.min.js'>
     </script>
@@ -811,7 +1152,7 @@
     </script>
     <script crossorigin='anonymous' integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=' src='https://code.jquery.com/jquery-3.4.1.min.js'>
     </script>
-    <script crossorigin='anonymous' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'>
+    <script crossorigin='anonymous' integrity='sha384-Q6E9RHvb>IyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'>
     </script>
     <script crossorigin='anonymous' integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6' src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js'>
     </script>
@@ -828,39 +1169,50 @@
     <script crossorigin='anonymous' integrity='sha256-i1I0MEGBEKKEtBLlagkEPdef5OGDQEUdcjCPYo47a3Y=' src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-highlight/prism-line-highlight.min.js'>
     </script>
 
-````<b:section id="main" class="main" showaddelement="yes">
-````	<b:widget id="Blog1" locked="yes" type="Blog">
-````		<b:includable id="main">
-````            <div id="main-contents">
-````                        <b:loop var="post" values="data:posts">
-````                            <div>
-````                                <div><data:post.title/></div>
-````                                <div>Artikel</div>
-````                                <div><data:post.snippet/></div>
-````                                <div>
-````                                    <div><data:post.author/></div>
-````                                    <div><data:post.authorPhoto.url/></div>
-````                                    <div><data:post.authorProfileUrl/></div>
-````                                </div>
-````                                <div><data:post.timestamp/></div>
-````                                <div><data:post.url/></div>
-````                                <div>
-````                                        <b:loop var="label" values="data:post.labels">
-````							                <div><data:label.name/></div>
-````						                </b:loop>
-````                                </div>
-````                                <div><data:post.body/></div>
-````                            </div>
-````                        </b:loop>
-````                    </div>
-````		</b:includable>
-````	</b:widget>
-```` </b:section>
-                    
+    <b:section id="main" class="main" showaddelement="yes">
+        <b:widget id="Blog1" locked="yes" type="Blog">
+    	    <b:includable id="main">
+                <div id="main-contents">
+                        <b:loop var="post" values="data:posts">
+                            <div>
+                                <div><data:post.title/></div>
+                                <div>Artikel</div>
+                                <div><data:post.snippet/></div>
+                                <div>
+                                    <div><data:post.author/></div>
+                                    <div><data:post.authorPhoto.url/></div>
+                                    <div><data:post.authorProfileUrl/></div>
+                                </div>
+                                <div><data:post.timestamp/></div>
+                                <div><data:post.url/></div>
+                                <div>
+                                        <b:loop var="label" values="data:post.labels">
+    						                <div><data:label.name/></div>
+    					                </b:loop>
+                                </div>
+                                <div><data:post.body/></div>
+                            </div>
+                        </b:loop>
+                    </div>
+    	        </b:includable>
+            </b:widget>
+        </b:section>
+                  
+    <b:if cond='data:blog.pageType == "error_page"'>
+        <script>
+            $("body").toggleClass("cover-error");
+        </script>
+    </b:if>
 
+    <b:if cond='data:blog.pageType == "item"'>
+        <script>
+            let item = true;
+            let url = "<data:blog.url/>";
+        </script>
+    </b:if>
 
     <script>
-    function fetch(str) {
+        function fetch(str, b) {
     var o = $(str);
     var arr = new Array;
     $(o.children()[6]).children().each(function (i, n) {
@@ -868,19 +1220,36 @@
     });
 
 
-    var result = {
-        &#x22;title&#x22;: $(o.children()[0]).text(),
-        &#x22;subTitle&#x22;: $(o.children()[1]).text(),
-        &#x22;text&#x22;: $(o.children()[2]).text(),
-        &#x22;author&#x22;: {
-            &#x22;name&#x22;: $($(o.children()[3]).children()[0]).text(),
-            &#x22;photoUrl&#x22;: &#x22;https:&#x22; + $($(o.children()[3]).children()[1]).text(),
-            &#x22;profileUrl&#x22;: $($(o.children()[3]).children()[2]).text()
-        },
-        &#x22;postTime&#x22;: $(o.children()[4]).text(),
-        &#x22;link&#x22;: $(o.children()[5]).text(),
-        &#x22;coverPicture&#x22;: getChildFirstPicUrl((o.children()[7])),
-        &#x22;tags&#x22;: arr
+    if (b) {
+        var result = {
+            &#x22;title&#x22;: $(o.children()[0]).text(),
+            &#x22;subTitle&#x22;: $(o.children()[1]).text(),
+            &#x22;text&#x22;: $(o.children()[2]).text(),
+            &#x22;author&#x22;: {
+                &#x22;name&#x22;: $($(o.children()[3]).children()[0]).text(),
+                &#x22;photoUrl&#x22;: &#x22;https:&#x22; + $($(o.children()[3]).children()[1]).text(),
+                &#x22;profileUrl&#x22;: $($(o.children()[3]).children()[2]).text()
+            },
+            &#x22;postTime&#x22;: $(o.children()[4]).text(),
+            &#x22;link&#x22;: $(o.children()[5]).text(),
+            &#x22;body&#x22;: o.children()[7],
+            &#x22;tags&#x22;: arr
+        }
+    } else {
+        var result = {
+            &#x22;title&#x22;: $(o.children()[0]).text(),
+            &#x22;subTitle&#x22;: $(o.children()[1]).text(),
+            &#x22;text&#x22;: $(o.children()[2]).text(),
+            &#x22;author&#x22;: {
+                &#x22;name&#x22;: $($(o.children()[3]).children()[0]).text(),
+                &#x22;photoUrl&#x22;: &#x22;https:&#x22; + $($(o.children()[3]).children()[1]).text(),
+                &#x22;profileUrl&#x22;: $($(o.children()[3]).children()[2]).text()
+            },
+            &#x22;postTime&#x22;: $(o.children()[4]).text(),
+            &#x22;link&#x22;: $(o.children()[5]).text(),
+            &#x22;coverPicture&#x22;: getChildFirstPicUrl((o.children()[7])),
+            &#x22;tags&#x22;: arr
+        }
     }
 
     return result;
@@ -1050,10 +1419,10 @@ $(document).ready(function () {
     $(&#x22;.daftar&#x22;).toggleClass(&#x22;d-none&#x22;);
     $(&#x22;.daftar&#x22;).hide();
 
-    // $(&#x22;.point&#x22;).each(function () {
-    //     var txt = $(this).text();
-    //     $(&#x22;#daftarIsi&#x22;).append(&#x27;&#x3C;li onclick=&#x22;goto(\&#x27;#&#x27; + $(this).attr(&#x22;id&#x22;) + &#x27;\&#x27;)&#x22;&#x3E;&#x27; + txt + &#x22;&#x3C;/li&#x3E;&#x22;);
-    // });
+    $(&#x22;.point&#x22;).each(function () {
+        var txt = $(this).text();
+        $(&#x22;#daftarIsi&#x22;).append(&#x27;&#x3C;li onclick=&#x22;goto(\&#x27;#&#x27; + $(this).attr(&#x22;id&#x22;) + &#x27;\&#x27;)&#x22;&#x3E;&#x27; + txt + &#x22;&#x3C;/li&#x3E;&#x22;);
+    });
 
     window.onscroll = function () {
         if ($(&#x22;body&#x22;).scrollTop &#x3E; 20 ||
@@ -1071,30 +1440,47 @@ $(document).ready(function () {
         $(&#x22;#kolomKomentar&#x22;).focus();
     });
 
-    if ($(&#x22;#namaPenulis&#x22;).length &#x3E; 0) {
-        $(&#x22;#share&#x22;).children(&#x22;span&#x22;).toggleClass(&#x22;d-none&#x22;);
-        $(&#x22;#waktuBaca&#x22;).text(lamaBaca(&#x22;#jumlahKata&#x22;));
-    }
-
-    if ($(&#x22;#namaPenulis&#x22;).length &#x3E; 0) {
-        $(&#x22;#jabatanPenulis&#x22;).text(team[$(&#x22;#namaPenulis&#x22;).text()][0]);
-        $(&#x22;#keteranganPenulis&#x22;).text(team[$(&#x22;#namaPenulis&#x22;).text()][1]);
-    }
-
     // POST LAUNCHER
     var posts = new Array;
     $(&#x22;#main-contents&#x22;).children().each(function (i, n) {
-        posts[i] = fetch(n)
+        posts[i] = fetch(n, (item) ? true : false);
     });
 
     $(&#x22;#main-contents&#x22;).remove();
 
-    for (var a of posts) {
-        $(&#x22;#newArticle&#x22;).append(blok(a.title, a.subTitle, a.text, a.author, a.postTime, a.link,
-            (a.tags == undefined) ? [] : a.tags, (a.coverPicture == undefined) ? &#x22;&#x22; : a.coverPicture));
+    if (item) {
+        $(&#x22;header&#x22;).toggleClass(&#x22;mb-4&#x22;);
+        $(&#x22;#tags&#x22;).append(&#x22;&#x3C;li class=\&#x22;breadcrumb-item\&#x22;&#x3E;&#x3C;a href=\&#x22;/\&#x22;&#x3E;Utama&#x3C;/a&#x3E;&#x3C;/li&#x3E;&#x22;);
+        for (var i of posts[0].tags) {
+            $(&#x22;#tags&#x22;).append(&#x22;&#x3C;li class=\&#x22;breadcrumb-item\&#x22;&#x3E;&#x3C;a href=\&#x22;&#x22; + encodeURI(&#x27;/search/label/&#x27; + i) + &#x22;\&#x22;&#x3E;&#x22; + i + &#x22;&#x3C;/a&#x3E;&#x3C;/li&#x3E;&#x22;);
+        }
+        $(&#x22;#tags&#x22;).append(&#x27;&#x3C;li class=&#x22;breadcrumb-item active&#x22; aria-current=&#x22;page&#x22;&#x3E;&#x27; + posts[0].title + &#x27;&#x3C;/li&#x3E;&#x27;);
+
+        $(&#x22;.titleArticle&#x22;).text(posts[0].title);
+        $(&#x22;.author&#x22;).text(posts[0].author.name);
+        $(&#x22;.time&#x22;).text(posts[0].postTime);
+        $(&#x22;#contentMaster&#x22;).html(posts[0].body);
+        $(&#x22;.authorPicture&#x22;).css(&#x22;background-image&#x22;, "url('" + posts[0].author.photoUrl + "')");
+
+        $.getJSON(&#x22;https://raw.githubusercontent.com/bayusamudra5502/hilirilmu/master/database.json&#x22;, function (obj) {
+            for (var i of obj.teams) {
+                if ($(&#x22;#namaPenulis&#x22;).text().localeCompare(i.name) == 0) {
+                    $(&#x22;#jabatanPenulis&#x22;).text(i.role);
+                    $(&#x22;#keteranganPenulis&#x22;).text(i.about);
+                }
+            }
+        });
+    } else {
+        for (var a of posts) {
+            $(&#x22;#newArticle&#x22;).append(blok(a.title, a.subTitle, a.text, a.author, a.postTime, a.link,
+                (a.tags == undefined) ? [] : a.tags, (a.coverPicture == undefined) ? &#x22;&#x22; : a.coverPicture));
+        }
     }
 
-
+    if ($(&#x22;#namaPenulis&#x22;).length &#x3E; 0) {
+        $(&#x22;#share&#x22;).children(&#x22;span&#x22;).toggleClass(&#x22;d-none&#x22;);
+        $(&#x22;#waktuBaca&#x22;).text(lamaBaca(&#x22;#jumlahKata&#x22;));
+    }
 
     $.getJSON(&#x22;https://raw.githubusercontent.com/bayusamudra5502/hilirilmu/master/database.json&#x22;, function (obj) {
         for (var i = 0; i &#x3C; obj.teams.length; i++) {
