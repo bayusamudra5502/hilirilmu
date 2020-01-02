@@ -291,13 +291,15 @@ $(document).ready(function () {
             "September", "Oktober", "November", "Desember"
         ][dat[dat.length - 2] - 1] + " " + dat[dat.length - 3])));
         $("#dataBar").remove();
-        $("#contentMaster").append("<p>Berikut ini adalah hasil penelusuran dari "++["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus",
+        $("#contentMaster").append("<p>Berikut ini adalah hasil penelusuran dari " + ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus",
             "September", "Oktober", "November", "Desember"
         ][dat[dat.length - 2] - 1] + " " + dat[dat.length - 1] + "</p>");
         for (var a of posts) {
             $("#contentMaster").append(blok(a.title, a.subTitle, a.text, a.author, a.postTime, a.link,
                 (a.tags == undefined) ? [] : a.tags, (a.coverPicture == undefined) ? "" : a.coverPicture));
         }
+
+        // $("#contentMaster").append('<div class="bg-secondary text-secondary text-center w-100 p-2">Oopss.. Kami tidak dapat menemukan artikel yang anda maksud...</div>');
     } else {
         for (var a of posts) {
             $("#newArticle").append(blok(a.title, a.subTitle, a.text, a.author, a.postTime, a.link,

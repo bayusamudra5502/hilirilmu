@@ -551,9 +551,13 @@
                             <li class='nav-item'>
                                 <a class='nav-link' href='/p/kontak.html'>Kontak</a>
                             </li>
-    
+                            <li class='nav-item' id='abuse-container'>
+                                <a class='nav-link' href='https://www.blogger.com/go/report-abuse'  target="_blank" title="Laporkan Penyalahgunaan" id='abuse'><i class='fa fa-flag fa-fw'>
+                                        <span class='sr-only'>Laporkan penyalahgunaan</span>
+                                    </i></a>
+                            </li>    
                             <li class='nav-item' id='cari-list-trig'>
-                                <a class='nav-link' href='#' id='cari-trig'><i class='fa fa-search fa-fw'>
+                                <a class='nav-link' href='#' title='Cari' id='cari-trig'><i class='fa fa-search fa-fw'>
                                         <span class='sr-only'>Cari</span>
                                     </i></a>
                             </li>
@@ -692,7 +696,11 @@
                             <li class='nav-item'>
                                 <a class='nav-link' href='/p/kontak.html'>Kontak</a>
                             </li>
-    
+                            <li class='nav-item' id='abuse-container'>
+                                <a class='nav-link' href='https://www.blogger.com/go/report-abuse' target="_blank" title="Laporkan Penyalahgunaan" id='abuse'><i class='fa fa-flag fa-fw'>
+                                        <span class='sr-only'>Laporkan penyalahgunaan</span>
+                                    </i></a>
+                            </li>
                             <li class='nav-item' id='cari-list-trig'>
                                 <a class='nav-link' href='#' id='cari-trig'><i class='fa fa-search fa-fw'>
                                         <span class='sr-only'>Cari</span>
@@ -2357,6 +2365,8 @@
     <b:if cond='data:blog.pageType == &quot;error_page&quot;'>
         <script>
             $(&quot;body&quot;).toggleClass(&quot;cover-error&quot;);
+            $(&quot;body&quot;).toggleClass(&quot;d-flex&quot;);
+            $(&quot;body&quot;).toggleClass(&quot;flex-column&quot;);
         </script>
     </b:if>
 
@@ -2674,13 +2684,21 @@ $(document).ready(function () {
         
         if(posts.length > 0){
             $("#contentMaster").toggleClass("search-body-advance");
+            $("#contentMaster").append('Yayy.. Kita menemukan ' + posts.length +' pos yang anda cari.');
             $("#contentMaster").append('&#x3C;div id=&#x22;card-deck-search&#x22; class=&#x22;card-column&#x22;&#x3E;&#x3C;/div&#x3E;');
             for (var a of posts) {
               $(&#x22;#card-deck-search&#x22;).append(blok(a.title, a.subTitle, a.text, a.author, a.postTime, a.link,
                 (a.tags == undefined) ? [] : a.tags, (a.coverPicture == undefined) ? &#x22;&#x22; : a.coverPicture));
             }
         }else{
-            $(&#x22;#contentMaster&#x22;).append(&#x27;&#x3C;div class=&#x22;bg-light rounded text-muted text-center w-100 p-2&#x22;&#x3E;Oopss.. Kami tidak dapat menemukan artikel yang anda maksud...&#x3C;/div&#x3E;&#x27;);
+            $(&#x22;#contentMaster&#x22;).append(&#x27;&#x3C;div class=&#x22;card border-0 text-left&#x22;&#x3E;&#x3C;div class=&#x22;card-body&#x22;&#x3E;&#x27;+
+                            &#x27;&#x3C;p class=&#x22;card-text&#x22;&#x3E;&#x27;+
+                                &#x27;&#x3C;div class=&#x22;media&#x22;&#x3E;&#x27;+
+                                    &#x27;&#x3C;img class=&#x22;mr-3&#x22; src=&#x22;https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/gambar-box.png&#x22; style=&#x22;width:6em&#x22; alt=&#x22;Gambar Box tidak ditemukan&#x22;&#x3E;&#x27;+
+                                    &#x27;&#x3C;div class=&#x22;media-body&#x22;&#x3E;&#x27;+
+                                        &#x27;&#x3C;h5 class=&#x22;mt-0&#x22;&#x3E;Oops...&#x3C;/h5&#x3E;&#x27;+
+                                        &#x27;&#x3C;p&#x3E;Maaf, sepertinya kami tidak dapat menemukan apa yang kamu cari... Coba gunakan kata kunci yang lain..&#x3C;/p&#x3E;&#x27;+
+                                    &#x27;&#x3C;/div&#x3E;&#x3C;/div&#x3E;&#x3C;/p&#x3E;&#x3C;/div&#x3E;&#x3C;/div&#x3E;&#x27;);
         }
 
 
