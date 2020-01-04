@@ -62,7 +62,7 @@
                 width: 10rem;
             }
             
-            body {
+            body, .tooltip {
                 font-family: 'Poppins', sans-serif;
             }
             
@@ -556,7 +556,7 @@
                                 <a class='nav-link' href='/p/kontak.html'>Kontak</a>
                             </li>
                             <li class='nav-item' id='abuse-container'>
-                                <a class='nav-link' href='https://www.blogger.com/go/report-abuse'  target="_blank" title="Laporkan Penyalahgunaan" id='abuse'><i class='fa fa-flag fa-fw'>
+                                <a class='nav-link' href='https://www.blogger.com/go/report-abuse' data-toggle="tooltip" data-placement="bottom"   target="_blank" title="Laporkan Penyalahgunaan" id='abuse'><i class='fa fa-flag fa-fw'>
                                         <span class='sr-only'>Laporkan penyalahgunaan</span>
                                     </i></a>
                             </li>    
@@ -701,7 +701,7 @@
                                 <a class='nav-link' href='/p/kontak.html'>Kontak</a>
                             </li>
                             <li class='nav-item' id='abuse-container'>
-                                <a class='nav-link' href='https://www.blogger.com/go/report-abuse' target="_blank" title="Laporkan Penyalahgunaan" id='abuse'><i class='fa fa-flag fa-fw'>
+                                <a class='nav-link' href='https://www.blogger.com/go/report-abuse' data-toggle="tooltip" data-placement="bottom"  target="_blank" title="Laporkan Penyalahgunaan" id='abuse'><i class='fa fa-flag fa-fw'>
                                         <span class='sr-only'>Laporkan penyalahgunaan</span>
                                     </i></a>
                             </li>
@@ -1001,10 +1001,10 @@
                                     <div class='card-body'>
                                         <div class='media d-flex d-flex-row'>
                                             <div class='mr-4 team rounded-circle d-md-block d-none authorPicture'/>
-                                            <img alt='nama penulis' class='d-none d-print-block mr-3 d-print-img' src='img/bamboo.png'/>
+                                            <img alt='' id="AuthorPictureInImg" class='d-none d-print-block mr-3 d-print-img' src=''/>
 
                                             <div class='media-body'>
-                                                <h5 class='card-title' id='namaPenulis'>Bayu Samudra</h5>
+                                                <h5 class='card-title' id='namaPenulis'></h5>
                                                 <p class='text-muted jabatan' id='jabatanPenulis'/>
                                                 <p class='card-text' id='keteranganPenulis'/>
                                             </div>
@@ -1119,7 +1119,34 @@
                             </div>
                         </div>
                     </div>
+                    <!-- COMMENT BLOCK by Disqus -->
+            <div class="row mb-2 d-print-none d-none" id="CommentBlockContainer">
+                <div class="col-11 col-lg-12 mx-auto">
+                    <div class="mx-2">
+                        <h2 class="point">Kolom Komentar</h2>
 
+                                <div id="disqus_thread"></div>
+                                  <script>
+
+                                  /**
+                                  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                                  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                                  /*
+                                  var disqus_config = function () {
+                                  this.page.url = <data:blog.canonicalUrl/>;  // Replace PAGE_URL with your page's canonical URL variable
+                                  this.page.identifier = <data:blog.Url/>; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                                  };
+                                  */
+                                  (function() { // DON'T EDIT BELOW THIS LINE
+                                  var d = document, s = d.createElement('script');
+                                  s.src = 'https://hilirilmu.disqus.com/embed.js';
+                                  s.setAttribute('data-timestamp', +new Date());
+                                  (d.head || d.body).appendChild(s);
+                                  })();
+                                  </script>
+                    </div>
+                </div>
+            </div>
 
                     <div class='row d-print-none' id="lastRowOfArticle">
                         <div class='col-11 col-lg-12 mx-auto'>
@@ -2665,6 +2692,9 @@ $(document).ready(function () {
         $(&quot;.time&quot;).text(posts[0].postTime);
         $(&quot;#contentMaster&quot;).html(posts[0].body);
         $(&quot;.authorPicture&quot;).css(&quot;background-image&quot;, &quot;url(&#39;&quot; + posts[0].author.photoUrl + &quot;&#39;)&quot;);
+        $("#namaPenulis").text(posts[0].author.name);
+        $("#AuthorPictureInImg").attr("src",posts[0].author.photoUrl);
+        $("#AuthorPictureInImg").attr("alt",posts[0].author.name);
 
         $.getJSON(&quot;https://raw.githubusercontent.com/bayusamudra5502/hilirilmu/master/database.json&quot;, function (obj) {
             for (var i of obj.teams) {
@@ -2675,6 +2705,7 @@ $(document).ready(function () {
             }
         });
 
+        $("#CommentBlockContainer").toggleClass("d-none");
         $("#postPopularData").children().each(function (i, n) {
             var r = fetch(n, true);
             $("#wadahPopuler").append(popularFormatter(r.title, r.subTitle, r.text, r.link));
@@ -2705,7 +2736,7 @@ $(document).ready(function () {
                                     &#x27;&#x3C;/div&#x3E;&#x3C;/div&#x3E;&#x3C;/p&#x3E;&#x3C;/div&#x3E;&#x3C;/div&#x3E;&#x27;);
         }
 
-
+        
         $(".search-body-advance .card").attr("style","min-width:19rem");
         $(".titleArticle").text("Arsip Blog pada " + ((isNaN([dat[dat.length - 3] - 1])) ? dat[dat.length - 2] : (["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus",
             "September", "Oktober", "November", "Desember"
@@ -2773,6 +2804,10 @@ $(document).ready(function () {
                 mediaR(obj.teams[i].name,
                     obj.teams[i].role, obj.teams[i].img, obj.teams[i].about));
         }
+    });
+
+        $(function () {
+      $(&#x27;[data-toggle=&#x22;tooltip&#x22;]&#x27;).tooltip()
     });
 
     // FREE THE FREEZE

@@ -26,6 +26,8 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-highlight/prism-line-highlight.min.css"
         integrity="sha256-FFGTaA49ZxFi2oUiWjxtTBqoda+t1Uw8GffYkdt9aco=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"
+        integrity="sha256-HAaDW5o2+LelybUhfuk0Zh2Vdk8Y2W2UeKmbaXhalfA=" crossorigin="anonymous" />
     <link rel="stylesheet" href="index.css">
 
     <!--[if lt IE 9]>
@@ -214,7 +216,9 @@
                                 tail meatloaf pig.
                             </p>
                             <h2 class="point" id="sb-1">Sub Judul 1</h2>
-                            <img src="img/universe.jpg" alt="Universe">
+                            <a href="img/universe.jpg" data-toggle="lightbox"><img src="img/universe.jpg"
+                                    alt="Universe"></a>
+
                             <p>Chislic doner rump sirloin pastrami biltong. Prosciutto chicken picanha, kevin sausage
                                 pancetta short ribs. Short ribs swine turkey, short loin shank chuck landjaeger sirloin
                                 ground round picanha salami tail. Hamburger kielbasa turkey tenderloin jowl ground
@@ -281,18 +285,72 @@
                     </div>
 
                 </div>
-                <div class="col-11 offset-lg-0 col-lg mx-auto d-print-none">
-                    <div class="card text-left">
-                        <div class="card-body">
 
-                            <p class="h5 card-title">Arsip Blog</p>
-                            <p class="card-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo velit est similique ut
-                                praesentium laborum quae ratione. Fuga eum dolor reiciendis? Excepturi quis ratione,
-                                repellendus enim illo asperiores. Tempora, ea?
-                            </p>
+                <div class="col-11 offset-lg-0 col-lg mx-auto d-print-none">
+                    <div class="card text-center">
+                        <img src="img/3136461.jpg" alt="Background Tombol Langganan" class="card-img-top">
+                        <div class="card-body body-card-up">
+                            <img src="hilir-ilmu.png" class="mb-3" alt="Logo HIlir Ilmu">
+                            <p class="h5 card-title">HIlir Ilmu</p>
+                            <div class="card-text mb-3">
+                                Ayo dukung kami dengan berlangganan!
+                            </div>
+                            <p><a href="https://www.facebook.com/hilirilmu" target="_blank"
+                                    class="btn btn-facebook w-100"><i
+                                        class="fab fa-facebook-square d-inline-block mr-2"></i><span
+                                        class="d-inline-block">Facebook</span></a></p>
+                            <p><a href="https://twitter.com/hilirilmu" target="_blank" class="btn btn-twitter w-100"><i
+                                        class="fab fa-twitter d-inline-block mr-2"></i><span
+                                        class="d-inline-block">Twitter</span></a></p>
+                            <p><button type="button" class="btn btn-dark w-100" data-toggle="modal"
+                                    data-target="#formEmailSubs"><i class="fa fa-envelope d-inline-block mr-2"></i><span
+                                        class="d-inline-block">Email</span></button></p>
+                            <p><a href="https://www.instagram.com/hilirilmu/" target="_blank"
+                                    class="btn btn-light w-100"><i
+                                        class="fab fa-instagram d-inline-block mr-2"></i><span
+                                        class="d-inline-block">Instagram</span></a></p>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="formEmailSubs" tabindex="-1" role="dialog">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <p class="modal-title h5">Langganan Email</p>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <form action="https://feedburner.google.com/fb/a/mailverify" method="post"
+                                            target="popupwindow"
+                                            onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=HilirIlmu', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+                                            <div class="modal-body">
+                                                <div class="form-group text-left">
+                                                    <label for="txtEmail">Email:</label>
+                                                    <input type="text" id="txtEmail" class="form-control"
+                                                        placeholder="Masukan alamat email" name="email" />
+                                                    <small id="emailHelp" class="form-text text-muted">Kita akan
+                                                        menghubungimu apabila ada konten terbaru dengan menggunakan
+                                                        email diatas.</small>
+                                                    <input type="hidden" value="HilirIlmu" name="uri" /><input
+                                                        type="hidden" name="loc" value="en_US" />
+                                                </div>
+
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-info">Langganan</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
+
+                    <!-- Modal -->
 
                     <div class="card text-left">
                         <div class="card-body">
@@ -424,6 +482,7 @@
         </div>
     </main>
 
+
     <div class="d-none d-print-block">
         <div class="container">
             <div class="row col text-center">
@@ -478,6 +537,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-highlight/prism-line-highlight.min.js"
         integrity="sha256-i1I0MEGBEKKEtBLlagkEPdef5OGDQEUdcjCPYo47a3Y=" crossorigin="anonymous">
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"
+        integrity="sha256-Y1rRlwTzT5K5hhCBfAFWABD4cU13QGuRN6P5apfWzVs=" crossorigin="anonymous"></script>
     <script src="index.js">
     </script>
 </body>

@@ -62,7 +62,7 @@
                 width: 10rem;
             }
             
-            body {
+            body, .tooltip {
                 font-family: 'Poppins', sans-serif;
             }
             
@@ -556,12 +556,12 @@
                                 <a class='nav-link' href='/p/kontak.html'>Kontak</a>
                             </li>
                             <li class='nav-item' id='abuse-container'>
-                                <a class='nav-link' href='https://www.blogger.com/go/report-abuse'  target="_blank" title="Laporkan Penyalahgunaan" id='abuse'><i class='fa fa-flag fa-fw'>
+                                <a class='nav-link' data-placement='bottom' data-toggle='tooltip' href='https://www.blogger.com/go/report-abuse' id='abuse' target='_blank' title='Laporkan Penyalahgunaan'><i class='fa fa-flag fa-fw'>
                                         <span class='sr-only'>Laporkan penyalahgunaan</span>
                                     </i></a>
                             </li>    
                             <li class='nav-item' id='cari-list-trig'>
-                                <a class='nav-link' href='#' title='Cari' id='cari-trig'><i class='fa fa-search fa-fw'>
+                                <a class='nav-link' href='#' id='cari-trig' title='Cari'><i class='fa fa-search fa-fw'>
                                         <span class='sr-only'>Cari</span>
                                     </i></a>
                             </li>
@@ -624,42 +624,42 @@
     <b:else/>
         <header>
             <!-- Navbar -->
-            <b:section id='navbarHalaman' class="d-none" maxwidgets='1' showaddelement='no'>
+            <b:section class='d-none' id='navbarHalaman' maxwidgets='1' showaddelement='no'>
               <b:widget id='Navbar1' locked='true' title='Navbar' type='Navbar' version='1'>
                 <b:includable id='main'>&lt;script type=&quot;text/javascript&quot;&gt;
-                        function setAttributeOnload(object, attribute, val) {
-                          if(window.addEventListener) {
-                            window.addEventListener(&#39;load&#39;,
-                              function(){ object[attribute] = val; }, false);
-                          } else {
-                            window.attachEvent(&#39;onload&#39;, function(){ object[attribute] = val; });
-                          }
-                        }
-                      &lt;/script&gt;
-                    &lt;div id=&quot;navbar-iframe-container&quot;&gt;&lt;/div&gt;
-                    &lt;script type=&quot;text/javascript&quot; src=&quot;https://apis.google.com/js/plusone.js&quot;&gt;&lt;/script&gt;
-                    &lt;script type=&quot;text/javascript&quot;&gt;
-                          gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
-                            if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
-                              gapi.iframes.getContext().openChild({
-                                  url: &#39;https://www.blogger.com/navbar.g?targetBlogID\x3d3302654278462726980\x26blogName\x3dTekno225\x26publishMode\x3dPUBLISH_MODE_BLOGSPOT\x26navbarType\x3dLIGHT\x26layoutType\x3dLAYOUTS\x26searchRoot\x3dhttps://tekno225.blogspot.com/search\x26blogLocale\x3din\x26v\x3d2\x26homepageUrl\x3dhttps://tekno225.blogspot.com/\x26vt\x3d8255741677992150163&#39;,
-                                  where: document.getElementById(&quot;navbar-iframe-container&quot;),
-                                  id: &quot;navbar-iframe&quot;
-                              });
-                            }
-                          });
-                        &lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt;
-                    (function() {
-                    var script = document.createElement(&#39;script&#39;);
-                    script.type = &#39;text/javascript&#39;;
-                    script.src = &#39;//pagead2.googlesyndication.com/pagead/js/google_top_exp.js&#39;;
-                    var head = document.getElementsByTagName(&#39;head&#39;)[0];
-                    if (head) {
-                    head.appendChild(script);
-                    }})();
-                    &lt;/script&gt;
-                    </b:includable>
-                </b:widget>
+    function setAttributeOnload(object, attribute, val) {
+      if(window.addEventListener) {
+        window.addEventListener(&#39;load&#39;,
+          function(){ object[attribute] = val; }, false);
+      } else {
+        window.attachEvent(&#39;onload&#39;, function(){ object[attribute] = val; });
+      }
+    }
+  &lt;/script&gt;
+&lt;div id=&quot;navbar-iframe-container&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://apis.google.com/js/plusone.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+      gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
+        if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
+          gapi.iframes.getContext().openChild({
+              url: &#39;https://www.blogger.com/navbar.g?targetBlogID\x3d8782700108516141730\x26blogName\x3dHilir+Ilmu\x26publishMode\x3dPUBLISH_MODE_HOSTED\x26navbarType\x3dLIGHT\x26layoutType\x3dLAYOUTS\x26searchRoot\x3dhttps://www.hilirilmu.com/search\x26blogLocale\x3din\x26v\x3d2\x26homepageUrl\x3dhttps://www.hilirilmu.com/\x26vt\x3d-5256027373784367536&#39;,
+              where: document.getElementById(&quot;navbar-iframe-container&quot;),
+              id: &quot;navbar-iframe&quot;
+          });
+        }
+      });
+    &lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt;
+(function() {
+var script = document.createElement(&#39;script&#39;);
+script.type = &#39;text/javascript&#39;;
+script.src = &#39;//pagead2.googlesyndication.com/pagead/js/google_top_exp.js&#39;;
+var head = document.getElementsByTagName(&#39;head&#39;)[0];
+if (head) {
+head.appendChild(script);
+}})();
+&lt;/script&gt;
+</b:includable>
+              </b:widget>
             </b:section>
     
             <nav class='navbar navbar-expand-sm navbar-dark navbar-utama'>
@@ -701,7 +701,7 @@
                                 <a class='nav-link' href='/p/kontak.html'>Kontak</a>
                             </li>
                             <li class='nav-item' id='abuse-container'>
-                                <a class='nav-link' href='https://www.blogger.com/go/report-abuse' target="_blank" title="Laporkan Penyalahgunaan" id='abuse'><i class='fa fa-flag fa-fw'>
+                                <a class='nav-link' data-placement='bottom' data-toggle='tooltip' href='https://www.blogger.com/go/report-abuse' id='abuse' target='_blank' title='Laporkan Penyalahgunaan'><i class='fa fa-flag fa-fw'>
                                         <span class='sr-only'>Laporkan penyalahgunaan</span>
                                     </i></a>
                             </li>
@@ -950,7 +950,7 @@
             </main>
 
         <b:else/>
-             <main class="mb-auto">
+             <main class='mb-auto'>
                 <div class='container'>
                     <div class='row'>
                         <div class='col-11 col-md-10 col-lg-8 mx-auto'>
@@ -966,7 +966,7 @@
 
                                 <h1 class='mb-4 titleArticle'/>
 
-                                <div class='container mb-2' id="dataBar">
+                                <div class='container mb-2' id='dataBar'>
                                     <div class='row mb-1'>
                                         <div class='col-1 d-print-none'>
                                             <div class='ml-1 circle-img rounded-circle authorPicture'>
@@ -1001,10 +1001,10 @@
                                     <div class='card-body'>
                                         <div class='media d-flex d-flex-row'>
                                             <div class='mr-4 team rounded-circle d-md-block d-none authorPicture'/>
-                                            <img alt='nama penulis' class='d-none d-print-block mr-3 d-print-img' src='img/bamboo.png'/>
+                                            <img alt='' class='d-none d-print-block mr-3 d-print-img' id='AuthorPictureInImg' src=''/>
 
                                             <div class='media-body'>
-                                                <h5 class='card-title' id='namaPenulis'>Bayu Samudra</h5>
+                                                <h5 class='card-title' id='namaPenulis'/>
                                                 <p class='text-muted jabatan' id='jabatanPenulis'/>
                                                 <p class='card-text' id='keteranganPenulis'/>
                                             </div>
@@ -1119,12 +1119,39 @@
                             </div>
                         </div>
                     </div>
+                    <!-- COMMENT BLOCK by Disqus -->
+            <div class='row mb-2 d-print-none d-none' id='CommentBlockContainer'>
+                <div class='col-11 col-lg-12 mx-auto'>
+                    <div class='mx-2'>
+                        <h2 class='point'>Kolom Komentar</h2>
 
+                                <div id='disqus_thread'/>
+                                  <script>
 
-                    <div class='row d-print-none' id="lastRowOfArticle">
+                                  /**
+                                  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                                  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                                  /*
+                                  var disqus_config = function () {
+                                  this.page.url = <data:blog.canonicalUrl/>;  // Replace PAGE_URL with your page&#39;s canonical URL variable
+                                  this.page.identifier = <data:blog.Url/>; // Replace PAGE_IDENTIFIER with your page&#39;s unique identifier variable
+                                  };
+                                  */
+                                  (function() { // DON&#39;T EDIT BELOW THIS LINE
+                                  var d = document, s = d.createElement(&#39;script&#39;);
+                                  s.src = &#39;https://hilirilmu.disqus.com/embed.js&#39;;
+                                  s.setAttribute(&#39;data-timestamp&#39;, +new Date());
+                                  (d.head || d.body).appendChild(s);
+                                  })();
+                                  </script>
+                    </div>
+                </div>
+            </div>
+
+                    <div class='row d-print-none' id='lastRowOfArticle'>
                         <div class='col-11 col-lg-12 mx-auto'>
                             <h2 class='point'>Postingan Populer</h2>
-                            <div id="wadahPopuler">
+                            <div id='wadahPopuler'>
                             </div>
                         </div>
                     </div>
@@ -2063,7 +2090,7 @@
   </div>
 </b:includable>
       </b:widget>
-      <b:widget id='Header1' locked='false' title='Tekno225 (Header)' type='Header'>
+      <b:widget id='Header1' locked='false' title='Hilir Ilmu (Header)' type='Header'>
         <b:widget-settings>
           <b:widget-setting name='displayUrl'/>
           <b:widget-setting name='displayHeight'>0</b:widget-setting>
@@ -2211,17 +2238,17 @@
   </div>
 </b:includable>
       </b:widget>
-      <b:widget cond='data:view.isSingleItem and data:posts any (p =&gt; p.id != data:view.postId)' id='PopularPosts1' locked='false' title='' type='PopularPosts'>
+      <b:widget cond='data:view.isSingleItem and data:posts any (p =&gt; p.id != data:view.postId)' id='PopularPosts1' locked='false' title='Postingan Populer' type='PopularPosts' version='1'>
         <b:widget-settings>
-          <b:widget-setting name='numItemsToShow'>3</b:widget-setting>
+          <b:widget-setting name='numItemsToShow'>5</b:widget-setting>
           <b:widget-setting name='showThumbnails'>true</b:widget-setting>
           <b:widget-setting name='showSnippets'>true</b:widget-setting>
-          <b:widget-setting name='timeRange'>LAST_YEAR</b:widget-setting>
+          <b:widget-setting name='timeRange'>ALL_TIME</b:widget-setting>
         </b:widget-settings>
         <b:includable id='main'>
   <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
   <div>
-    <div id="postPopularData">
+    <div id='postPopularData'>
       <b:loop values='data:posts' var='post'>
         <div>
           <div><data:post.title/></div>
@@ -2247,86 +2274,7 @@
   </div>
 </b:includable>
       </b:widget>
-      <b:widget cond='!data:view.isPost' id='PageList1' locked='false' title='' type='PageList'>
-        <b:widget-settings>
-          <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': 'http://tekno225.blogspot.com/', 'title': 'Beranda', 'position': 0}}]]></b:widget-setting>
-          <b:widget-setting name='homeTitle'>Beranda</b:widget-setting>
-        </b:widget-settings>
-        <b:includable id='main'>
-  <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
-  <div class='widget-content'>
-    <b:if cond='data:mobile'>
-      <select expr:id='data:widget.instanceId + &quot;_select&quot;'>
-        <b:loop values='data:links' var='link'>
-          <option expr:value='data:link.href'>
-            <b:attr cond='data:link.isCurrentPage' name='selected' value='selected'/>
-            <data:link.title/>
-          </option>
-        </b:loop>
-      </select>
-      <span class='pagelist-arrow'>&amp;#9660;</span>
-    <b:else/>
-      <ul>
-        <b:loop values='data:links' var='link'>
-          <li>
-            <b:class cond='data:link.isCurrentPage' name='selected'/>
-            <a expr:href='data:link.href'><data:link.title/></a>
-          </li>
-        </b:loop>
-      </ul>
-    </b:if>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-      </b:widget>
-      <b:widget id='Profile1' locked='false' title='Mengenai Saya' type='Profile'>
-        <b:widget-settings>
-          <b:widget-setting name='showaboutme'>true</b:widget-setting>
-          <b:widget-setting name='showlocation'>false</b:widget-setting>
-        </b:widget-settings>
-        <b:includable id='main'>
-    <b:if cond='data:title != &quot;&quot;'>
-      <h2><data:title/></h2>
-    </b:if>
-    <div class='widget-content'>
-    <b:if cond='data:team'> <!-- team blog profile -->
-      <ul>
-        <b:loop values='data:authors' var='i'>
-          <li><a class='profile-name-link g-profile' expr:href='data:i.userUrl' expr:style='&quot;background-image: url(&quot; + data:i.profileLogo + &quot;);&quot;'><data:i.display-name/></a></li>
-        </b:loop>
-      </ul>
-
-    <b:else/> <!-- normal blog profile -->
-
-      <b:if cond='data:photo.url != &quot;&quot;'>
-        <a expr:href='data:userUrl'><img class='profile-img' expr:alt='data:messages.myPhoto' expr:height='data:photo.height' expr:src='data:photo.url' expr:width='data:photo.width'/></a>
-      </b:if>
-
-      <dl class='profile-datablock'>
-        <dt class='profile-data'>
-          <a class='profile-name-link g-profile' expr:href='data:userUrl' expr:style='&quot;background-image: url(&quot; + data:profileLogo + &quot;);&quot;' rel='author'>
-            <data:displayname/>
-          </a>
-          <b:if cond='data:hasgoogleprofile'>
-            <br/>
-            <div class='g-follow' data-annotation='bubble' data-height='20' expr:data-href='data:userUrl'/>
-          </b:if>
-        </dt>
-
-        <b:if cond='data:showlocation'>
-          <dd class='profile-data'><data:location/></dd>
-        </b:if>
-
-        <b:if cond='data:aboutme != &quot;&quot;'><dd class='profile-textblock'><data:aboutme/></dd></b:if>
-      </dl>
-      <a class='profile-link' expr:href='data:userUrl' rel='author'><data:viewProfileMsg/></a>
-    </b:if>
-
-     <b:include name='quickedit'/>
-    </div>
-  </b:includable>
-      </b:widget>
-      <b:widget cond='data:view.isHomepage' id='FeaturedPost1' locked='false' title='' type='FeaturedPost'>
+      <b:widget cond='data:view.isHomepage' id='FeaturedPost1' locked='false' title='Entri yang Diunggulkan' type='FeaturedPost'>
         <b:widget-settings>
           <b:widget-setting name='showSnippet'>true</b:widget-setting>
           <b:widget-setting name='showPostTitle'>true</b:widget-setting>
@@ -2364,6 +2312,91 @@
   </style>
 </b:includable>
       </b:widget>
+      <b:widget id='BlogArchive1' locked='false' title='Arsip Blog' type='BlogArchive' version='1'>
+        <b:widget-settings>
+          <b:widget-setting name='showStyle'>HIERARCHY</b:widget-setting>
+          <b:widget-setting name='yearPattern'>yyyy</b:widget-setting>
+          <b:widget-setting name='showWeekEnd'>true</b:widget-setting>
+          <b:widget-setting name='monthPattern'>MMMM</b:widget-setting>
+          <b:widget-setting name='dayPattern'>MMM dd</b:widget-setting>
+          <b:widget-setting name='weekPattern'>MM/dd</b:widget-setting>
+          <b:widget-setting name='chronological'>false</b:widget-setting>
+          <b:widget-setting name='showPosts'>true</b:widget-setting>
+          <b:widget-setting name='frequency'>MONTHLY</b:widget-setting>
+        </b:widget-settings>
+        <b:includable id='main'>
+					<h1>BlogArchive</h1>
+					<table>
+						<tr><td>data:title</td><td><data:title/></td></tr>
+						<tr><td>data:style</td><td><data:style/></td></tr>
+					</table>
+					
+					<div class='indent'>
+						<h2>data:data</h2>
+						<b:loop values='data:data' var='data'>
+							<table>
+								<tr><td>data:data.name</td><td><data:data.name/></td></tr>
+								<tr><td>data:data.post-count</td><td><data:data.post-count/></td></tr>
+								<tr><td>data:data.url</td><td><data:interval.url/></td></tr>
+								<tr><td>data:data.data</td><td>[Array - Sub of this]</td></tr>
+								<tr><td>data:data.posts</td><td>[Array - data:title and data:url]</td></tr>
+							</table>
+						</b:loop>
+					</div>
+				</b:includable>
+        <b:includable id='flat' var='data'>
+  <ul class='flat'>
+    <b:loop values='data:data' var='i'>
+      <li class='archivedate'>
+        <a expr:href='data:i.url'><data:i.name/></a> (<data:i.post-count/>)
+      </li>
+    </b:loop>
+  </ul>
+</b:includable>
+        <b:includable id='interval' var='intervalData'>
+  <b:loop values='data:intervalData' var='interval'>
+    <ul class='hierarchy'>
+      <li expr:class='&quot;archivedate &quot; + data:interval.expclass'>
+        <b:include cond='data:interval.toggleId' data='interval' name='toggle'/>
+        <a class='post-count-link' expr:href='data:interval.url'>
+          <data:interval.name/>
+        </a>
+        <span class='post-count' dir='ltr'>(<data:interval.post-count/>)</span>
+        <b:include cond='data:interval.data' data='interval.data' name='interval'/>
+        <b:include cond='data:interval.posts' data='interval.posts' name='posts'/>
+      </li>
+    </ul>
+  </b:loop>
+</b:includable>
+        <b:includable id='menu' var='data'>
+  <select expr:id='data:widget.instanceId + &quot;_ArchiveMenu&quot;'>
+    <option value=''><data:title/></option>
+    <b:loop values='data:data' var='i'>
+      <option expr:value='data:i.url'><data:i.name/> (<data:i.post-count/>)</option>
+    </b:loop>
+  </select>
+</b:includable>
+        <b:includable id='posts' var='posts'>
+  <ul class='posts'>
+    <b:loop values='data:posts' var='post'>
+      <li><a expr:href='data:post.url'><data:post.title/></a></li>
+    </b:loop>
+  </ul>
+</b:includable>
+        <b:includable id='toggle' var='interval'>
+  <a class='toggle' href='javascript:void(0)'>
+    <span expr:class='&quot;zippy&quot; + (data:interval.expclass == &quot;expanded&quot; ? &quot; toggle-open&quot; : &quot;&quot;)'>
+      <b:if cond='data:interval.expclass == &quot;expanded&quot;'>
+        &#9660;&#160;
+      <b:elseif cond='data:blog.languageDirection == &quot;rtl&quot;'/>
+        &#9668;&#160;
+      <b:else/>
+        &#9658;&#160;
+      </b:if>
+    </span>
+  </a>
+</b:includable>
+      </b:widget>
     </b:section>
                   
     <b:if cond='data:blog.pageType == &quot;error_page&quot;'>
@@ -2394,24 +2427,24 @@
 
     <script>
     function popularFormatter(title, subTitle, text, href) {
-    var result = &#x22;&#x3C;div class=&#x27;card&#x27;&#x3E;&#x22; +
-        &#x22;&#x3C;div class=&#x27;card-body&#x27;&#x3E;&#x22; +
-        &#x22;&#x3C;div class=&#x27;container&#x27;&#x3E;&#x22; +
-        &#x22;&#x3C;div class=&#x27;row mb-1&#x27;&#x3E;&#x22; +
-        &#x22;&#x3C;div class=&#x27;col&#x27;&#x3E;&#x22; +
-        &#x22;&#x3C;h5 class=&#x27;card-title text-dark&#x27;&#x3E;&#x3C;a href=&#x27;&#x22; + href + &#x22;&#x27;&#x3E;&#x22; + title + &#x22;&#x3C;/a&#x3E;&#x3C;/h5&#x3E;&#x22; +
-        &#x22;&#x3C;h6 class=&#x27;card-subtitle mb-2 text-muted&#x27;&#x3E;&#x22; + subTitle + &#x22;&#x3C;/h6&#x3E;&#x22; +
-        &#x22;&#x3C;/div&#x3E;&#x22; +
-        &#x22;&#x3C;/div&#x3E;&#x22; +
-        &#x22;&#x3C;div class=&#x27;row mb-3&#x27;&#x3E;&#x22; +
-        &#x22;&#x3C;div class=&#x27;col&#x27;&#x3E;&#x22; +
-        &#x22;&#x3C;p class=&#x27;card-text text-justify&#x27;&#x3E;&#x22; + text +
-        &#x22;&#x3C;/p&#x3E;&#x22; +
-        &#x22;&#x3C;/div&#x3E;&#x22; +
-        &#x22;&#x3C;/div&#x3E;&#x22; +
-        &#x22;&#x3C;/div&#x3E;&#x22; +
-        &#x22;&#x3C;/div&#x3E;&#x22; +
-        &#x22;&#x3C;/div&#x3E;&#x22;;
+    var result = &quot;&lt;div class=&#39;card&#39;&gt;&quot; +
+        &quot;&lt;div class=&#39;card-body&#39;&gt;&quot; +
+        &quot;&lt;div class=&#39;container&#39;&gt;&quot; +
+        &quot;&lt;div class=&#39;row mb-1&#39;&gt;&quot; +
+        &quot;&lt;div class=&#39;col&#39;&gt;&quot; +
+        &quot;&lt;h5 class=&#39;card-title text-dark&#39;&gt;&lt;a href=&#39;&quot; + href + &quot;&#39;&gt;&quot; + title + &quot;&lt;/a&gt;&lt;/h5&gt;&quot; +
+        &quot;&lt;h6 class=&#39;card-subtitle mb-2 text-muted&#39;&gt;&quot; + subTitle + &quot;&lt;/h6&gt;&quot; +
+        &quot;&lt;/div&gt;&quot; +
+        &quot;&lt;/div&gt;&quot; +
+        &quot;&lt;div class=&#39;row mb-3&#39;&gt;&quot; +
+        &quot;&lt;div class=&#39;col&#39;&gt;&quot; +
+        &quot;&lt;p class=&#39;card-text text-justify&#39;&gt;&quot; + text +
+        &quot;&lt;/p&gt;&quot; +
+        &quot;&lt;/div&gt;&quot; +
+        &quot;&lt;/div&gt;&quot; +
+        &quot;&lt;/div&gt;&quot; +
+        &quot;&lt;/div&gt;&quot; +
+        &quot;&lt;/div&gt;&quot;;
 
     return result;
 }
@@ -2665,6 +2698,9 @@ $(document).ready(function () {
         $(&quot;.time&quot;).text(posts[0].postTime);
         $(&quot;#contentMaster&quot;).html(posts[0].body);
         $(&quot;.authorPicture&quot;).css(&quot;background-image&quot;, &quot;url(&#39;&quot; + posts[0].author.photoUrl + &quot;&#39;)&quot;);
+        $(&quot;#namaPenulis&quot;).text(posts[0].author.name);
+        $(&quot;#AuthorPictureInImg&quot;).attr(&quot;src&quot;,posts[0].author.photoUrl);
+        $(&quot;#AuthorPictureInImg&quot;).attr(&quot;alt&quot;,posts[0].author.name);
 
         $.getJSON(&quot;https://raw.githubusercontent.com/bayusamudra5502/hilirilmu/master/database.json&quot;, function (obj) {
             for (var i of obj.teams) {
@@ -2675,84 +2711,85 @@ $(document).ready(function () {
             }
         });
 
-        $("#postPopularData").children().each(function (i, n) {
+        $(&quot;#CommentBlockContainer&quot;).toggleClass(&quot;d-none&quot;);
+        $(&quot;#postPopularData&quot;).children().each(function (i, n) {
             var r = fetch(n, true);
-            $("#wadahPopuler").append(popularFormatter(r.title, r.subTitle, r.text, r.link));
+            $(&quot;#wadahPopuler&quot;).append(popularFormatter(r.title, r.subTitle, r.text, r.link));
         });
     }else if (archive) {
-        var dat = url.split("/");
-        $("header").toggleClass("mb-2");
-        $("#dataBar").remove();
-        $("#lastRowOfArticle").remove();   
-        $(".penulis").remove();  
+        var dat = url.split(&quot;/&quot;);
+        $(&quot;header&quot;).toggleClass(&quot;mb-2&quot;);
+        $(&quot;#dataBar&quot;).remove();
+        $(&quot;#lastRowOfArticle&quot;).remove();   
+        $(&quot;.penulis&quot;).remove();  
         
-        if(posts.length > 0){
-            $("#contentMaster").toggleClass("search-body-advance");
-            $("#contentMaster").append('&#x3C;p class=&#x22;mb-2&#x22;&#x3E;Yayy.. Kita menemukan &#x27; + posts.length +&#x27; pos yang anda cari.&#x3C;/p&#x3E;');
-            $("#contentMaster").append('&#x3C;div id=&#x22;card-deck-search&#x22; class=&#x22;card-column&#x22;&#x3E;&#x3C;/div&#x3E;');
+        if(posts.length &gt; 0){
+            $(&quot;#contentMaster&quot;).toggleClass(&quot;search-body-advance&quot;);
+            $(&quot;#contentMaster&quot;).append(&#39;&lt;p class=&quot;mb-2&quot;&gt;Yayy.. Kita menemukan &#39; + posts.length +&#39; pos yang anda cari.&lt;/p&gt;&#39;);
+            $(&quot;#contentMaster&quot;).append(&#39;&lt;div id=&quot;card-deck-search&quot; class=&quot;card-column&quot;&gt;&lt;/div&gt;&#39;);
             for (var a of posts) {
-              $(&#x22;#card-deck-search&#x22;).append(blok(a.title, a.subTitle, a.text, a.author, a.postTime, a.link,
-                (a.tags == undefined) ? [] : a.tags, (a.coverPicture == undefined) ? &#x22;&#x22; : a.coverPicture));
+              $(&quot;#card-deck-search&quot;).append(blok(a.title, a.subTitle, a.text, a.author, a.postTime, a.link,
+                (a.tags == undefined) ? [] : a.tags, (a.coverPicture == undefined) ? &quot;&quot; : a.coverPicture));
             }
         }else{
-            $(&#x22;#contentMaster&#x22;).append(&#x27;&#x3C;div class=&#x22;card border-0 text-left&#x22;&#x3E;&#x3C;div class=&#x22;card-body&#x22;&#x3E;&#x27;+
-                            &#x27;&#x3C;p class=&#x22;card-text&#x22;&#x3E;&#x27;+
-                                &#x27;&#x3C;div class=&#x22;media&#x22;&#x3E;&#x27;+
-                                    &#x27;&#x3C;img class=&#x22;mr-3&#x22; src=&#x22;https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/gambar-box.png&#x22; style=&#x22;width:6em&#x22; alt=&#x22;Gambar Box tidak ditemukan&#x22;&#x3E;&#x27;+
-                                    &#x27;&#x3C;div class=&#x22;media-body&#x22;&#x3E;&#x27;+
-                                        &#x27;&#x3C;h5 class=&#x22;mt-0&#x22;&#x3E;Oops...&#x3C;/h5&#x3E;&#x27;+
-                                        &#x27;&#x3C;p&#x3E;Maaf, sepertinya kami tidak dapat menemukan apa yang kamu cari... Coba gunakan kata kunci yang lain..&#x3C;/p&#x3E;&#x27;+
-                                    &#x27;&#x3C;/div&#x3E;&#x3C;/div&#x3E;&#x3C;/p&#x3E;&#x3C;/div&#x3E;&#x3C;/div&#x3E;&#x27;);
+            $(&quot;#contentMaster&quot;).append(&#39;&lt;div class=&quot;card border-0 text-left&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;&#39;+
+                            &#39;&lt;p class=&quot;card-text&quot;&gt;&#39;+
+                                &#39;&lt;div class=&quot;media&quot;&gt;&#39;+
+                                    &#39;&lt;img class=&quot;mr-3&quot; src=&quot;https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/gambar-box.png&quot; style=&quot;width:6em&quot; alt=&quot;Gambar Box tidak ditemukan&quot;&gt;&#39;+
+                                    &#39;&lt;div class=&quot;media-body&quot;&gt;&#39;+
+                                        &#39;&lt;h5 class=&quot;mt-0&quot;&gt;Oops...&lt;/h5&gt;&#39;+
+                                        &#39;&lt;p&gt;Maaf, sepertinya kami tidak dapat menemukan apa yang kamu cari... Coba gunakan kata kunci yang lain..&lt;/p&gt;&#39;+
+                                    &#39;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&#39;);
         }
 
-
-        $(".search-body-advance .card").attr("style","min-width:19rem");
-        $(".titleArticle").text("Arsip Blog pada " + ((isNaN([dat[dat.length - 3] - 1])) ? dat[dat.length - 2] : (["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus",
-            "September", "Oktober", "November", "Desember"
-        ][dat[dat.length - 2] - 1] + " " + dat[dat.length - 3])));
+        
+        $(&quot;.search-body-advance .card&quot;).attr(&quot;style&quot;,&quot;min-width:19rem&quot;);
+        $(&quot;.titleArticle&quot;).text(&quot;Arsip Blog pada &quot; + ((isNaN([dat[dat.length - 3] - 1])) ? dat[dat.length - 2] : ([&quot;Januari&quot;, &quot;Februari&quot;, &quot;Maret&quot;, &quot;April&quot;, &quot;Mei&quot;, &quot;Juni&quot;, &quot;Juli&quot;, &quot;Agustus&quot;,
+            &quot;September&quot;, &quot;Oktober&quot;, &quot;November&quot;, &quot;Desember&quot;
+        ][dat[dat.length - 2] - 1] + &quot; &quot; + dat[dat.length - 3])));
  
     } else {
-              var i = url.split("search");
-                  if(i.length > 1){
-                    if(i[i.length-1].split("/label/").length > 1){
-                       var dat = i[i.length-1].split("/label/");
-                       var searchKey = dat[dat.length-1].split("%20");
+              var i = url.split(&quot;search&quot;);
+                  if(i.length &gt; 1){
+                    if(i[i.length-1].split(&quot;/label/&quot;).length &gt; 1){
+                       var dat = i[i.length-1].split(&quot;/label/&quot;);
+                       var searchKey = dat[dat.length-1].split(&quot;%20&quot;);
                     }else{
-                      var dat = i[i.length-1].split("?q=");
-                      var searchKey = dat[dat.length-1].split("+");
+                      var dat = i[i.length-1].split(&quot;?q=&quot;);
+                      var searchKey = dat[dat.length-1].split(&quot;+&quot;);
                     }
                     
-                    $("header").toggleClass("mb-2");
-                    $("#dataBar").remove();
-                    $("#lastRowOfArticle").remove();   
-                    $(".penulis").remove();  
+                    $(&quot;header&quot;).toggleClass(&quot;mb-2&quot;);
+                    $(&quot;#dataBar&quot;).remove();
+                    $(&quot;#lastRowOfArticle&quot;).remove();   
+                    $(&quot;.penulis&quot;).remove();  
 
-                if(posts.length > 0){
-                    $("#contentMaster").toggleClass("search-body-advance");
-                    $("#contentMaster").append('Yayy.. Kita menemukan ' + posts.length +' pos yang anda cari.');
-                    $("#contentMaster").append('&#x3C;div id=&#x22;card-deck-search&#x22; class=&#x22;card-column&#x22;&#x3E;&#x3C;/div&#x3E;');
+                if(posts.length &gt; 0){
+                    $(&quot;#contentMaster&quot;).toggleClass(&quot;search-body-advance&quot;);
+                    $(&quot;#contentMaster&quot;).append(&#39;Yayy.. Kita menemukan &#39; + posts.length +&#39; pos yang anda cari.&#39;);
+                    $(&quot;#contentMaster&quot;).append(&#39;&lt;div id=&quot;card-deck-search&quot; class=&quot;card-column&quot;&gt;&lt;/div&gt;&#39;);
                     for (var a of posts) {
-                      $(&#x22;#card-deck-search&#x22;).append(blok(a.title, a.subTitle, a.text, a.author, a.postTime, a.link,
-                        (a.tags == undefined) ? [] : a.tags, (a.coverPicture == undefined) ? &#x22;&#x22; : a.coverPicture));
+                      $(&quot;#card-deck-search&quot;).append(blok(a.title, a.subTitle, a.text, a.author, a.postTime, a.link,
+                        (a.tags == undefined) ? [] : a.tags, (a.coverPicture == undefined) ? &quot;&quot; : a.coverPicture));
                     }
                 }else{
-                    $(&#x22;#contentMaster&#x22;).append(&#x27;&#x3C;div class=&#x22;card border-0 text-left&#x22;&#x3E;&#x3C;div class=&#x22;card-body&#x22;&#x3E;&#x27;+
-                                    &#x27;&#x3C;p class=&#x22;card-text&#x22;&#x3E;&#x27;+
-                                        &#x27;&#x3C;div class=&#x22;media&#x22;&#x3E;&#x27;+
-                                            &#x27;&#x3C;img class=&#x22;mr-3&#x22; src=&#x22;https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/gambar-box.png&#x22; style=&#x22;width:6em&#x22; alt=&#x22;Gambar Box tidak ditemukan&#x22;&#x3E;&#x27;+
-                                            &#x27;&#x3C;div class=&#x22;media-body&#x22;&#x3E;&#x27;+
-                                                &#x27;&#x3C;h5 class=&#x22;mt-0&#x22;&#x3E;Oops...&#x3C;/h5&#x3E;&#x27;+
-                                                &#x27;&#x3C;p&#x3E;Maaf, sepertinya kami tidak dapat menemukan apa yang kamu cari... Coba gunakan kata kunci yang lain..&#x3C;/p&#x3E;&#x27;+
-                                            &#x27;&#x3C;/div&#x3E;&#x3C;/div&#x3E;&#x3C;/p&#x3E;&#x3C;/div&#x3E;&#x3C;/div&#x3E;&#x27;);
+                    $(&quot;#contentMaster&quot;).append(&#39;&lt;div class=&quot;card border-0 text-left&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;&#39;+
+                                    &#39;&lt;p class=&quot;card-text&quot;&gt;&#39;+
+                                        &#39;&lt;div class=&quot;media&quot;&gt;&#39;+
+                                            &#39;&lt;img class=&quot;mr-3&quot; src=&quot;https://cdn.jsdelivr.net/gh/bayusamudra5502/hilirilmu/img/gambar-box.png&quot; style=&quot;width:6em&quot; alt=&quot;Gambar Box tidak ditemukan&quot;&gt;&#39;+
+                                            &#39;&lt;div class=&quot;media-body&quot;&gt;&#39;+
+                                                &#39;&lt;h5 class=&quot;mt-0&quot;&gt;Oops...&lt;/h5&gt;&#39;+
+                                                &#39;&lt;p&gt;Maaf, sepertinya kami tidak dapat menemukan apa yang kamu cari... Coba gunakan kata kunci yang lain..&lt;/p&gt;&#39;+
+                                            &#39;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&#39;);
                 }
 
-                $(".search-body-advance .card").attr("style","min-width:18rem");
-                var search = "";
+                $(&quot;.search-body-advance .card&quot;).attr(&quot;style&quot;,&quot;min-width:18rem&quot;);
+                var search = &quot;&quot;;
                 for(var x of searchKey){
-                  search += x + " ";
+                  search += x + &quot; &quot;;
                 }
 
-                $(".titleArticle").text('Mencari Pos "'+search+'"');
+                $(&quot;.titleArticle&quot;).text(&#39;Mencari Pos &quot;&#39;+search+&#39;&quot;&#39;);
             }else{
               for (var a of posts) {
                   $(&quot;#newArticle&quot;).append(blok(a.title, a.subTitle, a.text, a.author, a.postTime, a.link,
@@ -2773,6 +2810,10 @@ $(document).ready(function () {
                 mediaR(obj.teams[i].name,
                     obj.teams[i].role, obj.teams[i].img, obj.teams[i].about));
         }
+    });
+
+        $(function () {
+      $(&#39;[data-toggle=&quot;tooltip&quot;]&#39;).tooltip()
     });
 
     // FREE THE FREEZE

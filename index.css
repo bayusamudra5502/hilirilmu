@@ -13,6 +13,31 @@ body {
     background-color: #2c2c5f;
 }
 
+.body-card-up {
+    margin-top: -5em;
+    margin-bottom: 1em;
+}
+
+.btn-facebook {
+    background-color: #3b5998;
+    color: #fff;
+}
+
+.btn-facebook:hover {
+    background-color: #364e81;
+    color: rgba(255, 255, 255, .8);
+}
+
+.btn-twitter {
+    background-color: #1DA1F2;
+    color: #fff;
+}
+
+.btn-twitter:hover {
+    background-color: rgb(25, 133, 201);
+    color: rgba(255, 255, 255, .8);
+}
+
 .navbar-toggler {
     border: 0;
 }
